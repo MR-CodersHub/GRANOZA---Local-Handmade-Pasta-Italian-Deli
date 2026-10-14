@@ -1,0 +1,862 @@
+/* ==========================================================================
+   GRANOZA — HOME 2 (EDITORIAL SHOWCASE) MODERN REDESIGN
+   Reduced Hero Section Size & High-Density Section Architecture
+   Eliminates all excess whitespace, oversized typography, and empty voids
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO HOME 2: COMPACT & REDUCED SIZE
+   -------------------------------------------------------------------------- */
+.hero-home-2 {
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-dark) 100%) !important;
+  padding: 2.25rem 0 2.5rem !important;
+  color: var(--pure-white) !important;
+  border-bottom: 2px solid var(--golden-yellow) !important;
+  position: relative !important;
+}
+
+.hero-2-grid {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
+}
+
+.hero-2-headline {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.hero-2-headline .eyebrow {
+  margin-bottom: 0.5rem !important;
+  font-size: 0.78rem !important;
+}
+
+.hero-2-headline h1 {
+  font-size: clamp(1.85rem, 2.8vw, 2.45rem) !important;
+  color: var(--pure-white) !important;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.hero-2-headline h1 em {
+  color: var(--golden-yellow) !important;
+  font-style: italic !important;
+}
+
+.hero-2-headline p {
+  font-size: 0.95rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 1.25rem !important;
+  max-width: 540px !important;
+}
+
+/* Compact Daily Extrusions Board */
+.daily-board-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  border-radius: 12px !important;
+  padding: 0.85rem 1.15rem !important;
+  margin-bottom: 1.35rem !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.board-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.5rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding-bottom: 0.35rem !important;
+}
+
+.board-header strong {
+  font-size: 0.78rem !important;
+  color: var(--golden-yellow) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.board-status {
+  font-size: 0.72rem !important;
+  color: #5fe384 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  font-weight: 600 !important;
+}
+
+.board-items {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  font-size: 0.82rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.board-items li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.board-items li span:first-child {
+  color: var(--pure-white) !important;
+  font-weight: 500 !important;
+}
+
+.board-items li span:last-child {
+  color: var(--golden-yellow) !important;
+  font-weight: 600 !important;
+  font-size: 0.78rem !important;
+}
+
+.hero-2-btns {
+  display: flex !important;
+  gap: 0.85rem !important;
+  flex-wrap: wrap !important;
+}
+
+.hero-2-btns .btn {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 0.88rem !important;
+  border-radius: 999px !important;
+}
+
+/* Compact Hero 2 Image Collage */
+.hero-2-collage {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  grid-template-rows: 145px 145px !important;
+  gap: 0.85rem !important;
+}
+
+.collage-item {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.collage-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease !important;
+}
+
+.collage-item:hover img {
+  transform: scale(1.06) !important;
+}
+
+.collage-span-2 {
+  grid-row: span 2 !important;
+}
+
+.collage-caption {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0.6rem 0.85rem !important;
+  background: linear-gradient(to top, rgba(6, 26, 70, 0.92) 0%, transparent 100%) !important;
+  color: var(--pure-white) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. SECTION 2: SHAPES & GEOMETRIES (COMPACT 4-CARD SHOWCASE)
+   -------------------------------------------------------------------------- */
+.shape-showcase-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--warm-ivory) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.shape-showcase-section .section-header {
+  margin-bottom: 2rem !important;
+}
+
+.shape-showcase-section .section-header h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.shape-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.25rem !important;
+}
+
+.shape-card {
+  background: var(--pure-white) !important;
+  border: 1px solid var(--beige-border) !important;
+  border-radius: 14px !important;
+  padding: 1.35rem 1.15rem !important;
+  text-align: center !important;
+  box-shadow: var(--shadow-sm) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.shape-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--golden-yellow) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.shape-card-img {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin-bottom: 0.9rem !important;
+  border: 2px solid var(--golden-yellow) !important;
+  box-shadow: 0 4px 12px rgba(232, 184, 63, 0.25) !important;
+}
+
+.shape-card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.shape-card h3 {
+  font-size: 1.1rem !important;
+  margin-bottom: 0.2rem !important;
+  color: var(--navy-deep) !important;
+  font-family: var(--font-serif) !important;
+}
+
+.shape-origin {
+  font-size: 0.72rem !important;
+  color: var(--tomato-red) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.shape-card p {
+  font-size: 0.82rem !important;
+  color: var(--text-dark) !important;
+  line-height: 1.45 !important;
+  margin-bottom: 1rem !important;
+  flex: 1 !important;
+}
+
+.shape-card .btn-sm {
+  padding: 0.4rem 0.9rem !important;
+  font-size: 0.78rem !important;
+  border-radius: 999px !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTION 3: SEASONAL SPECIALS (COMPACT RESERVE BANNER)
+   -------------------------------------------------------------------------- */
+.seasonal-specials-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--creamy-beige) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.specials-banner {
+  background: var(--navy-deep) !important;
+  border-radius: 18px !important;
+  border: 2px solid var(--golden-yellow) !important;
+  padding: 2.25rem 2.5rem !important;
+  color: var(--pure-white) !important;
+  display: grid !important;
+  grid-template-columns: 1.2fr 0.8fr !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.specials-text h2 {
+  color: var(--pure-white) !important;
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem) !important;
+  margin: 0.35rem 0 0.75rem !important;
+  line-height: 1.18 !important;
+}
+
+.specials-text p {
+  font-size: 0.92rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.specials-highlight-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1.35rem !important;
+}
+
+.specials-item {
+  display: flex !important;
+  gap: 0.75rem !important;
+  align-items: flex-start !important;
+}
+
+.specials-item i {
+  color: var(--golden-yellow) !important;
+  font-size: 1rem !important;
+  margin-top: 0.2rem !important;
+}
+
+.specials-item h4 {
+  font-size: 0.92rem !important;
+  color: var(--pure-white) !important;
+  margin-bottom: 0.15rem !important;
+  font-family: var(--font-serif) !important;
+}
+
+.specials-item p {
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.specials-media {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+  height: 280px !important;
+}
+
+.specials-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. SECTION 4: CHEF'S PICKS
+   -------------------------------------------------------------------------- */
+.chef-rec-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--warm-ivory) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.chef-rec-grid {
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 2.75rem !important;
+  align-items: center !important;
+}
+
+.chef-portrait-frame {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 2px solid var(--beige-border) !important;
+  box-shadow: var(--shadow-md) !important;
+  position: relative !important;
+  height: 380px !important;
+}
+
+.chef-portrait-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.chef-quote-pill {
+  position: absolute !important;
+  bottom: 14px !important;
+  left: 14px !important;
+  right: 14px !important;
+  background: rgba(6, 26, 70, 0.92) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--golden-yellow) !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 10px !important;
+  color: var(--pure-white) !important;
+  font-size: 0.8rem !important;
+  font-style: italic !important;
+  line-height: 1.45 !important;
+}
+
+.chef-picks-content h2 {
+  font-size: clamp(1.85rem, 2.8vw, 2.4rem) !important;
+  color: var(--navy-deep) !important;
+  margin: 0.35rem 0 0.75rem !important;
+}
+
+.chef-picks-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.chef-pick-item {
+  background: var(--pure-white) !important;
+  border: 1px solid var(--beige-border) !important;
+  border-radius: 12px !important;
+  padding: 1rem 1.25rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.25s ease !important;
+}
+
+.chef-pick-item:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--golden-yellow) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.pick-details h4 {
+  font-size: 0.98rem !important;
+  color: var(--navy-deep) !important;
+  margin-bottom: 0.25rem !important;
+  font-family: var(--font-serif) !important;
+}
+
+.pick-details p {
+  font-size: 0.8rem !important;
+  color: var(--text-dark) !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+.pick-badge-price {
+  text-align: right !important;
+  flex-shrink: 0 !important;
+}
+
+.pick-badge-price .price {
+  font-family: var(--font-serif) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--tomato-red) !important;
+  display: block !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION 5: BEHIND THE SCENES
+   -------------------------------------------------------------------------- */
+.behind-scenes-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--navy-deep) !important;
+  color: var(--pure-white) !important;
+}
+
+.behind-scenes-section .section-header {
+  margin-bottom: 2rem !important;
+}
+
+.behind-scenes-section .section-header h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+  color: var(--pure-white) !important;
+}
+
+.bts-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.35rem !important;
+}
+
+.bts-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.bts-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--golden-yellow) !important;
+}
+
+.bts-media {
+  height: 180px !important;
+  overflow: hidden !important;
+}
+
+.bts-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.bts-body {
+  padding: 1.25rem !important;
+}
+
+.bts-body h3 {
+  font-size: 1.05rem !important;
+  color: var(--golden-yellow) !important;
+  margin-bottom: 0.35rem !important;
+  font-family: var(--font-serif) !important;
+}
+
+.bts-body p {
+  font-size: 0.82rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION 6: DELI PANTRY SHOWCASE
+   -------------------------------------------------------------------------- */
+.deli-pantry-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--pure-white) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.pantry-showcase {
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 2.75rem !important;
+  align-items: center !important;
+}
+
+.pantry-media {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 2px solid var(--warm-ivory) !important;
+  height: 360px !important;
+}
+
+.pantry-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.pantry-details h2 {
+  font-size: clamp(1.85rem, 2.8vw, 2.4rem) !important;
+  color: var(--navy-deep) !important;
+  margin: 0.35rem 0 0.75rem !important;
+}
+
+.pantry-details p {
+  font-size: 0.95rem !important;
+  color: var(--text-dark) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.pantry-tags-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0.65rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.pantry-tag-item {
+  background: var(--warm-ivory) !important;
+  border: 1px solid var(--beige-border) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 0.85rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: var(--navy-deep) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+}
+
+.pantry-tag-item i {
+  color: var(--tomato-red) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION 7: CATERING TIERS (REDESIGNED TO FIX SCREENSHOT 2 EMPTY SPACES)
+   -------------------------------------------------------------------------- */
+.home2-catering-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--warm-ivory) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.home2-catering-section .section-header {
+  margin-bottom: 2rem !important;
+}
+
+.home2-catering-section .section-header h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.home2-catering-section .section-header p {
+  max-width: 650px !important;
+  font-size: 0.95rem !important;
+  margin: 0.5rem auto 0 !important;
+}
+
+.catering-split-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.35rem !important;
+}
+
+.catering-tier-card {
+  background: var(--pure-white) !important;
+  border: 1px solid var(--beige-border) !important;
+  border-radius: 16px !important;
+  padding: 1.85rem 1.6rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  box-shadow: var(--shadow-sm) !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+.catering-tier-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--golden-yellow) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.catering-tier-card.featured {
+  border: 2px solid var(--golden-yellow) !important;
+  box-shadow: 0 10px 30px rgba(232, 184, 63, 0.22) !important;
+  background: #FFFFFA !important;
+}
+
+.tier-badge {
+  position: absolute !important;
+  top: -12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: var(--golden-yellow) !important;
+  color: var(--navy-dark) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 0.25rem 0.9rem !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.tier-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background: var(--navy-deep) !important;
+  color: var(--golden-yellow) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.35rem !important;
+  margin: 0 auto 1.15rem !important;
+}
+
+.catering-tier-card.featured .tier-icon {
+  background: var(--golden-yellow) !important;
+  color: var(--navy-dark) !important;
+}
+
+.catering-tier-card h3 {
+  font-family: var(--font-serif) !important;
+  font-size: 1.25rem !important;
+  color: var(--navy-deep) !important;
+  margin-bottom: 0.35rem !important;
+  font-weight: 700 !important;
+}
+
+.tier-serves {
+  display: inline-block !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  color: var(--tomato-red) !important;
+  margin-bottom: 0.85rem !important;
+  background: rgba(181, 45, 69, 0.08) !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 999px !important;
+}
+
+.catering-tier-card p {
+  font-size: 0.85rem !important;
+  color: var(--text-dark) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 1.5rem !important;
+  flex: 1 !important;
+}
+
+.catering-tier-card .btn {
+  width: 100% !important;
+  padding: 0.75rem 1.25rem !important;
+  font-size: 0.88rem !important;
+  border-radius: 999px !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECTION 8: CUSTOMER REVIEWS (REDESIGNED TO FIX SCREENSHOT 3 EMPTY SPACES)
+   -------------------------------------------------------------------------- */
+.home2-reviews-section {
+  padding: 3.25rem 0 !important;
+  background-color: var(--creamy-beige) !important;
+  border-bottom: 1px solid var(--beige-border) !important;
+}
+
+.home2-reviews-section .section-header {
+  margin-bottom: 2rem !important;
+}
+
+.home2-reviews-section .section-header h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.home2-reviews-section .section-header p {
+  font-size: 0.95rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 0.4rem !important;
+}
+
+.reviews-strip {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.25rem !important;
+}
+
+.review-mini-card {
+  background: var(--pure-white) !important;
+  border: 1px solid var(--beige-border) !important;
+  border-radius: 14px !important;
+  padding: 1.35rem 1.15rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.review-mini-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--golden-yellow) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.review-mini-card .stars {
+  color: var(--golden-yellow) !important;
+  font-size: 0.85rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.review-mini-card p {
+  font-family: var(--font-serif) !important;
+  font-size: 0.92rem !important;
+  font-style: italic !important;
+  color: var(--navy-deep) !important;
+  line-height: 1.5 !important;
+  margin-bottom: 1rem !important;
+  flex: 1 !important;
+}
+
+.review-mini-card strong {
+  display: block !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.78rem !important;
+  color: var(--tomato-red) !important;
+  font-weight: 700 !important;
+  border-top: 1px dashed var(--beige-border) !important;
+  padding-top: 0.6rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECTION 9: CALL TO ACTION STRIP
+   -------------------------------------------------------------------------- */
+.home2-cta-strip {
+  padding: 3.25rem 0 !important;
+  background: var(--navy-dark) !important;
+  border-top: 2px solid var(--golden-yellow) !important;
+}
+
+.home2-cta-strip h2 {
+  font-size: clamp(2rem, 3.2vw, 2.6rem) !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.home2-cta-strip p {
+  font-size: 1rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE QUERIES FOR HOME 2
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .shape-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .specials-banner {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .chef-rec-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .chef-portrait-frame {
+    height: 300px !important;
+  }
+
+  .pantry-showcase {
+    grid-template-columns: 1fr !important;
+  }
+
+  .catering-split-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reviews-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-home-2 {
+    padding: 1.75rem 0 !important;
+  }
+
+  .hero-2-collage {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 120px 120px !important;
+  }
+
+  .shape-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bts-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pantry-tags-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reviews-strip {
+    grid-template-columns: 1fr !important;
+  }
+}

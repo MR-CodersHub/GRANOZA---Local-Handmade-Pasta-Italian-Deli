@@ -1,0 +1,1697 @@
+/* ==========================================================================
+   GRANOZA — THEME & RTL MASTER STYLESHEET (V10 - ULTIMATE DARK MODE & RTL)
+   Midnight Luxury Dark Mode & Full Right-to-Left (RTL) Layout
+   Guarantees 100% text readability, high-contrast artisanal surfaces,
+   and flawless illumination across all 7 pages.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. HEADER TOGGLE BUTTONS (Theme & RTL)
+   ========================================================================== */
+.theme-toggle-btn,
+.rtl-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff !important;
+  cursor: pointer;
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.theme-toggle-btn {
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1.05rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff !important;
+}
+
+.theme-toggle-btn i {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+  color: #ffffff;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--royal-blue, #164A87);
+  border-color: var(--golden-yellow, #E8B83F);
+  color: var(--golden-yellow, #E8B83F) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.35);
+}
+
+.theme-toggle-btn:hover i {
+  color: var(--golden-yellow, #E8B83F);
+}
+
+.rtl-toggle-btn {
+  padding: 0 0.85rem;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: 0.82rem;
+  color: #ffffff !important;
+}
+
+.rtl-toggle-btn i {
+  font-size: 0.85rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.rtl-toggle-btn .rtl-text {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+}
+
+.rtl-toggle-btn:hover {
+  background: var(--royal-blue, #164A87);
+  border-color: var(--golden-yellow, #E8B83F);
+  color: var(--golden-yellow, #E8B83F) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.35);
+}
+
+.rtl-toggle-btn:hover i,
+.rtl-toggle-btn:hover .rtl-text {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Active RTL State */
+html[dir="rtl"] .rtl-toggle-btn,
+.rtl-toggle-btn.active {
+  background: rgba(232, 184, 63, 0.25) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[dir="rtl"] .rtl-toggle-btn i,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Dark Theme Header Buttons State */
+html[data-theme="dark"] .theme-toggle-btn {
+  background: rgba(232, 184, 63, 0.22) !important;
+  border-color: rgba(232, 184, 63, 0.6) !important;
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .theme-toggle-btn i {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .theme-toggle-btn:hover {
+  background: rgba(232, 184, 63, 0.4) !important;
+  box-shadow: 0 0 20px rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .rtl-toggle-btn i,
+html[data-theme="dark"] .rtl-toggle-btn .rtl-text {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-toggle-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-toggle-btn i {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .hamburger-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+html[data-theme="dark"] .hamburger-line {
+  background-color: #ffffff !important;
+}
+
+/* Mobile Drawer Controls Group */
+.mobile-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-nav-controls .theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 0.95rem;
+}
+
+.mobile-nav-controls .rtl-toggle-btn {
+  height: 36px;
+  padding: 0 0.65rem;
+  font-size: 0.75rem;
+}
+
+/* Responsive header spacing on small phones */
+@media (max-width: 768px) {
+  .nav-actions {
+    gap: 0.55rem;
+  }
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .rtl-toggle-btn {
+    height: 36px;
+    padding: 0 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-actions {
+    gap: 0.4rem;
+  }
+  .rtl-toggle-btn .rtl-text {
+    font-size: 0.7rem;
+  }
+}
+
+
+/* ==========================================================================
+   2. MIDNIGHT LUXURY DARK MODE (html[data-theme="dark"])
+   Complete high-contrast dark palette covering all pages and sections
+   ========================================================================== */
+html[data-theme="dark"] {
+  /* Crucial: Pure white must remain true white for all white text! */
+  --pure-white: #ffffff;
+  
+  /* Midnight surfaces */
+  --navy-deep: #050d22;
+  --navy-dark: #030714;
+  --navy-surface: #0a183d;
+  --royal-blue: #13396e;
+  --royal-light: #1b4985;
+  --warm-ivory: #070f22;
+  --warm-ivory-dark: #0b1937;
+  --creamy-beige: #0d1e40;
+  --beige-border: rgba(232, 184, 63, 0.25);
+  
+  /* Text tokens */
+  --text-dark: #f8f6f0;
+  --text-muted: #cbd5e1;
+  --text-light-muted: #e2e8f0;
+  --surface-border: rgba(232, 184, 63, 0.2);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.75);
+}
+
+/* Base Body & Layout in Dark Theme */
+html[data-theme="dark"] body {
+  background-color: #070f22 !important;
+  color: #f8f6f0 !important;
+}
+
+/* Top Announcement Bar */
+html[data-theme="dark"] .top-bar {
+  background-color: #030714 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .top-bar-item {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .top-bar-item span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .top-bar-item strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .top-bar-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .top-bar-right a,
+html[data-theme="dark"] .top-bar-right span {
+  color: #cbd5e1 !important;
+}
+
+/* Main Navigation Header */
+html[data-theme="dark"] .main-header {
+  background-color: rgba(5, 13, 34, 0.96) !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-link.active {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Outline Buttons (Buttons in hero, cards, and CTA strips) */
+html[data-theme="dark"] .hero-cta-ghost,
+html[data-theme="dark"] .btn-outline-white {
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .hero-cta-ghost:hover,
+html[data-theme="dark"] .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-outline {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hero-trust-row,
+html[data-theme="dark"] .htr-item {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .htr-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* ==========================================================================
+   ALL LIGHT SECTIONS ACROSS ALL PAGES TURN MIDNIGHT
+   ========================================================================== */
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-ivory,
+html[data-theme="dark"] .bg-beige,
+html[data-theme="dark"] .workshop-section,
+html[data-theme="dark"] .curated-pantry-showcase,
+html[data-theme="dark"] .extrusion-section,
+html[data-theme="dark"] .comparison-section,
+html[data-theme="dark"] .tasting-menu-section,
+html[data-theme="dark"] .salumiere-section,
+html[data-theme="dark"] .customer-reviews-section,
+html[data-theme="dark"] .reviews-section,
+html[data-theme="dark"] .about-heritage-spine,
+html[data-theme="dark"] .about-ratio-bar,
+html[data-theme="dark"] .about-quality-seals,
+html[data-theme="dark"] .bespoke-occasions-section,
+html[data-theme="dark"] .specials-banner,
+html[data-theme="dark"] .quote-calculator-box,
+html[data-theme="dark"] .about-hero-section,
+html[data-theme="dark"] .about-story-section,
+html[data-theme="dark"] .about-techniques-section,
+html[data-theme="dark"] .about-sourcing-section,
+html[data-theme="dark"] .about-pledge-section,
+html[data-theme="dark"] .deli-showcase-section,
+html[data-theme="dark"] .shape-showcase-section,
+html[data-theme="dark"] .seasonal-specials-section,
+html[data-theme="dark"] .chef-rec-section,
+html[data-theme="dark"] .deli-pantry-section,
+html[data-theme="dark"] .home2-catering-section,
+html[data-theme="dark"] .home2-reviews-section,
+html[data-theme="dark"] .catering-packages-section,
+html[data-theme="dark"] .catering-platters-section,
+html[data-theme="dark"] .deli-intro-section,
+html[data-theme="dark"] .catering-events-section,
+html[data-theme="dark"] .catering-instructions-section,
+html[data-theme="dark"] .catering-form-section,
+html[data-theme="dark"] .product-group-section,
+html[data-theme="dark"] .blog-featured-section,
+html[data-theme="dark"] .blog-grid-section,
+html[data-theme="dark"] .contact-banner-section,
+html[data-theme="dark"] .contact-main-section,
+html[data-theme="dark"] .contact-map-section,
+html[data-theme="dark"] .contact-faq-section,
+html[data-theme="dark"] .about-invite-section,
+html[data-theme="dark"] section {
+  background-color: #070f22 !important;
+  color: #f8f6f0;
+}
+
+/* Alternating rhythmic dark background */
+html[data-theme="dark"] .extrusion-section,
+html[data-theme="dark"] .salumiere-section,
+html[data-theme="dark"] .about-ratio-bar,
+html[data-theme="dark"] .specials-banner,
+html[data-theme="dark"] .curated-pantry-showcase,
+html[data-theme="dark"] .deli-pantry-section,
+html[data-theme="dark"] .home2-reviews-section,
+html[data-theme="dark"] .seasonal-specials-section,
+html[data-theme="dark"] .behind-scenes-section {
+  background-color: #050b1a !important;
+}
+
+/* ==========================================================================
+   HOME2 SCREENSHOT SPECIFIC FIXES
+   ========================================================================== */
+
+/* 1. Shape Cards & Buttons (Home2 Screenshot 1) */
+html[data-theme="dark"] .shape-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .shape-card h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shape-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .shape-card-img {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .shape-card .shape-badge {
+  background: rgba(232, 184, 63, 0.2) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.4) !important;
+}
+
+html[data-theme="dark"] .shape-card .btn,
+html[data-theme="dark"] .shape-card .btn-outline,
+html[data-theme="dark"] .shape-card .btn-sm {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shape-card .btn:hover,
+html[data-theme="dark"] .shape-card .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.3) !important;
+}
+
+/* 2. Chef Giancarlo's Picks (Home2 Screenshot 2) */
+html[data-theme="dark"] .chef-rec-section {
+  background-color: #070f22 !important;
+}
+
+html[data-theme="dark"] .chef-picks-content h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .chef-picks-content p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .chef-pick-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .pick-details h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pick-details p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pick-badge-price .price {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .pick-badge-price .btn,
+html[data-theme="dark"] .pick-badge-price .btn-primary {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 3. Salumeria & Formaggeria (Home2 Screenshot 3) */
+html[data-theme="dark"] .deli-pantry-section {
+  background-color: #050b1a !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .pantry-media {
+  border: 2px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .pantry-details h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pantry-details p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pantry-tags-grid .pantry-tag-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .pantry-tags-grid .pantry-tag-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .pantry-details .btn {
+  background: var(--royal-blue, #164A87) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .pantry-details .btn:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+/* 4. Banchetti per Occasioni Speciali (Home2 Screenshot 4) */
+html[data-theme="dark"] .home2-catering-section {
+  background-color: #070f22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .home2-catering-section .section-header h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home2-catering-section .section-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured {
+  background: #0e2044 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .tier-serves {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .tier-icon {
+  background: #050d20 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured .tier-icon {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #050d20 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .btn-outline {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured .btn,
+html[data-theme="dark"] .catering-tier-card.featured .btn-primary {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+/* 5. What Our Community Says (Home2 Screenshot 5) */
+html[data-theme="dark"] .home2-reviews-section {
+  background-color: #050b1a !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .home2-reviews-section .section-header h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home2-reviews-section .section-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .review-mini-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .review-mini-card .stars {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .review-mini-card p {
+  color: #cbd5e1 !important;
+  font-style: italic !important;
+}
+
+html[data-theme="dark"] .review-mini-card .author {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .review-mini-card strong,
+html[data-theme="dark"] .review-mini-card span {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   INDEX.HTML SPECIFIC FIXES (From Previous Screenshots)
+   ========================================================================== */
+/* Heritage seal (26 Years badge) */
+html[data-theme="dark"] .shs-heritage-seal {
+  background: #061129 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .shs-seal-text strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .shs-seal-text span {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .shs-lead-p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .shs-pull-quote {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border-left-color: var(--golden-yellow, #E8B83F) !important;
+  color: #f0e9d6 !important;
+}
+
+/* Connected Milestone Track */
+html[data-theme="dark"] .shs-timeline-track {
+  background: #0d1e40 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .shs-step-node {
+  background: #050d20 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.4) !important;
+}
+
+html[data-theme="dark"] .shs-node-active {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border-color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .shs-step-info strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shs-step-info span {
+  color: #c4d3e8 !important;
+  font-size: 0.72rem !important;
+}
+
+html[data-theme="dark"] .shs-step-line {
+  background: rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .shs-note {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .shs-text-col h2 {
+  color: #ffffff !important;
+}
+
+/* Pappardelle Card & Specs Grid */
+html[data-theme="dark"] .pss-featured-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .pfh-title-row h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pfh-desc {
+  color: #c8d7ea !important;
+}
+
+html[data-theme="dark"] .pfh-cooktime-pill {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .pfh-specs-grid {
+  background: #08142c !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item strong {
+  color: #ffda6a !important;
+  font-size: 0.74rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item span {
+  color: #ffffff !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Daily Counter Board (Section 3 Right) */
+html[data-theme="dark"] .pss-daily-board {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .pdb-board-header h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pdb-subtitle {
+  color: #c4d3e8 !important;
+}
+
+html[data-theme="dark"] .pdb-item {
+  background: #08142c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .pdb-item-top h5 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pdb-item-price {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pdb-item-price small {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pdb-item-info p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pdb-item-tag {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .pdb-footer-note {
+  color: #a4b8d0 !important;
+}
+
+/* Sourcing & Ingredient Cards */
+html[data-theme="dark"] .dps-hero-ing-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .dps-hic-body h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dps-hic-meta {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-hic-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .dps-hic-profile span {
+  color: #4ade80 !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .dps-hic-profile i {
+  color: #4ade80 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.22) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .dps-cc-loc {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .dps-flavor-tag {
+  background: #061129 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-header-row h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dps-header-row p {
+  color: #cbd5e1 !important;
+}
+
+/* Sacred Pasta Ratio & Trattoria Recipes */
+html[data-theme="dark"] .cgs-formula-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .cgs-formula-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cgs-formula-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cgs-ratio-steps {
+  background: #071228 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .crs-metric {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .crs-label {
+  color: #cbd5e1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+html[data-theme="dark"] .cgs-ratio-divider {
+  color: rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .cfs-secret-card {
+  background: #071228 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .cfs-secret-text strong {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cfs-secret-text p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cgs-formula-footer {
+  color: #a0b4cc !important;
+}
+
+html[data-theme="dark"] .cgs-dish-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .cdc-meta-row span {
+  color: #ffda6a !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .cdc-body h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cdc-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cdc-pairing-chip {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .cdc-pairing-chip i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .cdc-link,
+html[data-theme="dark"] a[class*="recipe-link"],
+html[data-theme="dark"] a[class*="view-guide"] {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cgs-header-row h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cgs-header-row p {
+  color: #cbd5e1 !important;
+}
+
+/* Toast Notifications */
+html[data-theme="dark"] .toast {
+  background: #0a1738 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  border-left: 5px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75) !important;
+}
+
+html[data-theme="dark"] .toast span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .toast i {
+  color: var(--golden-yellow, #E8B83F) !important;
+  font-size: 1.15rem !important;
+}
+
+html[data-theme="dark"] .toast-success {
+  border-left-color: #2ecc71 !important;
+}
+
+html[data-theme="dark"] .toast-error {
+  border-left-color: var(--tomato-red, #B52D45) !important;
+}
+
+/* ==========================================================================
+   GLOBAL CARDS, CONTAINERS & FORMS ACROSS ALL PAGES
+   ========================================================================== */
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .curated-card,
+html[data-theme="dark"] .workshop-card,
+html[data-theme="dark"] .tasting-menu-card,
+html[data-theme="dark"] .salumiere-card,
+html[data-theme="dark"] .review-card,
+html[data-theme="dark"] .bespoke-occasion-card,
+html[data-theme="dark"] .concierge-strip,
+html[data-theme="dark"] .craft-card,
+html[data-theme="dark"] .testimonial-card,
+html[data-theme="dark"] .blog-card,
+html[data-theme="dark"] .contact-info-card,
+html[data-theme="dark"] .contact-form-card,
+html[data-theme="dark"] .catering-form-card,
+html[data-theme="dark"] .package-card,
+html[data-theme="dark"] .event-card,
+html[data-theme="dark"] .instruction-step,
+html[data-theme="dark"] .recipe-card,
+html[data-theme="dark"] .bts-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .cart-drawer,
+html[data-theme="dark"] .modal-card,
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .timeline-card,
+html[data-theme="dark"] .hst-content-box,
+html[data-theme="dark"] .about-stat,
+html[data-theme="dark"] .sourcing-pin,
+html[data-theme="dark"] .sourcing-map-box,
+html[data-theme="dark"] .pmb-seal-card,
+html[data-theme="dark"] .pmb-tile,
+html[data-theme="dark"] .tech-card,
+html[data-theme="dark"] .platter-card,
+html[data-theme="dark"] .featured-article-card {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  color: #f8f6f0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Headings in all cards */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .brand-title,
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .product-title,
+html[data-theme="dark"] .item-title,
+html[data-theme="dark"] .comparison-title,
+html[data-theme="dark"] .faq-question {
+  color: #ffffff !important;
+}
+
+/* Paragraphs & Text */
+html[data-theme="dark"] p,
+html[data-theme="dark"] .card-text,
+html[data-theme="dark"] .section-lead,
+html[data-theme="dark"] .faq-answer p,
+html[data-theme="dark"] .hero-lead,
+html[data-theme="dark"] .modal-desc,
+html[data-theme="dark"] .sourcing-lead-p {
+  color: #cbd5e1 !important;
+}
+
+/* Eyebrows, Gold subtitles, Prices */
+html[data-theme="dark"] .price-current,
+html[data-theme="dark"] .price-display,
+html[data-theme="dark"] .tier-price,
+html[data-theme="dark"] .price,
+html[data-theme="dark"] .gold-text,
+html[data-theme="dark"] .section-eyebrow,
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .card-tag {
+  color: #ffda6a !important;
+}
+
+/* Form Controls in Dark Theme */
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="tel"],
+html[data-theme="dark"] input[type="date"],
+html[data-theme="dark"] input[type="number"],
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: #050c1e !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] input:focus,
+html[data-theme="dark"] select:focus,
+html[data-theme="dark"] textarea:focus {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 0 15px rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #7a8fa8 !important;
+}
+
+html[data-theme="dark"] label,
+html[data-theme="dark"] .form-label {
+  color: #e2e8f0 !important;
+}
+
+/* Cart Drawer Dark Theme */
+html[data-theme="dark"] .cart-drawer {
+  background-color: #070f22 !important;
+}
+
+html[data-theme="dark"] .cart-drawer-header {
+  background-color: #050d22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .cart-drawer-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-close-btn {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-item {
+  background-color: #0c1a36 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8f6f0 !important;
+}
+
+html[data-theme="dark"] .cart-item-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-summary,
+html[data-theme="dark"] .cart-footer {
+  background-color: #040916 !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .cart-summary-row {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cart-summary-row.total strong {
+  color: #ffffff !important;
+}
+
+/* Category Filter Pills */
+html[data-theme="dark"] .filter-pill,
+html[data-theme="dark"] .category-tab-btn {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .filter-pill.active,
+html[data-theme="dark"] .filter-pill:hover,
+html[data-theme="dark"] .category-tab-btn.active,
+html[data-theme="dark"] .category-tab-btn:hover {
+  background-color: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+/* Modal Overlay & Modal Card */
+html[data-theme="dark"] .modal-overlay {
+  background: rgba(2, 6, 16, 0.85) !important;
+}
+
+html[data-theme="dark"] .modal-close-btn {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Footer in Dark Theme */
+html[data-theme="dark"] .main-footer {
+  background-color: #030714 !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .footer-links a {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .footer-links a:hover {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #9cb0c8 !important;
+}
+
+/* ==========================================================================
+   PAGE-SPECIFIC HIGH-CONTRAST DARK MODE OVERRIDES (PRODUCTS, ABOUT, ETC.)
+   ========================================================================== */
+
+/* PRODUCTS.HTML — Product Item Cards (Fixes Screenshots 4 & 5) */
+html[data-theme="dark"] .product-item-card {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+}
+
+html[data-theme="dark"] .product-item-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 14px 35px rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .product-subtitle {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-card-details h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-card-details p {
+  color: #cbd5e1 !important;
+  line-height: 1.55 !important;
+}
+
+/* Ingredients Box inside Product Cards */
+html[data-theme="dark"] .product-ingredients-snippet {
+  background: #071228 !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  color: #cbd5e1 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-theme="dark"] .product-ingredients-snippet strong {
+  color: #ffda6a !important;
+}
+
+/* Product Card Bottom Bar & Price */
+html[data-theme="dark"] .product-card-bar {
+  border-top: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .product-price-tag {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .product-price-tag small {
+  color: #cbd5e1 !important;
+}
+
+/* Product Card Action Buttons */
+html[data-theme="dark"] .btn-outline-navy,
+html[data-theme="dark"] .btn-quick-view {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .btn-outline-navy:hover,
+html[data-theme="dark"] .btn-quick-view:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .btn-add-pasta {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-cook-badge {
+  background: rgba(5, 13, 34, 0.92) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+
+/* ABOUT.HTML — Specific Dark Mode Overrides (Fixes Screenshots 1, 2, 3) */
+
+/* 1. Stat Boxes (Screenshot 1) */
+html[data-theme="dark"] .about-stat {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .about-stat h3 {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .about-stat span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  display: block !important;
+}
+
+/* 2. Timeline Tag Chips & Content Boxes (Screenshot 2) */
+html[data-theme="dark"] .hst-content-box {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .hst-content-box h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hst-content-box p {
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+}
+
+html[data-theme="dark"] .hst-year-badge {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+}
+
+html[data-theme="dark"] .hst-year-current {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border-color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .hst-tag-chip {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hst-node-pin {
+  background: #0c1a36 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .hst-center-line {
+  background: rgba(232, 184, 63, 0.3) !important;
+}
+
+/* 3. Family Pledge & Sacred Table Rule (Screenshot 3) */
+html[data-theme="dark"] .pmb-seal-card {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+}
+
+html[data-theme="dark"] .pmb-seal-badge {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .pmb-seal-card h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-quote {
+  background: #071228 !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  color: #f0e9d6 !important;
+  font-style: italic !important;
+}
+
+html[data-theme="dark"] .pmb-check-item {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.84rem !important;
+}
+
+html[data-theme="dark"] .pmb-check-item i {
+  color: #4ade80 !important;
+  font-size: 0.95rem !important;
+}
+
+html[data-theme="dark"] .pmb-signature span {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-signature small {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pmb-tile {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .pmb-tile-top h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-tile p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pmb-metric-tag {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .pmb-tile-icon {
+  background: #071228 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+/* Sourcing Map & Pins in About Us */
+html[data-theme="dark"] .sourcing-pin {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .sourcing-pin h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .sourcing-pin p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .sourcing-map-box {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .smb-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .smb-desc {
+  color: #cbd5e1 !important;
+}
+
+
+/* CATERING.HTML — Specific Dark Mode Overrides */
+html[data-theme="dark"] .platter-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .platter-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .platter-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .instruction-step {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .step-number {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .instruction-step h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .instruction-step p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .bespoke-occasion-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .bespoke-occasion-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .bespoke-occasion-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .concierge-strip {
+  background: #050d22 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .concierge-strip h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .concierge-strip p {
+  color: #cbd5e1 !important;
+}
+
+
+/* BLOG.HTML — Specific Dark Mode Overrides */
+html[data-theme="dark"] .featured-article-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .featured-article-body h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .featured-article-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .blog-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .blog-card-body h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .blog-card-body p {
+  color: #cbd5e1 !important;
+}
+
+
+/* CONTACT.HTML — Specific Dark Mode Overrides */
+html[data-theme="dark"] .contact-info-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .contact-info-card h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .contact-info-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .contact-form-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .contact-form-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .contact-form-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .faq-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .faq-question {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .faq-answer p {
+  color: #cbd5e1 !important;
+}
+
+
+/* ==========================================================================
+   3. RIGHT-TO-LEFT (RTL) STYLES (html[dir="rtl"])
+   Flips layout direction, text alignment, drawers, badges, and directional arrows
+   ========================================================================== */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Alignments */
+html[dir="rtl"] .text-start,
+html[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end,
+html[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+/* Header & Navigation Layout */
+html[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+/* Cart Badge flipped to left */
+html[dir="rtl"] .cart-badge {
+  right: auto !important;
+  left: -4px !important;
+}
+
+/* Drawers - In RTL they slide gracefully from the LEFT instead of right */
+html[dir="rtl"] .cart-drawer {
+  right: auto !important;
+  left: -460px !important;
+  border-left: none !important;
+  border-right: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.45) !important;
+  transition: left 0.35s ease !important;
+}
+
+html[dir="rtl"] .cart-drawer.open {
+  left: 0 !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] .mobile-nav-drawer {
+  right: auto !important;
+  left: -100% !important;
+  border-left: none !important;
+  border-right: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5) !important;
+  transition: left 0.35s ease !important;
+}
+
+html[dir="rtl"] .mobile-nav-drawer.open {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Directional Icons (Flip arrows that indicate forwards/backwards) */
+html[dir="rtl"] .fa-arrow-right,
+html[dir="rtl"] .fa-angle-right,
+html[dir="rtl"] .fa-chevron-right,
+html[dir="rtl"] .fa-arrow-right-long,
+html[dir="rtl"] .fa-arrow-right-from-bracket {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+html[dir="rtl"] .fa-arrow-left,
+html[dir="rtl"] .fa-angle-left,
+html[dir="rtl"] .fa-chevron-left,
+html[dir="rtl"] .fa-arrow-left-long {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Button & Element Icon Margins */
+html[dir="rtl"] .btn i,
+html[dir="rtl"] .top-bar-item i,
+html[dir="rtl"] .badge i,
+html[dir="rtl"] .footer-links a i,
+html[dir="rtl"] .mobile-deli-info p i {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Floating Badges on Images */
+html[dir="rtl"] .hero-floating-badge {
+  right: auto !important;
+  left: 24px !important;
+}
+
+html[dir="rtl"] .card-floating-badge,
+html[dir="rtl"] .product-badge,
+html[dir="rtl"] .shape-badge {
+  right: auto !important;
+  left: 1rem !important;
+}
+
+/* Form Controls in RTL */
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  text-align: right !important;
+}
+
+/* Toast Container in RTL */
+html[dir="rtl"] .toast-container {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+html[dir="rtl"] .toast {
+  text-align: right;
+  flex-direction: row;
+}
+
+/* Breadcrumb in RTL */
+html[dir="rtl"] .breadcrumb-list {
+  flex-direction: row-reverse;
+}
+
+/* Occasion Strip Concierge in RTL */
+html[dir="rtl"] .concierge-strip {
+  direction: rtl;
+}
+
+/* Back to Top button in RTL */
+html[dir="rtl"] .back-to-top {
+  right: auto !important;
+  left: 1.5rem !important;
+}

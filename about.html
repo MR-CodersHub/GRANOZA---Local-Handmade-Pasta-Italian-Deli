@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Granoza — Our generational Italian pasta-making heritage, sustainable ingredient sourcing from Altamura and Parma, and our artisan team.">
+  <meta name="keywords" content="Granoza, italian pasta heritage, master pasta maker, artisan sfoglina, altamura semolina sourcing, authentic italian deli">
+  <title>About Us — Our Italian Heritage &amp; Artisanal Craft | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/about_redesign.css?v=12">
+  <!-- Theme & RTL Stylesheet -->
+  <link rel="stylesheet" href="css/theme_rtl.css?v=12">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-wheat-awn"></i>
+          <span>Handmade Sfoglia Rolled Daily &bull; 100% Altamura Durum Semolina</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Deli Counter: <strong>8:00 AM — 7:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+<button type="button" class="cart-toggle-btn" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      </div>
+
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About Our Story</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2123</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-note">Freshly made pasta orders are chilled and boxed in insulated thermal sleeves with cooking instructions.</p>
+      <button type="button" class="btn btn-primary btn-cart-checkout" style="width:100%;">
+        <i class="fa-solid fa-circle-check"></i> Proceed to Order Reservation
+      </button>
+      <button type="button" class="btn btn-outline-navy btn-sm" onclick="showToast('Your basket has been saved for local pickup!','info')" style="width:100%;">
+        Save For Later
+      </button>
+    </div>
+  </aside>
+
+      <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT (UNIFIED HEIGHT: 500PX)
+       ========================================================================= -->
+  <section class="page-hero" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/hero_about.jpg" class="hero-bg-img" alt="Italian culinary heritage and wooden table"
+        onerror="this.src='images/italian_dining.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About Our Heritage</span>
+        </nav>
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Tradizione &bull; Since 1998 &bull; Bologna</span>
+        </div>
+        <h1>Artisans of the <br><em class="hero-italic-accent">Wooden Table</em> &amp; Sfoglia</h1>
+        <p class="hero-desc">Founded on timeless Emilian principles, Granoza preserves the ancient dignity of hand-rolled sfoglia, slow bronze extrusion, and genuine neighborhood Italian deli culture.</p>
+        <div class="hero-cta-row">
+          <a href="#about-philosophy" class="hero-cta-primary">
+            <span>Our Heritage Story</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#about-methods" class="hero-cta-ghost">Ancestral Methods</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-wheat-awn"></i> 100% Altamura Wheat</div>
+          <div class="htr-item"><i class="fa-solid fa-shield-halved"></i> Zero Chemical Additives</div>
+          <div class="htr-item"><i class="fa-solid fa-clock-rotate-left"></i> 26+ Years Craft</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/chef_pastaio.jpg" alt="Master pastaio dusting semolina over handmade pasta"
+              onerror="this.src='images/chef_rolling.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-award"></i>
+              <span>Maestro Giancarlo De Luca<br><small>Founder &amp; Master Sfoglino</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-heart" style="color:var(--tomato-red);"></i>
+              <span>Generational Emilian Atelier</span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">1998</span>
+              <span class="hsb-label">Founded</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">0.6<small>mm</small></span>
+              <span class="hsb-label">Sfoglia Thin</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">&lt;40<small>&deg;C</small></span>
+              <span class="hsb-label">Slow Cold Air</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Introduction Showcase -->
+  <section class="about-hero-section">
+    <div class="container about-intro-grid">
+      <div class="about-intro-media">
+        <div class="intro-image-frame">
+          <img src="images/chef_pastaio.jpg" alt="Master Pastaio dusting golden semolina over tortellini" onerror="this.src='images/chef_rolling.jpg'">
+          <div class="intro-media-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>Maestro Pastaio Giancarlo De Luca</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-intro-text">
+        <span class="eyebrow"><i class="fa-solid fa-seedling"></i> La Nostra Filosofia</span>
+        <h2>A Passion Born Between Bologna &amp; Bari</h2>
+        <p>
+          In Italy, pasta is not merely nourishment &mdash; it is a spiritual rhythm. It marks Sunday gatherings, seals friendships, and honors centuries of culinary memory passed down from mother to daughter without written manuals.
+        </p>
+        <p>
+          When Maestro Giancarlo established our atelier in 1998, he brought a set of heavy wooden rolling pins (mattarelli) hand-carved from Emilian pearwood and an uncompromising pledge: never use artificial preservatives, never rush the cold air-drying cycle, and never compromise on whole grains.
+        </p>
+        <div class="about-stats-row">
+          <div class="about-stat">
+            <h3>26+</h3>
+            <span>Years of Local Heritage</span>
+          </div>
+          <div class="about-stat">
+            <h3>100%</h3>
+            <span>Altamura Durum Wheat</span>
+          </div>
+          <div class="about-stat">
+            <h3>Zero</h3>
+            <span>Chemical Additives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: OUR ITALIAN-INSPIRED STORY (ALTERNATING HERITAGE SPINE TIMELINE)
+       ========================================================================= -->
+  <section class="about-story-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-clock-rotate-left"></i> Il Nostro Cammino</span>
+        <h2>Our Journey Through Generations</h2>
+        <div class="gold-divider"><i class="fa-solid fa-hourglass-half"></i></div>
+        <p>How an apprentice's passion in an alleyway in Bologna blossomed into a beloved neighborhood pastificio and gourmet Italian deli.</p>
+      </div>
+
+      <!-- Alternating Heritage Timeline with Center Spine (NO EMPTY GAPS!) -->
+      <div class="heritage-spine-track">
+        <div class="hst-center-line"></div>
+        <div class="hst-milestones-list">
+          <!-- Milestone 1: 1992 (Left) -->
+          <div class="hst-item hst-item-left">
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">1992</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-graduation-cap"></i> Bologna Quadrilatero</span>
+              </div>
+              <h3>Apprenticeship in Bologna</h3>
+              <p>At age 19, Giancarlo De Luca apprenticed under Master Sfoglina Signora Rosa in Bologna's historic Quadrilatero district, learning the exacting art of rolling dough so thin it could be held up to the sunlight without breaking.</p>
+            </div>
+            <div class="hst-node-pin"><i class="fa-solid fa-seedling"></i></div>
+          </div>
+
+          <!-- Milestone 2: 1998 (Right) -->
+          <div class="hst-item hst-item-right">
+            <div class="hst-node-pin"><i class="fa-solid fa-shop"></i></div>
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">1998</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-handshake"></i> The First Bottega</span>
+              </div>
+              <h3>Opening the Neighborhood Bottega</h3>
+              <p>Granoza opened its doors with two wooden tables, a small counter, and a single vintage bronze extrusion press brought across the Atlantic from Treviso. Neighbors gathered each morning lured by the aroma of freshly kneaded semolina.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2010 (Left) -->
+          <div class="hst-item hst-item-left">
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">2010</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-cheese"></i> D.O.P. Partnerships</span>
+              </div>
+              <h3>Expanding to an Authentic Salumeria</h3>
+              <p>To accompany fresh pasta, we partnered directly with family dairies in Parma and salumifici in Modena to install our cold cuts counter, offering prosciutto di Parma aged on chestnut racks and cave-ripened pecorino.</p>
+            </div>
+            <div class="hst-node-pin"><i class="fa-solid fa-wine-bottle"></i></div>
+          </div>
+
+          <!-- Milestone 4: 2026 (Right) -->
+          <div class="hst-item hst-item-right">
+            <div class="hst-node-pin"><i class="fa-solid fa-medal"></i></div>
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge hst-year-current">Today</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-heart"></i> Generational Atelier</span>
+              </div>
+              <h3>The Tradition Continues</h3>
+              <p>Today, the second generation of the De Luca family works side-by-side with our master sfoglini, providing daily fresh pasta to hundreds of neighborhood families, renowned trattorias, and festive catering banquets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: HANDMADE PASTA-MAKING TECHNIQUES (TECHNICAL SHOWCASE + RATIO BAR)
+       ========================================================================= -->
+  <section class="about-techniques-section">
+    <div class="container">
+      <div class="section-header text-light">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-screwdriver-wrench"></i> Tecniche Artigianali</span>
+        <h2>Honoring Ancient Methods</h2>
+        <div class="gold-divider"><i class="fa-solid fa-wheat-awn"></i></div>
+        <p>Industrial pasta factories prioritize speed and volume. We prioritize touch, patience, and the physics of dough structure.</p>
+      </div>
+
+      <div class="tech-cards-grid">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-hands"></i></div>
+            <span class="tech-metric-pill">0.6mm Sfoglia</span>
+          </div>
+          <span class="tech-subtitle">Rough Beechwood Friction</span>
+          <h3>Manual Sfoglia Rolling</h3>
+          <p>Rolling on rough wood aerates the dough and imparts microscopic friction channels across the sheet, giving fresh tagliatelle and pappardelle their velvety, sauce-binding grip.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-fire-burner"></i></div>
+            <span class="tech-metric-pill">100% Solid Bronze</span>
+          </div>
+          <span class="tech-subtitle">Trafilatura al Bronzo</span>
+          <h3>Solid Bronze Extrusion Dies</h3>
+          <p>Bronze dies leave a chalky, pale matte exterior on macaroni and penne. When simmered, this microscopic roughness releases natural starch that turns pasta water into silk.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+            <span class="tech-metric-pill">&lt; 40&deg;C &bull; 36 Hours</span>
+          </div>
+          <span class="tech-subtitle">Enzyme Protection</span>
+          <h3>Static Low-Heat Air Curing</h3>
+          <p>We dry our non-fresh pasta slowly on breathable cedar frames at ambient room temperatures (under 40°C), preserving the wheat's natural nutty aroma and delicate enzymes.</p>
+        </div>
+      </div>
+
+      <!-- Emilian Standard Formula Bar (Fills empty space with authentic culinary insight!) -->
+      <div class="tech-formula-bar">
+        <div class="tfb-item">
+          <span class="tfb-val">100g</span>
+          <span class="tfb-label">Altamura Wheat</span>
+        </div>
+        <span class="tfb-plus">+</span>
+        <div class="tfb-item">
+          <span class="tfb-val">1</span>
+          <span class="tfb-label">Farm Fresh Egg</span>
+        </div>
+        <span class="tfb-plus">+</span>
+        <div class="tfb-item">
+          <span class="tfb-val">0</span>
+          <span class="tfb-label">Chemical Additives</span>
+        </div>
+        <span class="tfb-equal">=</span>
+        <div class="tfb-result">
+          <strong>The Century-Old Bologna Standard</strong>
+          <small>Pure taste, digestible gluten, and effortless al dente structure</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: INGREDIENT SOURCING & DIRECT FARM PARTNERSHIPS
+       ========================================================================= -->
+  <section class="about-sourcing-section">
+    <div class="container sourcing-grid">
+      <div class="sourcing-content">
+        <span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Provenienza e Origine</span>
+        <h2>Traceable Sourcing Across Italy's Regions</h2>
+        <p class="sourcing-lead-p">
+          We never buy generic commodity grains or mystery bulk oils. Every sack of durum semolina, wheel of cheese, and leg of salumi is traced back to a specific Italian cooperative or family estate.
+        </p>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-wheat-awn"></i>
+          <div>
+            <h4>Altamura Durum Wheat Semolina (Puglia)</h4>
+            <p>100% certified coarse-milled durum wheat grown under intense Mediterranean sunshine, providing natural yellow pigment and superior gluten elasticity.</p>
+          </div>
+        </div>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-egg"></i>
+          <div>
+            <h4>Pasture-Raised Hen Eggs (Local Valley Farms)</h4>
+            <p>Laid by pasture-roaming hens fed on natural grains and alfalfa, producing brilliant amber yolks that give our egg noodles their rich, buttery hue.</p>
+          </div>
+        </div>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-cheese"></i>
+          <div>
+            <h4>30-Month Parmigiano Reggiano (Parma Hills)</h4>
+            <p>Crafted exclusively from raw milk of heritage Vacche Rosse cattle. Tested and wheel-branded by the Parmigiano Reggiano Consortium.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sourcing-map-box">
+        <div class="smb-header">
+          <i class="fa-solid fa-certificate" style="color:var(--golden-yellow);"></i>
+          <h3>Our Regional Sourcing Map</h3>
+        </div>
+        <p class="smb-desc">Direct trade with ethical Italian producers ensures maximum freshness and supports small agricultural families.</p>
+        <div class="smb-media-frame">
+          <img src="images/hero_about.jpg" alt="Artisanal food table in Italy with olive oil, pasta and fresh bread" onerror="this.src='images/italian_dining.jpg'">
+          <div class="smb-map-overlay">
+            <span><i class="fa-solid fa-location-dot"></i> Altamura</span>
+            <span><i class="fa-solid fa-location-dot"></i> Parma</span>
+            <span><i class="fa-solid fa-location-dot"></i> Bologna</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: COMMITMENT TO FRESHNESS & FAMILY PLEDGE BOARD (REPLACES GENERIC CARDS)
+       ========================================================================= -->
+  <section class="about-pledge-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Il Nostro Impegno</span>
+        <h2>Our Unconditional Promise to Your Family</h2>
+        <div class="gold-divider"><i class="fa-solid fa-check-double"></i></div>
+        <p>When you purchase pasta from Granoza, you receive food made today with ingredients you could find in an Italian grandmother's pantry.</p>
+      </div>
+
+      <!-- Atelier Quality Seal & Family Pledge Board -->
+      <div class="pledge-master-board">
+        <!-- Left: De Luca Quality Seal Card -->
+        <div class="pmb-seal-card">
+          <div class="pmb-seal-badge">
+            <i class="fa-solid fa-stamp"></i>
+            <span>De Luca Family Guarantee</span>
+          </div>
+          <h3>The Chef's Sacred Table Rule</h3>
+          <p class="pmb-quote">&ldquo;We never sell pasta that we would not proudly set down on our own Sunday family table before our children and elders.&rdquo;</p>
+          <div class="pmb-checklist">
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Preservatives or Chemicals</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Bleached or Modified Flours</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Artificial Colorants or Gums</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Daily Extrusion or Roll Guarantee</div>
+          </div>
+          <div class="pmb-signature">
+            <span>Giancarlo De Luca</span>
+            <small>Founder &amp; Master Pastaio</small>
+          </div>
+        </div>
+
+        <!-- Right: 3 Actionable Pillar Tiles -->
+        <div class="pmb-tiles-col">
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Daily Small Batches</h4>
+                <span class="pmb-metric-tag">&lt; 15kg Limit</span>
+              </div>
+              <p>Extruded in micro-batches under 15kg to prevent machine friction overheating and delicate starch degradation.</p>
+            </div>
+          </div>
+
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-box-archive"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Breathable Cedar Trays</h4>
+                <span class="pmb-metric-tag">Condensation-Free</span>
+              </div>
+              <p>Chilled breathable trays lined with durum semolina prevent condensation buildup and protect dough elasticity.</p>
+            </div>
+          </div>
+
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-recycle"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Zero-Waste Ethics</h4>
+                <span class="pmb-metric-tag">Traditional Re-Use</span>
+              </div>
+              <p>Dough trimmings are re-kneaded into maltagliati ("badly cut") rustic soup noodles, honoring sacred peasant thrift.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================================
+       UNIVERSAL FOOTER (CONSISTENT ACROSS ALL 7 PAGES)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with 100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              Order Counter: <a href="tel:+15558902123">(555) 890-2123</a><br>
+              Catering Hotline: <a href="tel:+15558902124">(555) 890-2124</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              Mon – Fri: 8:00 AM – 7:30 PM<br>
+              Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 Granoza LLC. All Rights Reserved. Crafted with Italian Passion.
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Food Allergen Info</a>
+          <a href="contact.html">Visit Deli</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Granoza — Editorial & Artisan Showcase. Explore today's freshly extruded batches, Chef Giancarlo's daily board, and seasonal Italian specials.">
+  <meta name="keywords" content="Granoza, handmade pasta shop, fresh bronze pasta, chef recommendations pasta, seasonal italian specials, artisanal deli counter, prosciutto parma">
+  <title>Granoza — Editorial Showcase & Daily Bottega Selection</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/home2_redesign.css?v=12">
+  <!-- Theme & RTL Stylesheet -->
+  <link rel="stylesheet" href="css/theme_rtl.css?v=12">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-wheat-awn"></i>
+          <span>Live Batch: <strong>Hand-Pinched Tortelloni & Campanelle</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Deli Counter: <strong>8:00 AM — 7:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link active">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+<button type="button" class="cart-toggle-btn" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      </div>
+
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link active"><span>Home 2 (Editorial)</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2123</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-note">Freshly made pasta orders are chilled and boxed in insulated thermal sleeves with cooking instructions.</p>
+      <button type="button" class="btn btn-primary btn-cart-checkout" style="width:100%;">
+        <i class="fa-solid fa-circle-check"></i> Proceed to Order Reservation
+      </button>
+      <button type="button" class="btn btn-outline-navy btn-sm" onclick="showToast('Your basket has been saved for local pickup!','info')" style="width:100%;">
+        Save For Later
+      </button>
+    </div>
+  </aside>
+
+    <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT (UNIFIED HEIGHT: 500PX)
+       ========================================================================= -->
+  <section class="hero-home-2" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/hero_home2.jpg" class="hero-bg-img" alt="Granoza Live Bottega Extrusions"
+        onerror="this.src='images/hero_bowl.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Edizione Speciale &bull; Bologna Live Atelier</span>
+        </div>
+        <h1>Today's Artisan Harvest, <br><em class="hero-italic-accent">Rolled Fresh</em> Before Sunrise.</h1>
+        <p class="hero-desc">Daily dough hydrations, active bronze dies, and seasonal cellar arrivals from Bologna and Bari &mdash; tracked live from our wooden tables.</p>
+        <div class="hero-cta-row">
+          <a href="products.html" class="hero-cta-primary">
+            <span>Order Fresh Batch</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#chef-recommendations" class="hero-cta-ghost">Chef's Picks</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-circle-nodes"></i> 3 Active Extrusions</div>
+          <div class="htr-item"><i class="fa-solid fa-temperature-arrow-down"></i> Slow Air-Drying</div>
+          <div class="htr-item"><i class="fa-solid fa-door-open"></i> Deli Counter Open</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/chef_rolling.jpg" alt="Master pastaio rolling golden egg sfoglia"
+              onerror="this.src='images/kitchen.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-wheat-awn"></i>
+              <span>Live Extrusions<br><small>Batch #104 Active</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-circle" style="color:#10b981; font-size:0.5rem;"></i>
+              <span>Rolling Now &bull; Tagliatelle all'Uovo</span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">8<small>kg</small></span>
+              <span class="hsb-label">Batch Left</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">10<small>yolks</small></span>
+              <span class="hsb-label">Per Kilo Flour</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">3<small>min</small></span>
+              <span class="hsb-label">Cook Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: VISUAL PASTA COLLECTION SHOWCASE (SHAPES & GEOMETRIES)
+       ========================================================================= -->
+  <section class="shape-showcase-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-shapes"></i> La Geometria del Gusto</span>
+        <h2>The Architecture of Italian Shapes</h2>
+        <div class="gold-divider"><i class="fa-solid fa-wheat-awn"></i></div>
+        <p>In authentic Italian tradition, pasta geometry is never arbitrary. Each curve, ridge, hollow, and curl is engineered to pair scientifically with specific sauce viscosity.</p>
+      </div>
+
+      <div class="shape-grid">
+        <div class="shape-card">
+          <div class="shape-card-img">
+            <img src="images/prod_tagliatelle.jpg" alt="Golden egg tagliatelle ribbons" onerror="this.src='images/tagliatelle.jpg'">
+          </div>
+          <h3>Tagliatelle</h3>
+          <span class="shape-origin">Emilia-Romagna</span>
+          <p>Wide ribbons with a coarse, porous surface designed to hug rich pork and veal ragù bolognese without letting sauce slide off.</p>
+          <a href="products.html" class="btn btn-outline-navy btn-sm">Explore Ribbon Cut</a>
+        </div>
+
+        <div class="shape-card">
+          <div class="shape-card-img">
+            <img src="images/prod_campanelle.jpg" alt="Ruffled campanelle florets" onerror="this.src='images/prod_pappardelle.jpg'">
+          </div>
+          <h3>Campanelle</h3>
+          <span class="shape-origin">Tuscany</span>
+          <p>Cone-shaped florets with fluted ruffled petals that capture chunky sausage, roasted sweet peppers, and creamy mascarpone sauces.</p>
+          <a href="products.html" class="btn btn-outline-navy btn-sm">Explore Shaped Cut</a>
+        </div>
+
+        <div class="shape-card">
+          <div class="shape-card-img">
+            <img src="images/prod_orecchiette.jpg" alt="Hand-turned orecchiette cups" onerror="this.src='images/prod_gnocchi.jpg'">
+          </div>
+          <h3>Orecchiette</h3>
+          <span class="shape-origin">Puglia</span>
+          <p>Little ear-shaped discs with a smooth concave cup and rough exterior, traditionally tossed with rapini greens, chili, and anchovies.</p>
+          <a href="products.html" class="btn btn-outline-navy btn-sm">Explore Regional Cut</a>
+        </div>
+
+        <div class="shape-card">
+          <div class="shape-card-img">
+            <img src="images/prod_tortelloni.jpg" alt="Hand-pinched ricotta and herb tortelloni" onerror="this.src='images/prod_ravioli.jpg'">
+          </div>
+          <h3>Tortelloni</h3>
+          <span class="shape-origin">Modena</span>
+          <p>Larger than tortellini, filled with fresh cow's milk ricotta, lemon zest, and nutmeg, hand-folded into regal crowned knots.</p>
+          <a href="products.html" class="btn btn-outline-navy btn-sm">Explore Filled Pasta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: SEASONAL ITALIAN SPECIALS (AUTUMN/WINTER TRUFFLE & SQUASH)
+       ========================================================================= -->
+  <section class="seasonal-specials-section">
+    <div class="container">
+      <div class="specials-banner">
+        <div class="specials-text">
+          <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-leaf"></i> Menù di Stagione &bull; Raccolto Autunnale</span>
+          <h2>Seasonal Reserve: Black Truffle &amp; Roasted Squash</h2>
+          <p>
+            Every quarter, Maestro Giancarlo creates micro-batches celebrating Italy's seasonal harvests. This month features Umbrian winter black truffles and sweet Mantuan butternut squash roasted over beechwood coals.
+          </p>
+          <div class="specials-highlight-list">
+            <div class="specials-item">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <div>
+                <h4>Tortelli di Zucca Mantovana</h4>
+                <p>Filled with wood-roasted squash, amaretti crumbs, and aged Mostarda di Cremona for a balance of savory, sweet, and spice.</p>
+              </div>
+            </div>
+            <div class="specials-item">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <div>
+                <h4>Pappardelle al Tartufo Nero</h4>
+                <p>Silky broad ribbons infused with crushed Norcia black truffles and cultured Alpine butter.</p>
+              </div>
+            </div>
+          </div>
+          <a href="products.html" class="btn btn-gold btn-lg">
+            <i class="fa-solid fa-basket-shopping"></i> Reserve Seasonal Pack ($22.00)
+          </a>
+        </div>
+
+        <div class="specials-media">
+          <img src="images/bowl_dish_2.jpg" alt="Plated seasonal pasta dish with truffles and shaved parmigiano" onerror="this.src='images/hero_pasta_bowl.jpg'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: CHEF'S RECOMMENDATIONS & DAILY BOARD
+       ========================================================================= -->
+  <section class="chef-rec-section" id="chef-recommendations">
+    <div class="container chef-rec-grid">
+      <div class="chef-portrait-frame">
+        <img src="images/chef_pastaio.jpg" alt="Master Pastaio Giancarlo dusting semolina over fresh tagliatelle" onerror="this.src='images/chef_rolling.jpg'">
+        <div class="chef-quote-pill">
+          "When you roll sfoglia thin enough to read a love letter through the dough, you have honored the craft."
+          <span style="display:block; font-size:0.75rem; color:var(--golden-yellow); font-style:normal; margin-top:0.3rem;">— Maestro Giancarlo De Luca, Head Pastaio</span>
+        </div>
+      </div>
+
+      <div class="chef-picks-content">
+        <span class="eyebrow"><i class="fa-solid fa-star"></i> Scelte del Maestro</span>
+        <h2>Chef Giancarlo's Personal Daily Picks</h2>
+        <p style="color:var(--text-muted); line-height:1.7; margin-bottom:2rem;">
+          "Customers always ask what I take home to my own family on Tuesday evenings. Here are three pairings that showcase why simplicity reigns supreme in Italian cooking."
+        </p>
+
+        <div class="chef-picks-list">
+          <div class="chef-pick-item">
+            <div class="pick-details">
+              <h4>1. Spaghetti alla Chitarra + Pomodoro al Basilico</h4>
+              <p>Square-cut chitarra strands tossed with sweet crushed San Marzano tomatoes, torn Genovese basil, and a generous drizzle of green Coratina olive oil.</p>
+            </div>
+            <div class="pick-badge-price">
+              <span class="price">$14.00</span>
+              <button class="btn btn-primary btn-sm btn-add-pasta" style="margin-top:0.5rem;"><i class="fa-solid fa-plus"></i> Add</button>
+            </div>
+          </div>
+
+          <div class="chef-pick-item">
+            <div class="pick-details">
+              <h4>2. Agnolotti del Plin + Sugo d'Arrosto</h4>
+              <p>Tiny hand-pinched Piedmontese parcels filled with braised beef and veal, dressed in reduced roast roasting juices and fresh rosemary.</p>
+            </div>
+            <div class="pick-badge-price">
+              <span class="price">$19.50</span>
+              <button class="btn btn-primary btn-sm btn-add-pasta" style="margin-top:0.5rem;"><i class="fa-solid fa-plus"></i> Add</button>
+            </div>
+          </div>
+
+          <div class="chef-pick-item">
+            <div class="pick-details">
+              <h4>3. Gnocchi Soffici + Pesto alla Genovese DOP</h4>
+              <p>Our cloud-like potato gnocchi stirred into mortar-ground Pra' basil pesto, pine nuts, garlic, and 24-month Parmigiano Reggiano.</p>
+            </div>
+            <div class="pick-badge-price">
+              <span class="price">$16.50</span>
+              <button class="btn btn-primary btn-sm btn-add-pasta" style="margin-top:0.5rem;"><i class="fa-solid fa-plus"></i> Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: BEHIND-THE-SCENES PASTA-MAKING STORY
+       ========================================================================= -->
+  <section class="behind-scenes-section">
+    <div class="container">
+      <div class="section-header text-light">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-film"></i> Dietro le Quinte</span>
+        <h2>Behind the Scenes in Our Morning Workshop</h2>
+        <div class="gold-divider"><i class="fa-solid fa-clock"></i></div>
+        <p>A window into the quiet, meticulous dawn rituals that give our handmade pasta its world-renowned texture and golden character.</p>
+      </div>
+
+      <div class="bts-grid">
+        <div class="bts-card">
+          <div class="bts-media">
+            <img src="images/flour_mound.jpg" alt="Mound of golden semolina flour with well of fresh egg yolks" onerror="this.src='images/pasta_machine.jpg'">
+          </div>
+          <div class="bts-body">
+            <h3>05:00 AM &bull; The Flour Volcano</h3>
+            <p>Our dough masters create the traditional fontana (flour well) on raw beechwood tables, cracking deep-orange yolks from local pasture-raised hens directly into the center.</p>
+          </div>
+        </div>
+
+        <div class="bts-card">
+          <div class="bts-media">
+            <img src="images/pasta_machine.jpg" alt="Heavy bronze extruder in action extruding ridged rigatoni" onerror="this.src='images/chef_rolling.jpg'">
+          </div>
+          <div class="bts-body">
+            <h3>06:30 AM &bull; Bronze Extrusion Chamber</h3>
+            <p>Solid bronze dies press coarse dough under controlled pressure. The friction creates microscopic ridges, ensuring the pasta never feels slick or industrially smooth.</p>
+          </div>
+        </div>
+
+        <div class="bts-card">
+          <div class="bts-media">
+            <img src="images/article_storage.jpg" alt="Trays of freshly rolled tagliatelle nests resting in temperature-controlled cooler" onerror="this.src='images/hanging_lamp.jpg'">
+          </div>
+          <div class="bts-body">
+            <h3>07:45 AM &bull; Chilled Hand-Packing</h3>
+            <p>Each nest is coiled by hand, dusted with coarse semola to prevent sticking, and placed into breathable kraft trays ready for morning shoppers and local trattoria orders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: ITALIAN DELI INGREDIENTS & CHARCUTERIE PANTRY
+       ========================================================================= -->
+  <section class="deli-pantry-section">
+    <div class="container pantry-showcase">
+      <div class="pantry-media">
+        <img src="images/deli_charcuterie.jpg" alt="Authentic Italian deli counter with cured prosciutti, mortadella, aged cheese, and bread" onerror="this.src='images/kitchen.jpg'">
+      </div>
+
+      <div class="pantry-details">
+        <span class="eyebrow"><i class="fa-solid fa-store"></i> Salumeria &amp; Formaggeria</span>
+        <h2>The Complete Italian Deli Experience</h2>
+        <p>
+          A great plate of pasta deserves an equally extraordinary antipasto. Our deli counter is stocked with artisanal charcuterie sliced paper-thin to order, aged sheep and cow's milk cheeses, and house-marinated delicacies.
+        </p>
+
+        <div class="pantry-tags-grid">
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Prosciutto di Parma D.O.P. (24M)
+          </div>
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Mortadella Bologna IGP con Pistacchi
+          </div>
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Pecorino Romano Fulvi di Roma
+          </div>
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Burrata di Andria Hand-Filled
+          </div>
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Castelvetrano Green Olives
+          </div>
+          <div class="pantry-tag-item">
+            <i class="fa-solid fa-certificate"></i> Fresh Rosemary &amp; Sea Salt Focaccia
+          </div>
+        </div>
+
+        <a href="products.html" class="btn btn-navy">
+          <i class="fa-solid fa-cheese"></i> View All Deli Cheeses &amp; Meats
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CATERING SERVICE HIGHLIGHT & FEAST PACKAGES
+       ========================================================================= -->
+  <section class="home2-catering-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-champagne-glasses"></i> Banchetti per Occasioni Speciali</span>
+        <h2>Catering for Gatherings of Every Scale</h2>
+        <div class="gold-divider"><i class="fa-solid fa-utensils"></i></div>
+        <p>Let our chefs take care of the cooking. From intimate Sunday family feasts to grand 150-guest corporate banquets, our catering packages deliver hot, unforgettable Italian food.</p>
+      </div>
+
+      <div class="catering-split-cards">
+        <div class="catering-tier-card">
+          <div class="tier-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
+          <h3>Family Sunday Table</h3>
+          <span class="tier-serves">Serves 8 – 12 Guests &bull; $260</span>
+          <p>Full pan of deep-dish lasagna al forno or baked ziti, mixed green insalata della casa, whole rosemary focaccia, and fresh cannoli dessert box.</p>
+          <a href="catering.html" class="btn btn-outline-navy btn-sm" style="margin-top:auto;">Reserve Package</a>
+        </div>
+
+        <div class="catering-tier-card featured">
+          <span class="tier-badge">Most Popular</span>
+          <div class="tier-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>Classic Italian Feast</h3>
+          <span class="tier-serves">Serves 20 – 35 Guests &bull; $680</span>
+          <p>Two pasta platters (Tagliatelle al Ragù &amp; Ricotta Ravioli), large antipasti misti charcuterie board, Caprese salad, hot focaccia, and tiramisù trays.</p>
+          <a href="catering.html" class="btn btn-gold btn-sm" style="margin-top:auto;">Reserve Package</a>
+        </div>
+
+        <div class="catering-tier-card">
+          <div class="tier-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Executive Corporate Pranzo</h3>
+          <span class="tier-serves">Serves 40 – 80 Guests &bull; Custom</span>
+          <p>Full chafing buffet setup, three artisan pasta options, seasonal roast vegetables, charcuterie bar, sparkling San Pellegrino waters, and event staff support.</p>
+          <a href="catering.html" class="btn btn-outline-navy btn-sm" style="margin-top:auto;">Request Custom Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: CUSTOMER REVIEWS & COMMUNITY FEEDBACK
+       ========================================================================= -->
+  <section class="home2-reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-heart"></i> Amore per la Bottega</span>
+        <h2>What Our Community Says</h2>
+        <div class="gold-divider"><i class="fa-solid fa-star"></i></div>
+        <p>Rated 4.9 / 5 Stars across 650+ verified local neighborhood reviews.</p>
+      </div>
+
+      <div class="reviews-strip">
+        <div class="review-mini-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The squid ink fettuccine with garlic prawns has become our Friday date night ritual. Nothing comes close to this freshness."</p>
+          <strong>— David K., Food Blogger</strong>
+        </div>
+
+        <div class="review-mini-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The catering platter for our office team was delivered hot, on time, and completely devoured within 20 minutes."</p>
+          <strong>— Sarah L., Studio Producer</strong>
+        </div>
+
+        <div class="review-mini-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The cheese counter alone is worth a visit. Aged Parmigiano broken with the almond knife right in front of you!"</p>
+          <strong>— Lorenzo G., Local Chef</strong>
+        </div>
+
+        <div class="review-mini-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Authentic Italian hospitality. Maestro Giancarlo took the time to explain how to properly salt pasta water. 10/10!"</p>
+          <strong>— Maria T., Home Cook</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 9: STRONG ENQUIRY & ORDERING CALL TO ACTION
+       ========================================================================= -->
+  <section class="home2-cta-strip">
+    <div class="container text-center" style="max-width: 820px; margin: 0 auto;">
+      <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-bell-concierge"></i> Ordina Oggi Stesso</span>
+      <h2 style="color:var(--pure-white); font-size:clamp(2.2rem, 3.5vw, 3rem); margin-bottom:1.25rem;">
+        Taste Fresh Handmade Pasta Tonight
+      </h2>
+      <p style="color:rgba(255,255,255,0.85); font-size:1.15rem; margin-bottom:2.25rem; line-height:1.7;">
+        Pick up fresh pasta and house-simmered sauces at our market deli counter, or reserve custom catering trays for your upcoming event.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
+        <a href="products.html" class="btn btn-gold btn-lg">
+          <i class="fa-solid fa-basket-shopping"></i> Browse Online Pasta Shop
+        </a>
+        <a href="catering.html" class="btn btn-outline-white btn-lg">
+          <i class="fa-solid fa-calculator"></i> Calculate Catering Estimate
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       UNIVERSAL FOOTER (CONSISTENT ACROSS ALL 7 PAGES)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with 100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              Order Counter: <a href="tel:+15558902123">(555) 890-2123</a><br>
+              Catering Hotline: <a href="tel:+15558902124">(555) 890-2124</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              Mon – Fri: 8:00 AM – 7:30 PM<br>
+              Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 Granoza LLC. All Rights Reserved. Crafted with Italian Passion.
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Food Allergen Info</a>
+          <a href="contact.html">Visit Deli</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=12"></script>
+</body>
+</html>
