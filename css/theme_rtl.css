@@ -203,49 +203,80 @@ html[data-theme="dark"] .mobile-cart-badge-pill {
   .d-none-mobile {
     display: none !important;
   }
-}
 
-@media (max-width: 768px) {
-  .nav-actions {
-    gap: 0.4rem;
+  /* Hide cart icon from header on mobile & tablet view */
+  .header .cart-toggle-btn,
+  .nav-actions .cart-toggle-btn {
+    display: none !important;
   }
+
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+  }
+
   .theme-toggle-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 0.85rem;
-  }
-  .rtl-toggle-btn {
-    height: 34px;
-    padding: 0 0.55rem;
-    font-size: 0.72rem;
-  }
-  .cart-toggle-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 0.85rem;
-  }
-  .hamburger-btn {
-    width: 42px !important;
-    min-width: 42px !important;
-    height: 40px !important;
-    min-height: 40px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
     padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
   }
-}
 
-@media (max-width: 420px) {
-  .nav-actions {
-    gap: 0.3rem;
+  .rtl-toggle-btn {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.92rem !important;
   }
+
   .rtl-toggle-btn .rtl-text {
     display: none !important;
   }
-  .rtl-toggle-btn {
-    width: 34px;
-    padding: 0;
-    justify-content: center;
+
+  .hamburger-btn {
+    width: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  .hamburger-line {
+    width: 20px !important;
+    height: 2px !important;
+    margin: 0 auto !important;
   }
 }
+
 
 
 /* ==========================================================================

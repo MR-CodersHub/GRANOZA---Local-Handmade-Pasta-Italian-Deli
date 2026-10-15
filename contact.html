@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=18">
 <!-- Theme & RTL Stylesheet -->
-  <link rel="stylesheet" href="css/theme_rtl.css?v=12">
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
 
   <!-- Immediate Theme & RTL Init Script (prevents flash) -->
   <script>
@@ -101,7 +101,7 @@
           <i class="fa-solid fa-right-left"></i>
           <span class="rtl-text">RTL</span>
         </button>
-<button type="button" class="cart-toggle-btn" aria-label="Open Cart Order Drawer">
+<button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
           <i class="fa-solid fa-basket-shopping"></i>
           <span class="cart-badge">0</span>
         </button>
@@ -132,11 +132,26 @@
           <i class="fa-solid fa-right-left"></i>
           <span class="rtl-text">RTL</span>
         </button>
+      
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger" aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
       </div>
 
       <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
     </div>
     <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping" style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
       <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
       <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i class="fa-solid fa-angle-right"></i></a>
       <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i class="fa-solid fa-angle-right"></i></a>
@@ -632,6 +647,6 @@
   </button>
 
   <!-- Master JavaScript File -->
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=18"></script>
 </body>
 </html>
