@@ -2437,3 +2437,25 @@ html[dir="rtl"] .back-to-top {
   right: auto !important;
   left: 1.5rem !important;
 }
+
+/* Utility Pages RTL Rules */
+html[dir="rtl"] .eqr-card,
+html[dir="rtl"] .cs-teaser-card,
+html[dir="rtl"] .maint-progress-card {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .mpc-task-item span,
+html[dir="rtl"] .eqr-card {
+  flex-direction: row-reverse;
+}
+
+/* Utility Pages Dark Mode */
+html[data-theme="dark"] .error-quick-recommendations,
+html[data-theme="dark"] .maint-progress-card,
+html[data-theme="dark"] .countdown-stat-box,
+html[data-theme="dark"] .cs-teaser-card {
+  background: rgba(5, 13, 34, 0.88) !important;
+  border-color: rgba(232, 184, 63, 0.35) !important;
+}
+

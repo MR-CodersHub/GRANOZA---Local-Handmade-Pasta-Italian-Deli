@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Coming Soon — Something extraordinary is kneading in the Granoza kitchen. Spring truffle agnolotti, artisanal bronze dies, and private pasta masterclasses are arriving soon.">
+  <meta name="keywords" content="Granoza coming soon, artisan pasta drop, seasonal spring italian pasta, truffle ravioli">
+  <title>Coming Soon — New Seasonal Creations in the Oven | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-sparkles" style="color:var(--golden-yellow);"></i>
+          <span>Seasonal Release: <strong>Spring 2026 Reserve Collection in Preparation</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions (Theme, RTL, Cart & Hamburger) -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger"
+          aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping"
+            style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <a href="catering.html" class="btn btn-gold btn-block checkout-btn">
+        <span>Proceed to Counter Order</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       COMING SOON HERO SECTION WITH LIVE COUNTDOWN
+       ========================================================================= -->
+  <main>
+    <section class="utility-hero-section">
+      <div class="utility-bg-overlay" style="background-image: url('images/chef_rolling.jpg');"></div>
+      <div class="utility-bg-gradient"></div>
+
+      <div class="container utility-content-wrap">
+        <span class="eyebrow eyebrow-gold">
+          <i class="fa-solid fa-sparkles"></i> Nuove Creazioni &bull; Spring Drop 2026
+        </span>
+
+        <h1 class="utility-heading">
+          Something Extraordinary is <em>Kneading in Our Kitchen</em>
+        </h1>
+
+        <p class="utility-desc">
+          Our master sfogline are calibrating new hand-carved solid bronze dies, sourcing Alba white truffles, and crafting private pasta masterclass curriculums. Reserve your first taste before public release.
+        </p>
+
+        <!-- Live Countdown Clock -->
+        <div class="countdown-clock-grid" id="launchCountdown">
+          <div class="countdown-stat-box">
+            <span class="countdown-num" id="cdDays">18</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-stat-box">
+            <span class="countdown-num" id="cdHours">09</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-stat-box">
+            <span class="countdown-num" id="cdMinutes">42</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-stat-box">
+            <span class="countdown-num" id="cdSeconds">15</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+
+        <!-- VIP Early Access Notification Form -->
+        <div class="coming-soon-form-wrap">
+          <form class="cs-form" id="comingSoonNotifyForm">
+            <input type="email" class="cs-input" placeholder="Enter your email for first-batch invitation..." required
+              aria-label="Email address for launch notification">
+            <button type="submit" class="cs-submit-btn">
+              <i class="fa-solid fa-bell"></i> Notify Me First
+            </button>
+          </form>
+          <div id="csFeedbackToast" style="display:none; margin-top:1rem; color:var(--golden-yellow); font-size:0.92rem; font-weight:600;">
+            <i class="fa-solid fa-check-circle"></i> Grazie! You are on the VIP guest list for our seasonal premiere.
+          </div>
+        </div>
+
+        <div class="utility-cta-row">
+          <a href="index.html" class="btn btn-outline-white">
+            <i class="fa-solid fa-house"></i> Explore Current Bottega
+          </a>
+          <a href="products.html" class="btn btn-gold">
+            <i class="fa-solid fa-basket-shopping"></i> Shop Today's Menu
+          </a>
+        </div>
+
+        <!-- 3 Feature Teasers -->
+        <div class="coming-soon-teasers-grid">
+          <div class="cs-teaser-card">
+            <div class="cs-teaser-icon"><i class="fa-solid fa-gem"></i></div>
+            <h4>Alba Truffle Agnolotti</h4>
+            <p>Folded with whole pasture egg yolks, creamy sweet mascarpone, and fresh shaved white truffles from Piedmont.</p>
+          </div>
+          <div class="cs-teaser-card">
+            <div class="cs-teaser-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <h4>Artisanal Radiatori Dies</h4>
+            <p>New multi-tiered ruffled pasta shape extruded with heavy bronze dies to catch braised game and porcini cream.</p>
+          </div>
+          <div class="cs-teaser-card">
+            <div class="cs-teaser-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h4>Saturday Masterclass</h4>
+            <p>Private sfoglia rolling workshops around our 10-seat antique beechwood butcher block with Maestro Giancarlo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with
+          100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pasta Varieties -->
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Hours -->
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza Pastificio</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Order Desk:</strong><br>
+              <a href="tel:+15558902123">(555) 890-2123</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Direct Inquiries:</strong><br>
+              <a href="mailto:ciao@granozapasta.com">ciao@granozapasta.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-Footer / Copyright Bar -->
+    <div class="sub-footer">
+      <div class="container sub-footer-inner">
+        <p>&copy; 2026 Granoza Pastificio &bull; Handcrafted in Bologna &bull; All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="index.html">Privacy Policy</a>
+          <a href="index.html">Terms of Service</a>
+          <a href="contact.html">Store Locator</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Scroll Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+
+  <!-- Countdown Timer & VIP Form Script -->
+  <script>
+    (function () {
+      // Countdown Timer Logic
+      var launchDate = new Date();
+      launchDate.setDate(launchDate.getDate() + 18);
+      launchDate.setHours(launchDate.getHours() + 9);
+      launchDate.setMinutes(launchDate.getMinutes() + 42);
+
+      function updateTimer() {
+        var now = new Date().getTime();
+        var distance = launchDate.getTime() - now;
+
+        if (distance < 0) {
+          distance = 0;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        var daysEl = document.getElementById('cdDays');
+        var hoursEl = document.getElementById('cdHours');
+        var minsEl = document.getElementById('cdMinutes');
+        var secsEl = document.getElementById('cdSeconds');
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minsEl) minsEl.textContent = String(minutes).padStart(2, '0');
+        if (secsEl) secsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      setInterval(updateTimer, 1000);
+      updateTimer();
+
+      // Form Handling
+      var form = document.getElementById('comingSoonNotifyForm');
+      var toast = document.getElementById('csFeedbackToast');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var btn = form.querySelector('button');
+          if (btn) {
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Reserving...';
+            setTimeout(function () {
+              form.style.display = 'none';
+              if (toast) toast.style.display = 'block';
+            }, 700);
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

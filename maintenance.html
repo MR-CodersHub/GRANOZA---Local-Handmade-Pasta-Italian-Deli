@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Under Maintenance — Granoza's online bottega is currently undergoing scheduled maintenance and equipment polishing. We will return shortly with fresh daily batches.">
+  <meta name="keywords" content="Granoza maintenance, scheduled maintenance, italian pasta atelier tuning">
+  <title>Under Maintenance — Polishing the Bronze Dies | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-wrench" style="color:var(--golden-yellow);"></i>
+          <span>Scheduled Maintenance: <strong>Counter Reopening Shortly at 12:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>Urgent Phone Orders: <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions (Theme, RTL, Cart & Hamburger) -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="tel:+15558902123" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-phone"></i> Call Deli
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger"
+          aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping"
+            style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="tel:+15558902123" class="btn btn-gold btn-sm" style="width:100%;">
+        <i class="fa-solid fa-phone"></i> Call Kitchen Directly
+      </a>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       UNDER MAINTENANCE HERO SECTION WITH LIVE STATUS
+       ========================================================================= -->
+  <main>
+    <section class="utility-hero-section">
+      <div class="utility-bg-overlay" style="background-image: url('images/kitchen.jpg');"></div>
+      <div class="utility-bg-gradient"></div>
+
+      <div class="container utility-content-wrap">
+        <div class="status-pulsing-badge">
+          <span class="pulse-led"></span>
+          <span>Kitchen Tuning &amp; Press Calibration in Progress</span>
+        </div>
+
+        <h1 class="utility-heading">
+          Polishing the Bronze Dies &amp; <em>Refreshing the Counter</em>
+        </h1>
+
+        <p class="utility-desc">
+          We are conducting scheduled equipment maintenance on our digital ordering system and synchronizing today's farm-fresh egg and semolina shipments. We will be back online shortly.
+        </p>
+
+        <!-- Live Progress & Tasks Card -->
+        <div class="maint-progress-card">
+          <div class="mpc-header">
+            <strong>System Calibration Status</strong>
+            <span id="maintPercent">85% Complete</span>
+          </div>
+          <div class="mpc-progress-track">
+            <div class="mpc-progress-bar"></div>
+          </div>
+          <div class="mpc-tasks-list">
+            <div class="mpc-task-item">
+              <span><i class="fa-solid fa-check" style="color:#2ecc71;"></i> Steam cleaning vintage Treviso extruder press</span>
+              <span class="mpc-task-status status-done">Completed</span>
+            </div>
+            <div class="mpc-task-item">
+              <span><i class="fa-solid fa-check" style="color:#2ecc71;"></i> Restocking organic Altamura durum semolina bins</span>
+              <span class="mpc-task-status status-done">Completed</span>
+            </div>
+            <div class="mpc-task-item">
+              <span><i class="fa-solid fa-circle-notch fa-spin" style="color:var(--golden-yellow);"></i> Synchronizing daily deli counter batch inventory</span>
+              <span class="mpc-task-status status-prog">In Progress</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency & Immediate Order Contacts -->
+        <div class="utility-cta-row">
+          <a href="tel:+15558902123" class="btn btn-gold">
+            <i class="fa-solid fa-phone"></i> Call Deli Desk: (555) 890-2123
+          </a>
+          <button type="button" class="btn btn-outline-white" id="checkStatusBtn">
+            <i class="fa-solid fa-rotate"></i> Check System Status
+          </button>
+          <a href="mailto:catering@granozapasta.com" class="btn btn-outline-white">
+            <i class="fa-solid fa-envelope"></i> Email Catering Team
+          </a>
+        </div>
+
+        <div id="maintStatusNotice" style="display:none; margin-top:-1rem; margin-bottom:2rem; color:var(--golden-yellow); font-size:0.92rem; font-weight:600;">
+          <i class="fa-solid fa-clock-rotate-left"></i> Calibration on schedule &mdash; estimated return in 20 minutes!
+        </div>
+
+        <div style="font-size:0.85rem; color:rgba(255,255,255,0.7); max-width:500px; margin:0 auto;">
+          <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> In-Person Deli Counter is Open Mon–Sat 8:00 AM – 7:30 PM</p>
+          <p><i class="fa-solid fa-location-dot" style="color:var(--golden-yellow);"></i> Via della Spiga 24, Artisanal Market District</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with
+          100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pasta Varieties -->
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Hours -->
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza Pastificio</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Order Desk:</strong><br>
+              <a href="tel:+15558902123">(555) 890-2123</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Direct Inquiries:</strong><br>
+              <a href="mailto:ciao@granozapasta.com">ciao@granozapasta.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-Footer / Copyright Bar -->
+    <div class="sub-footer">
+      <div class="container sub-footer-inner">
+        <p>&copy; 2026 Granoza Pastificio &bull; Handcrafted in Bologna &bull; All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="index.html">Privacy Policy</a>
+          <a href="index.html">Terms of Service</a>
+          <a href="contact.html">Store Locator</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Scroll Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+
+  <!-- Check Status Simulation Script -->
+  <script>
+    (function () {
+      var checkBtn = document.getElementById('checkStatusBtn');
+      var notice = document.getElementById('maintStatusNotice');
+      if (checkBtn) {
+        checkBtn.addEventListener('click', function () {
+          var origHTML = checkBtn.innerHTML;
+          checkBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Checking Servers...';
+          setTimeout(function () {
+            checkBtn.innerHTML = '<i class="fa-solid fa-check"></i> Status Verified';
+            if (notice) notice.style.display = 'block';
+            setTimeout(function () {
+              checkBtn.innerHTML = origHTML;
+            }, 3000);
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
