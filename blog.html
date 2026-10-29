@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Granoza Culinary Journal — Master the secrets of Italian pasta making, starch water emulsions, authentic Roman carbonara, and bronze die science.">
+  <meta name="keywords"
+    content="Granoza, pasta making guide, italian recipes blog, how to make pasta dough, pasta water emulsion, cacio e pepe recipe, bronze extruded pasta guide">
+  <title>Culinary Journal &amp; Pasta Masterclass | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Theme & RTL Stylesheet -->
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Weekly Italian Culinary Journal &bull; Written by Our Master Pastaio</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Deli Counter: <strong>8:00 AM — 7:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger" aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping" style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link active"><span>Culinary Journal</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2123</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-note">Freshly made pasta orders are chilled and boxed in insulated thermal sleeves with cooking
+        instructions.</p>
+      <button type="button" class="btn btn-primary btn-cart-checkout" style="width:100%;">
+        <i class="fa-solid fa-circle-check"></i> Proceed to Order Reservation
+      </button>
+      <button type="button" class="btn btn-outline-navy btn-sm"
+        onclick="showToast('Your basket has been saved for local pickup!','info')" style="width:100%;">
+        Save For Later
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT (UNIFIED HEIGHT: 500PX)
+       ========================================================================= -->
+  <section class="page-hero" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/hero_blog.jpg" class="hero-bg-img" alt="Culinary journal and pasta making recipes"
+        onerror="this.src='images/article_emulsion.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Cucina &bull; Techniques &amp; Recipes</span>
+        </div>
+        <h1>The Pastaio's Journal &amp; <br><em class="hero-italic-accent">Culinary Guides</em></h1>
+        <p class="hero-desc">Masterclasses in ancestral sfoglia rolling, emulsification science, trattoria sauce
+          pairings, and seasonal Emilian secrets straight from our kitchen table.</p>
+        <div class="hero-cta-row">
+          <a href="#featured-article" class="hero-cta-primary">
+            <span>Read Masterclass</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#articles-grid" class="hero-cta-ghost">All Guides</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-user-pen"></i> Master Pastaio Authored</div>
+          <div class="htr-item"><i class="fa-solid fa-fire"></i> Trattoria Secrets</div>
+          <div class="htr-item"><i class="fa-solid fa-book-open"></i> Weekly Dispatch</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/article_emulsion.jpg" alt="Chef tossing fresh pasta in pan"
+              onerror="this.src='images/hero_noodle_lift.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-fire"></i>
+              <span>Featured Masterclass<br><small>Starch Emulsion Science</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-lightbulb" style="color:var(--golden-yellow);"></i>
+              <span>Liquid Gold Secret</span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">10<small>g</small></span>
+              <span class="hsb-label">Salt Ratio</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">0<small>%</small></span>
+              <span class="hsb-label">Cream Rule</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">4<small>min</small></span>
+              <span class="hsb-label">Al Dente Boil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Cover Article Card -->
+  <section class="blog-featured-section">
+    <div class="container">
+      <article class="featured-article-card">
+        <div class="featured-article-media">
+          <img src="images/article_emulsion.jpg" alt="Chef tossing fresh pasta in pan with starchy emulsified water"
+            onerror="this.src='images/hero_noodle_lift.jpg'">
+        </div>
+        <div class="featured-article-body">
+          <div class="article-badge-row">
+            <span class="badge badge-gold">Masterclass</span>
+            <span class="badge badge-navy">Culinary Science</span>
+          </div>
+          <h2>The Secret to Silky Emulsion: Why Pasta Cooking Water is Liquid Gold</h2>
+          <p>
+            Never pour your pasta water down the drain! Learn how starch molecules released during boiling act as
+            natural emulsifiers, binding fat and olive oil into glossy, restaurant-caliber coatings without heavy cream.
+          </p>
+          <div class="author-meta">
+            <i class="fa-solid fa-user-pen" style="color:var(--golden-yellow);"></i>
+            <span>By <strong>Maestro Giancarlo</strong> &bull; 6 min read &bull; October 2026</span>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary btn-read-article">
+              Read Complete Guide <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: INTERACTIVE CATEGORY FILTER STRIP
+       ========================================================================= -->
+  <div class="blog-categories-strip">
+    <div class="container text-center">
+      <div class="filter-pills-row">
+        <button type="button" class="filter-btn blog-filter-btn active" data-category="all">
+          <i class="fa-solid fa-layer-group"></i> All Articles (9)
+        </button>
+        <button type="button" class="filter-btn blog-filter-btn" data-category="guides">
+          <i class="fa-solid fa-book"></i> Pasta Guides (3)
+        </button>
+        <button type="button" class="filter-btn blog-filter-btn" data-category="recipes">
+          <i class="fa-solid fa-utensils"></i> Authentic Recipes (3)
+        </button>
+        <button type="button" class="filter-btn blog-filter-btn" data-category="stories">
+          <i class="fa-solid fa-landmark"></i> Italian Stories (3)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTIONS 3, 4, 5, 6, 7: ARTICLES GRID BY TOPIC
+       ========================================================================= -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-newspaper"></i> Articoli Recenti</span>
+        <h2>Explore Cooking Guides, Stories &amp; Recipes</h2>
+        <div class="gold-divider"><i class="fa-solid fa-star"></i></div>
+        <p>Click any article card below to read the comprehensive step-by-step masterclass inside our interactive reader
+          modal.</p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Article 1: Bronze Dies Science (Guides) -->
+        <article class="blog-card" data-category="guides">
+          <div class="blog-card-media">
+            <img src="images/article_bronze.jpg" alt="Antique bronze extrusion dies with raw pasta"
+              onerror="this.src='images/pasta_machine.jpg'">
+            <span class="badge badge-gold blog-category-tag">Technique</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              <span>&bull;</span>
+              <span>Technique</span>
+            </div>
+            <h3>Bronze Dies vs. Teflon Extrusion: Why Surface Texture Matters</h3>
+            <p>Why does commercial supermarket pasta look slick and shiny, while artisan pasta feels like chalky velvet?
+              The physics of solid bronze dies explained.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Giancarlo De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: The Salt Water Rule (Guides) -->
+        <article class="blog-card" data-category="guides">
+          <div class="blog-card-media">
+            <img src="images/article_salt.jpg" alt="Coarse Mediterranean sea salt falling into boiling pasta water"
+              onerror="this.src='images/flour_mound.jpg'">
+            <span class="badge badge-navy blog-category-tag">Fundamentals</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+              <span>&bull;</span>
+              <span>Fundamentals</span>
+            </div>
+            <h3>Salting the Pot: The 10 Grams per Liter Mediterranean Doctrine</h3>
+            <p>Under-salted pasta water results in bland noodles that no amount of finishing salt on top can salvage.
+              Learn the exact salinity balance of Sicilian sea water.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Rosa De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Sealing Ravioli (Guides) -->
+        <article class="blog-card" data-category="guides">
+          <div class="blog-card-media">
+            <img src="images/article_sealing.jpg" alt="Hands crimping ricotta ravioli sheets to expel air pockets"
+              onerror="this.src='images/chef_rolling.jpg'">
+            <span class="badge badge-gold blog-category-tag">Craftsmanship</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+              <span>&bull;</span>
+              <span>Craftsmanship</span>
+            </div>
+            <h3>The Sfoglina's Touch: Sealing Filled Pasta Without Air Pockets</h3>
+            <p>Air pockets inside ravioli expand in boiling water, causing them to burst. Master the gentle thumb-press
+              roll that expels air before crimping edges.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Rosa De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4: Roman Carbonara (Recipes) -->
+        <article class="blog-card" data-category="recipes">
+          <div class="blog-card-media">
+            <img src="images/recipe_carbonara.jpg" alt="Spaghetti Carbonara in white ceramic bowl"
+              onerror="this.src='images/bowl_dish_3.jpg'">
+            <span class="badge badge-tomato blog-category-tag">Authentic Recipe</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+              <span>&bull;</span>
+              <span>Roman Cuisine</span>
+            </div>
+            <h3>Authentic Roman Carbonara: Why Cream is Strictly Forbidden</h3>
+            <p>The pure Roman discipline uses only four ingredients: guanciale, pasture egg yolks, Pecorino Romano, and
+              toasted black pepper. How to avoid scrambling yolks.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Giancarlo De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Recipe <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5: 4-Hour Bolognese Ragù (Recipes) -->
+        <article class="blog-card" data-category="recipes">
+          <div class="blog-card-media">
+            <img src="images/recipe_bolognese.jpg" alt="Copper pot with slow simmering Bolognese meat sauce"
+              onerror="this.src='images/bowl_dish_1.jpg'">
+            <span class="badge badge-tomato blog-category-tag">Emilian Classic</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+              <span>&bull;</span>
+              <span>Emilian Heritage</span>
+            </div>
+            <h3>The 4-Hour Simmer: Nonna's Sacred Bolognese Ragù Discipline</h3>
+            <p>How braising with whole milk tenderizes minced pork and beef before adding wine and tomato paste. The
+              official recipe registered at the Bologna Chamber of Commerce.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Giancarlo De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Recipe <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6: Cacio e Pepe Chemistry (Recipes) -->
+        <article class="blog-card" data-category="recipes">
+          <div class="blog-card-media">
+            <img src="images/hero_bowl.jpg" alt="Creamy Cacio e Pepe in dark plate with black pepper"
+              onerror="this.src='images/prod_spaghetti.jpg'">
+            <span class="badge badge-tomato blog-category-tag">Food Science</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              <span>&bull;</span>
+              <span>Chemistry</span>
+            </div>
+            <h3>The Science of Cacio e Pepe: Avoiding the Cheese Clump Disaster</h3>
+            <p>Why does pecorino turn into a rubbery clump when water is too hot? How starch stabilizes the emulsion
+              between water and melted sheep's milk proteins.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Giancarlo De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Recipe <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 7: Squid Ink Lore (Stories) -->
+        <article class="blog-card" data-category="stories">
+          <div class="blog-card-media">
+            <img src="images/article_squid.jpg" alt="Dark squid ink pasta ribbons drying on wooden rack"
+              onerror="this.src='images/specialty_squid_ink.jpg'">
+            <span class="badge badge-navy blog-category-tag">Venetian Lore</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              <span>&bull;</span>
+              <span>Coastal History</span>
+            </div>
+            <h3>From Venetian Fishermen to Modern Luxury: The Story of Squid Ink</h3>
+            <p>Once considered a humble zero-waste necessity in the Venetian lagoon, nero di seppia transformed into one
+              of Italy's most visually striking culinary treasures.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Matteo Conti</span>
+              <a href="#" class="read-link btn-read-article">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 8: Nonna Rosa's Sunday Rituals (Stories) -->
+        <article class="blog-card" data-category="stories">
+          <div class="blog-card-media">
+            <img src="images/italian_dining.jpg" alt="Large Italian family gathered around long wooden dining table"
+              onerror="this.src='images/hero_about.jpg'">
+            <span class="badge badge-gold blog-category-tag">Memoir</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+              <span>&bull;</span>
+              <span>Family Memoir</span>
+            </div>
+            <h3>Sunday Morning at 7:00 AM: The Wooden Table in Bologna</h3>
+            <p>A personal memoir of flour dust, ticking grandfather clocks, and the rhythmic thump of rolling pins that
+              made Sunday dinner the holy center of the week.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Rosa De Luca</span>
+              <a href="#" class="read-link btn-read-article">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 9: Storage Wisdom (Stories / Guides) -->
+        <article class="blog-card" data-category="stories">
+          <div class="blog-card-media">
+            <img src="images/article_storage.jpg" alt="Fresh pasta nests stored on breathable semolina dusted parchment"
+              onerror="this.src='images/hanging_lamp.jpg'">
+            <span class="badge badge-navy blog-category-tag">Home Pantry</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-info">
+              <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+              <span>&bull;</span>
+              <span>Storage Tips</span>
+            </div>
+            <h3>The Fresh Pasta Storage Compass: Fridge, Freezer &amp; Drying Racks</h3>
+            <p>Step-by-step preservation methods to keep your fresh egg pasta silky for up to 3 days in the
+              refrigerator, or preserve bite for 2 months in the home freezer.</p>
+            <div class="blog-card-footer">
+              <span style="font-size:0.78rem; color:var(--text-muted);">Matteo Conti</span>
+              <a href="#" class="read-link btn-read-article">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: NEWSLETTER SUBSCRIPTION INTEGRATION
+       ========================================================================= -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-newspaper"></i> La Lettera del Sabato</span>
+        <h2>Never Miss a Seasonal Recipe or Batch Drop</h2>
+        <p>Join 3,500+ local home cooks. Every Saturday morning we send an authentic recipe guide, wine pairing notes,
+          and the schedule of upcoming specialty pasta dies.</p>
+        <form class="newsletter-form" id="blogNewsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Enter your email for the Saturday dispatch..."
+            required aria-label="Email address for culinary dispatch">
+          <button type="submit" class="btn btn-gold">
+            <i class="fa-solid fa-paper-plane"></i> Join Masterclass Letter
+          </button>
+        </form>
+        <div class="newsletter-fineprint">
+          Zero marketing spam. Only artisanal recipes, cooking chemistry, and fresh deli notices. Unsubscribe anytime.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       UNIVERSAL FOOTER (CONSISTENT ACROSS ALL 7 PAGES)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with
+          100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              Order Counter: <a href="tel:+15558902123">(555) 890-2123</a><br>
+              Catering Hotline: <a href="tel:+15558902124">(555) 890-2124</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              Mon – Fri: 8:00 AM – 7:30 PM<br>
+              Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 Granoza LLC. All Rights Reserved. Crafted with Italian Passion.
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Food Allergen Info</a>
+          <a href="contact.html">Visit Deli</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+</body>
+
+</html>

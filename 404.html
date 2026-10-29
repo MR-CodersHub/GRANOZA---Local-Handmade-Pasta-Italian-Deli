@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="404 Page Not Found — The recipe or page you are looking for has rolled off the pasta board. Return to Granoza's artisanal pasta atelier, fresh deli, or catering menu.">
+  <meta name="keywords" content="Granoza 404, page not found, italian pasta deli, bologna handmade pasta">
+  <title>404 — Page Lost in the Pantry | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-wheat-awn"></i>
+          <span>Today's Batch: <strong>Fresh Pappardelle & Porcini Ravioli</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Daily Deli Counter: <strong>8:00 AM — 7:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions (Theme, RTL, Cart & Hamburger) -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout"
+          title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger"
+          aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping"
+            style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i
+          class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2123</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-tax-note">Fresh pasta packaged in insulated thermal chiller boxes with ice packs.</p>
+      <a href="catering.html" class="btn btn-gold btn-block checkout-btn">
+        <span>Proceed to Counter Order</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       404 HERO SECTION: LOST IN THE PANTRY
+       ========================================================================= -->
+  <main>
+    <section class="utility-hero-section">
+      <div class="utility-bg-overlay" style="background-image: url('images/flour_mound.jpg');"></div>
+      <div class="utility-bg-gradient"></div>
+
+      <div class="container utility-content-wrap">
+        <span class="eyebrow eyebrow-gold">
+          <i class="fa-solid fa-wheat-awn"></i> La Pagina Non Esiste &bull; Error 404
+        </span>
+
+        <div class="error-glitch-code">
+          <span>4</span>
+          <i class="fa-solid fa-plate-wheat error-pasta-icon" title="Pasta Plate"></i>
+          <span>4</span>
+        </div>
+
+        <h1 class="utility-heading">
+          Lost in the Pantry? Looks Like This Cut <em>Rolled Off the Board</em>
+        </h1>
+
+        <p class="utility-desc">
+          The recipe, article, or page you are looking for has been retired, kneaded into a new batch, or never existed in our bottega. Don't worry — our kitchen has trays of fresh handmade pasta waiting for you.
+        </p>
+
+        <div class="utility-cta-row">
+          <a href="index.html" class="btn btn-gold">
+            <i class="fa-solid fa-house"></i> Return to Bottega Home
+          </a>
+          <a href="products.html" class="btn btn-primary">
+            <i class="fa-solid fa-basket-shopping"></i> Shop Fresh Pasta Cuts
+          </a>
+          <a href="contact.html" class="btn btn-outline-white">
+            <i class="fa-solid fa-location-dot"></i> Visit Our Deli
+          </a>
+        </div>
+
+        <!-- Quick Recommendations -->
+        <div class="error-quick-recommendations">
+          <div class="eqr-title">
+            <i class="fa-solid fa-fire"></i> Fresh From Today's Morning Batch
+          </div>
+          <div class="eqr-grid">
+            <a href="products.html" class="eqr-card">
+              <img src="images/prod_tagliatelle.jpg" alt="Tagliatelle all'Uovo" class="eqr-thumb"
+                onerror="this.src='images/bowl_dish_1.jpg'">
+              <div class="eqr-info">
+                <strong>Tagliatelle all'Uovo</strong>
+                <span>$14.50 / 500g</span>
+              </div>
+            </a>
+            <a href="products.html" class="eqr-card">
+              <img src="images/prod_pappardelle.jpg" alt="Pappardelle Rustiche" class="eqr-thumb"
+                onerror="this.src='images/bowl_dish_2.jpg'">
+              <div class="eqr-info">
+                <strong>Pappardelle Rustiche</strong>
+                <span>$15.00 / 500g</span>
+              </div>
+            </a>
+            <a href="products.html" class="eqr-card">
+              <img src="images/prod_ravioli.jpg" alt="Ravioli Ricotta & Spinaci" class="eqr-thumb"
+                onerror="this.src='images/ravioli.jpg'">
+              <div class="eqr-info">
+                <strong>Ravioli di Ricotta</strong>
+                <span>$18.50 / 500g</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with
+          100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pasta Varieties -->
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Hours -->
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza Pastificio</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Order Desk:</strong><br>
+              <a href="tel:+15558902123">(555) 890-2123</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Direct Inquiries:</strong><br>
+              <a href="mailto:ciao@granozapasta.com">ciao@granozapasta.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-Footer / Copyright Bar -->
+    <div class="sub-footer">
+      <div class="container sub-footer-inner">
+        <p>&copy; 2026 Granoza Pastificio &bull; Handcrafted in Bologna &bull; All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="index.html">Privacy Policy</a>
+          <a href="index.html">Terms of Service</a>
+          <a href="contact.html">Store Locator</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Scroll Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+</body>
+
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Granoza Catering Orders — Generous handmade pasta platters, authentic Italian charcuterie boards, and custom event feasts for weddings, family gatherings, and corporate luncheons.">
+  <meta name="keywords" content="Granoza, italian catering, pasta platters catering, lasagna trays catering, antipasti boards, corporate lunch catering, wedding italian buffet">
+  <title>Catering Orders &amp; Italian Feast Packages | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+<!-- Theme & RTL Stylesheet -->
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-champagne-glasses"></i>
+          <span>Custom Catering for 10 to 150+ Guests &bull; Hot Chafing Trays Provided</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Catering Office: <strong>9:00 AM — 6:00 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902124" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2124</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catering.html" class="nav-link active">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+<button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="#catering-form-section" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger" aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping" style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link"><span>Pasta & Deli Shop</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link active"><span>Catering & Platters</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="#catering-form-section" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2124</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-note">Freshly made pasta orders are chilled and boxed in insulated thermal sleeves with cooking instructions.</p>
+      <button type="button" class="btn btn-primary btn-cart-checkout" style="width:100%;">
+        <i class="fa-solid fa-circle-check"></i> Proceed to Order Reservation
+      </button>
+      <button type="button" class="btn btn-outline-navy btn-sm" onclick="showToast('Your basket has been saved for local pickup!','info')" style="width:100%;">
+        Save For Later
+      </button>
+    </div>
+  </aside>
+
+    <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT (UNIFIED HEIGHT: 500PX)
+       ========================================================================= -->
+  <section class="catering-hero-section" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/catering_spread.jpg" class="hero-bg-img" alt="Spectacular Italian banquet catering spread"
+        onerror="this.src='images/italian_dining.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Banchetti &amp; Ricevimenti &bull; Turnkey Hospitality</span>
+        </div>
+        <h1>Authentic Italian Feasts for <br><em class="hero-italic-accent">Memorable Celebrations</em></h1>
+        <p class="hero-desc">Steaming multi-layered lasagna pans, custom pasta bars, and monumental antipasti boards designed to feed groups of 10 to over 150 guests with flawless Italian warmth.</p>
+        <div class="hero-cta-row">
+          <a href="#catering-packages" class="hero-cta-primary">
+            <span>Explore Packages</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#catering-form-section" class="hero-cta-ghost">Request Quote</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-users"></i> 10 to 150+ Guests</div>
+          <div class="htr-item"><i class="fa-solid fa-fire-burner"></i> Delivered Hot in Warmers</div>
+          <div class="htr-item"><i class="fa-solid fa-clock"></i> 24h Setup Notice</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/catering_spread.jpg" alt="Italian feast spread"
+              onerror="this.src='images/kitchen.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-bell-concierge"></i>
+              <span>Turnkey Catering<br><small>Buffet &amp; Chafing Sets</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-tag"></i>
+              <span>Packages From $22 / Guest</span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">150<small>+</small></span>
+              <span class="hsb-label">Max Capacity</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">24<small>h</small></span>
+              <span class="hsb-label">Setup Notice</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">100<small>%</small></span>
+              <span class="hsb-label">Hot Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: CATERING PACKAGES
+       ========================================================================= -->
+  <section class="catering-packages-section" id="catering-packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-box-archive"></i> I Nostri Pacchetti</span>
+        <h2>Curated Italian Catering Packages</h2>
+        <div class="gold-divider"><i class="fa-solid fa-award"></i></div>
+        <p>Complete feast experiences designed to simplify your event planning. Each package includes hot chafing warmers, serving tongs, and fresh bread.</p>
+      </div>
+
+      <div class="package-cards-grid">
+        <!-- Package 1: Corporate Lunch -->
+        <div class="package-card">
+          <h3>Pranzo Executive</h3>
+          <span class="package-serves">Minimum 12 Guests</span>
+          <div class="package-price">$22 <span>/ person</span></div>
+          <ul class="package-items-list">
+            <li><i class="fa-solid fa-check"></i> Choice of Penne Pomodoro or Pesto Fusilli</li>
+            <li><i class="fa-solid fa-check"></i> Mixed Tuscan Garden Salad with balsamic</li>
+            <li><i class="fa-solid fa-check"></i> Fresh Rosemary &amp; Sea Salt Focaccia</li>
+            <li><i class="fa-solid fa-check"></i> Individual Italian Mineral Waters</li>
+            <li><i class="fa-solid fa-check"></i> Eco-friendly plates, forks &amp; napkins</li>
+          </ul>
+          <a href="#catering-form-section" class="btn btn-outline-navy btn-sm" style="margin-top:auto;">Select Pranzo</a>
+        </div>
+
+        <!-- Package 2: The Classic Italian Feast (Popular) -->
+        <div class="package-card popular">
+          <span class="popular-ribbon">Most Requested</span>
+          <h3>Classic Italian Feast</h3>
+          <span class="package-serves">Minimum 20 Guests</span>
+          <div class="package-price">$26 <span>/ person</span></div>
+          <ul class="package-items-list">
+            <li><i class="fa-solid fa-check"></i> Tagliatelle al Ragù Bolognese</li>
+            <li><i class="fa-solid fa-check"></i> Hand-Made Ricotta &amp; Spinach Ravioli</li>
+            <li><i class="fa-solid fa-check"></i> Prosciutto di Parma &amp; Melon Board</li>
+            <li><i class="fa-solid fa-check"></i> Insalata Caprese with Buffalo Mozzarella</li>
+            <li><i class="fa-solid fa-check"></i> Fresh Rosemary Focaccia &amp; Parmigiano</li>
+            <li><i class="fa-solid fa-check"></i> Chafing warmers &amp; buffet setup</li>
+          </ul>
+          <a href="#catering-form-section" class="btn btn-gold btn-sm" style="margin-top:auto;">Select Classic Feast</a>
+        </div>
+
+        <!-- Package 3: Nonna's Sunday Table -->
+        <div class="package-card">
+          <h3>Nonna's Sunday Table</h3>
+          <span class="package-serves">Minimum 15 Guests</span>
+          <div class="package-price">$34 <span>/ person</span></div>
+          <ul class="package-items-list">
+            <li><i class="fa-solid fa-check"></i> Lasagna Tradizionale al Forno (Veal &amp; Beef)</li>
+            <li><i class="fa-solid fa-check"></i> Orecchiette with Italian Sausage &amp; Rapini</li>
+            <li><i class="fa-solid fa-check"></i> Grand Antipasto Misti Charcuterie Board</li>
+            <li><i class="fa-solid fa-check"></i> Marinated Artichokes, Olives &amp; Sun Tomatoes</li>
+            <li><i class="fa-solid fa-check"></i> Classic Espresso Tiramisù Trays</li>
+          </ul>
+          <a href="#catering-form-section" class="btn btn-outline-navy btn-sm" style="margin-top:auto;">Select Sunday Table</a>
+        </div>
+
+        <!-- Package 4: Grand Antipasto & Wine Soirée -->
+        <div class="package-card">
+          <h3>Grand Festa Soirée</h3>
+          <span class="package-serves">Minimum 30 Guests</span>
+          <div class="package-price">$42 <span>/ person</span></div>
+          <ul class="package-items-list">
+            <li><i class="fa-solid fa-check"></i> 3 Hot Pasta Platters (including Truffle Gnocchi)</li>
+            <li><i class="fa-solid fa-check"></i> Live Carved Prosciutto &amp; Aged Cheeses</li>
+            <li><i class="fa-solid fa-check"></i> Hand-pulled Burrata Bar with heirloom tomatoes</li>
+            <li><i class="fa-solid fa-check"></i> Whole wheel Parmigiano Reggiano tasting</li>
+            <li><i class="fa-solid fa-check"></i> Miniature Sicilian Cannoli &amp; Panna Cotta</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated pastificio catering staff</li>
+          </ul>
+          <a href="#catering-form-section" class="btn btn-outline-navy btn-sm" style="margin-top:auto;">Select Grand Soirée</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: FRESH PASTA PLATTERS (HOT BUFFET TRAYS)
+       ========================================================================= -->
+  <section class="catering-platters-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-fire-burner"></i> Teglie e Vassoi Caldi</span>
+        <h2>Fresh Pasta Platters &amp; Baked Trays</h2>
+        <div class="gold-divider"><i class="fa-solid fa-utensils"></i></div>
+        <p>Order a la carte trays to complement your gathering. Each pan is baked fresh in heavy ceramic-look containers that retain heat for up to two hours.</p>
+      </div>
+
+      <div class="platters-grid">
+        <div class="platter-card">
+          <div class="platter-thumb">
+            <img src="images/recipe_bolognese.jpg" alt="Deep pan of Lasagna al Forno with bechamel and meat sauce" onerror="this.src='images/bowl_dish_1.jpg'">
+          </div>
+          <div class="platter-content">
+            <h4>Lasagna Tradizionale al Forno</h4>
+            <div class="platter-yield"><i class="fa-solid fa-users"></i> Full Pan Serves 12 – 15 Guests</div>
+            <p>Seven layers of handmade spinach egg sheets, slow-simmered bolognese ragù, silky nutmeg béchamel, and 24-month Parmigiano Reggiano.</p>
+            <div class="platter-footer">
+              <span style="font-family:var(--font-serif); font-size:1.35rem; font-weight:800; color:var(--tomato-red);">$135.00</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="showToast('Added Lasagna Tray to enquiry notes!','info')">Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="platter-card">
+          <div class="platter-thumb">
+            <img src="images/recipe_ravioli.jpg" alt="Platter of Ricotta and Spinach Ravioli in brown sage butter" onerror="this.src='images/ravioli.jpg'">
+          </div>
+          <div class="platter-content">
+            <h4>Ravioli al Forno con Salvia e Burro</h4>
+            <div class="platter-yield"><i class="fa-solid fa-users"></i> Full Pan Serves 10 – 12 Guests</div>
+            <p>Pillowy ricotta ravioli baked in brown butter, crispy mountain sage leaves, and melted fontina cheese crust with toasted breadcrumbs.</p>
+            <div class="platter-footer">
+              <span style="font-family:var(--font-serif); font-size:1.35rem; font-weight:800; color:var(--tomato-red);">$120.00</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="showToast('Added Ravioli Tray to enquiry notes!','info')">Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="platter-card">
+          <div class="platter-thumb">
+            <img src="images/bowl_dish_3.jpg" alt="Pan of Orecchiette with Italian Sausage and Rapini" onerror="this.src='images/prod_orecchiette.jpg'">
+          </div>
+          <div class="platter-content">
+            <h4>Orecchiette Salsiccia &amp; Friarielli</h4>
+            <div class="platter-yield"><i class="fa-solid fa-users"></i> Full Pan Serves 12 – 15 Guests</div>
+            <p>Pugliese ear pasta tossed with fennel sausage crumbles, garlic-sautéed broccoli rabe greens, chili flakes, and Pecorino Romano.</p>
+            <div class="platter-footer">
+              <span style="font-family:var(--font-serif); font-size:1.35rem; font-weight:800; color:var(--tomato-red);">$125.00</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="showToast('Added Orecchiette Tray to enquiry notes!','info')">Add to Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: ITALIAN DELI SELECTIONS & CHARCUTERIE BOARDS
+       ========================================================================= -->
+  <section class="deli-intro-section" style="background-color:var(--warm-ivory);">
+    <div class="container intro-grid">
+      <div class="intro-media">
+        <div class="intro-image-frame">
+          <img src="images/deli_charcuterie.jpg" alt="Artisan Italian charcuterie platter with mortadella, prosciutto, and cheese" onerror="this.src='images/italian_dining.jpg'">
+        </div>
+      </div>
+      <div class="intro-content">
+        <span class="eyebrow"><i class="fa-solid fa-cheese"></i> Taglieri di Salumi e Formaggi</span>
+        <h2>Show-Stopping Antipasti Display Boards</h2>
+        <p>
+          No Italian feast is complete without an abundant antipasti spread. We assemble heavy wooden boards adorned with 24-month Prosciutto di Parma, Mortadella di Bologna studded with pistachios, aged Pecorino Romano, and artisanal accompaniments.
+        </p>
+        <div class="intro-features-list">
+          <div class="intro-feature-card">
+            <div class="intro-feature-icon"><i class="fa-solid fa-bread-slice"></i></div>
+            <div>
+              <h4>House-Baked Focaccia</h4>
+              <p>Studded with cherry tomatoes, fresh rosemary, and sea salt flakes.</p>
+            </div>
+          </div>
+          <div class="intro-feature-card">
+            <div class="intro-feature-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div>
+              <h4>Marinated Delicacies</h4>
+              <p>Castelvetrano olives, artichoke hearts, and roasted sweet peppers.</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--creamy-beige); padding:1rem 1.25rem; border-radius:var(--radius-md); border-left:3px solid var(--golden-yellow); margin-top:1rem;">
+          <div style="font-size:0.85rem; font-weight:700; color:var(--navy-deep);">Antipasto Board Pricing:</div>
+          <div style="font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">
+            Small (Serves 8-10): <strong>$95</strong> &bull; Medium (Serves 15-20): <strong>$175</strong> &bull; Grand Board (Serves 30+): <strong>$295</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- =========================================================================
+       SECTION 5: CELEBRATIONS, WEDDINGS & CORPORATE EVENTS (BESPOKE ATELIER REDESIGN)
+       ========================================================================= -->
+  <section class="catering-events-section" id="catering-occasions">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-calendar-check"></i> Eventi su Misura</span>
+        <h2>Tailored for Every <em>Milestone &amp; Gathering</em></h2>
+        <div class="gold-divider"><i class="fa-solid fa-heart"></i></div>
+        <p>From intimate family banquets to 150-guest corporate galas, our atelier crafts authentic Emilian feasts with hot chafing warmers, dedicated pastai, and turnkey Italian hospitality.</p>
+      </div>
+
+      <div class="occasions-cards-grid">
+        <!-- Occasion 1: Family Gatherings -->
+        <article class="occ-card">
+          <div class="occ-media">
+            <img src="images/italian_dining.jpg" alt="Italian family sharing dinner around a warm table" onerror="this.src='images/bowl_dish_1.jpg'">
+            <span class="occ-tag"><i class="fa-solid fa-people-roof"></i> Famiglia &amp; Tradizione</span>
+            <span class="occ-capacity-pill"><i class="fa-solid fa-users"></i> 10 &ndash; 45 Guests</span>
+          </div>
+          <div class="occ-body">
+            <h3>Family Gatherings &amp; Milestones</h3>
+            <span class="occ-sub">Sunday Lunches, Baptisms &amp; Anniversaries</span>
+            <p>Generous, multi-layered warm lasagna trays, platters of hand-pinched ravioli, and house-made tiramisù that bring multiple generations around the table in celebration.</p>
+            <div class="occ-perks">
+              <span><i class="fa-solid fa-check"></i> Family-style ceramic-look warmers</span>
+              <span><i class="fa-solid fa-check"></i> Rosemary focaccia &amp; Parmigiano included</span>
+            </div>
+            <div class="occ-footer">
+              <a href="#catering-form-section" class="occ-link-btn" onclick="selectEventTier('sunday', 'Family Milestone Gathering')">
+                <span>Inquire For Family Feast</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Occasion 2: Corporate Luncheons -->
+        <article class="occ-card">
+          <div class="occ-media">
+            <img src="images/hero_products.jpg" alt="Italian pasta buffet catering display" onerror="this.src='images/kitchen.jpg'">
+            <span class="occ-tag"><i class="fa-solid fa-briefcase"></i> Executive &amp; Corporate</span>
+            <span class="occ-capacity-pill"><i class="fa-solid fa-users"></i> 15 &ndash; 120 Guests</span>
+          </div>
+          <div class="occ-body">
+            <h3>Corporate Luncheons &amp; Summits</h3>
+            <span class="occ-sub">Board Meetings, Client Lunches &amp; Galas</span>
+            <p>Punctual, seamless hot delivery with individual bowls or buffet chafing stations, clear dietary markings, and eco-friendly tableware for effortless corporate polish.</p>
+            <div class="occ-perks">
+              <span><i class="fa-solid fa-check"></i> Guaranteed on-time thermal hot delivery</span>
+              <span><i class="fa-solid fa-check"></i> Gluten-aware, vegan &amp; allergen labels</span>
+            </div>
+            <div class="occ-footer">
+              <a href="#catering-form-section" class="occ-link-btn" onclick="selectEventTier('pranzo', 'Corporate Luncheon')">
+                <span>Inquire For Corporate</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Occasion 3: Weddings & Rehearsals (Featured Card!) -->
+        <article class="occ-card occ-card-featured">
+          <div class="occ-featured-badge"><i class="fa-solid fa-crown"></i> Signature Experience</div>
+          <div class="occ-media">
+            <img src="images/catering_spread.jpg" alt="Grand wedding catering spread with pasta, antipasti and wine" onerror="this.src='images/italian_dining.jpg'">
+            <span class="occ-tag"><i class="fa-solid fa-ring"></i> Nozze &amp; Ricevimenti</span>
+            <span class="occ-capacity-pill"><i class="fa-solid fa-users"></i> 40 &ndash; 200+ Guests</span>
+          </div>
+          <div class="occ-body">
+            <h3>Weddings &amp; Rustic Rehearsals</h3>
+            <span class="occ-sub">Rehearsal Dinners &amp; Elegant Receptions</span>
+            <p>Create an unforgettable theatrical spectacle with our dedicated live Pastaio station, tossing hot pasta in a 40kg wheel of 30-month Parmigiano Reggiano before your guests.</p>
+            <div class="occ-perks">
+              <span><i class="fa-solid fa-check"></i> Live Parmigiano wheel show station</span>
+              <span><i class="fa-solid fa-check"></i> Dedicated chef &amp; Italian sommelier pairing</span>
+            </div>
+            <div class="occ-footer">
+              <a href="#catering-form-section" class="occ-link-btn occ-btn-gold" onclick="selectEventTier('grand', 'Wedding & Rehearsal Dinner')">
+                <span>Book Wedding Experience</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Occasion 4: Cocktail Parties -->
+        <article class="occ-card">
+          <div class="occ-media">
+            <img src="images/deli_charcuterie.jpg" alt="Artisan Italian charcuterie and antipasti display board" onerror="this.src='images/hanging_lamp.jpg'">
+            <span class="occ-tag"><i class="fa-solid fa-champagne-glasses"></i> Aperitivo &amp; Soirée</span>
+            <span class="occ-capacity-pill"><i class="fa-solid fa-users"></i> 20 &ndash; 100 Guests</span>
+          </div>
+          <div class="occ-body">
+            <h3>Aperitivo &amp; Cocktail Soirées</h3>
+            <span class="occ-sub">Private Receptions &amp; Holiday Galas</span>
+            <p>Monumental wooden antipasti boards laden with 24-month Prosciutto di Parma, bite-sized truffle arancini, crispy frico, and artisanal finger foods perfect for mingling.</p>
+            <div class="occ-perks">
+              <span><i class="fa-solid fa-check"></i> Carved salumi &amp; cave-aged cheeses</span>
+              <span><i class="fa-solid fa-check"></i> Passed warm bite-sized arancini &amp; skewers</span>
+            </div>
+            <div class="occ-footer">
+              <a href="#catering-form-section" class="occ-link-btn" onclick="selectEventTier('classic', 'Cocktail Soirée & Aperitivo')">
+                <span>Inquire For Cocktail Party</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Reassurance Concierge Strip -->
+      <div class="occ-concierge-strip">
+        <div class="ocs-item">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <strong>Dedicated Catering Concierge</strong>
+            <span>Direct: <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:700;">(555) 890-2123</a> &bull; catering@granoza.com</span>
+          </div>
+        </div>
+        <div class="ocs-divider"></div>
+        <div class="ocs-item">
+          <i class="fa-solid fa-stopwatch"></i>
+          <div>
+            <strong>Express 24-Hour Confirmation</strong>
+            <span>Custom proposal and dietary consultation within 1 business day</span>
+          </div>
+        </div>
+        <div class="ocs-divider"></div>
+        <div class="ocs-action">
+          <a href="#catering-form-section" class="btn btn-gold btn-sm">
+            <i class="fa-solid fa-calculator"></i> Build Instant Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: ORDERING INSTRUCTIONS & LOGISTICS
+       ========================================================================= -->
+  <section class="catering-instructions-section">
+    <div class="container">
+      <div class="section-header text-light">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-clipboard-list"></i> Guida all'Ordinazione</span>
+        <h2>Simple 4-Step Catering Reservation Process</h2>
+        <div class="gold-divider"><i class="fa-solid fa-truck"></i></div>
+        <p>We make reserving your Italian feast straightforward and transparent.</p>
+      </div>
+
+      <div class="instructions-row">
+        <div class="instruction-step">
+          <div class="instruction-step-num">01</div>
+          <h4>Submit Enquiry</h4>
+          <p>Fill out the form below with your tentative guest count, preferred date, and favorite pasta selections.</p>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-step-num">02</div>
+          <h4>Menu Consultation</h4>
+          <p>Our catering director contacts you within 24 hours to finalize portion sizes, dietary needs, and wine pairings.</p>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-step-num">03</div>
+          <h4>Morning Preparation</h4>
+          <p>Pasta sheets are extruded and baked on the day of your event for maximum freshness and aroma.</p>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-step-num">04</div>
+          <h4>Delivery &amp; Setup</h4>
+          <p>We arrive with insulated hot boxes, set up your chafing warmers, and provide full serving guidelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: DETAILED CATERING ENQUIRY FORM & COST ESTIMATOR
+       ========================================================================= -->
+  <section class="catering-form-section" id="catering-form-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-file-signature"></i> Preventivo Online</span>
+        <h2>Reserve Your Catering Date &amp; Estimate Cost</h2>
+        <div class="gold-divider"><i class="fa-solid fa-calculator"></i></div>
+        <p>Adjust the guest count and package choice to preview estimated pricing, then submit your details for a personalized contract.</p>
+      </div>
+
+      <div class="catering-form-card">
+        <!-- Interactive Cost Estimator Preview Bar -->
+        <div class="cost-preview-box">
+          <div>
+            <h4>Interactive Catering Estimate Preview</h4>
+            <p>Calculated dynamically based on guest count and chosen feast tier.</p>
+          </div>
+          <div class="cost-preview-amount">$520</div>
+        </div>
+
+        <form id="cateringEnquiryForm" novalidate>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="catering_name">Full Name <span>*</span></label>
+              <input type="text" id="catering_name" name="catering_name" class="form-control" placeholder="e.g. Isabella Moretti" required>
+              <span class="form-error-msg">Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label for="catering_email">Email Address <span>*</span></label>
+              <input type="email" id="catering_email" name="catering_email" class="form-control" placeholder="e.g. isabella@example.com" required>
+              <span class="form-error-msg">Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="catering_phone">Phone Number <span>*</span></label>
+              <input type="tel" id="catering_phone" name="catering_phone" class="form-control" placeholder="e.g. (555) 234-5678" required>
+              <span class="form-error-msg">Please enter a contact phone number.</span>
+            </div>
+            <div class="form-group">
+              <label for="catering_date">Event Date <span>*</span></label>
+              <input type="date" id="catering_date" name="catering_date" class="form-control" required>
+              <span class="form-error-msg">Please select an event date.</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="catering_guests">Number of Guests <span>*</span></label>
+              <input type="number" id="catering_guests" name="catering_guests" class="form-control" min="10" max="250" value="20" required>
+              <span class="form-error-msg">Please enter the estimated number of guests (minimum 10).</span>
+            </div>
+            <div class="form-group">
+              <label for="catering_package">Catering Package Preference <span>*</span></label>
+              <select id="catering_package" name="catering_package" class="form-control" required>
+                <option value="classic" selected>The Classic Italian Feast ($26 / person)</option>
+                <option value="pranzo">Pranzo Executive Luncheon ($22 / person)</option>
+                <option value="sunday">Nonna's Sunday Table ($34 / person)</option>
+                <option value="grand">Grand Festa Soirée ($42 / person)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label for="catering_dietary">Dietary Requirements &amp; Preferences</label>
+            <input type="text" id="catering_dietary" name="catering_dietary" class="form-control" placeholder="e.g. 4 Vegetarian guests, 2 Gluten-friendly trays requested, no nut allergies">
+          </div>
+
+          <div class="form-group" style="margin-bottom:2rem;">
+            <label for="catering_notes">Additional Event Notes &amp; Delivery Instructions</label>
+            <textarea id="catering_notes" name="catering_notes" class="form-control" placeholder="Tell us about the venue, delivery window timing, setup requirements, or special pasta requests..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+            <i class="fa-solid fa-paper-plane"></i> Submit Catering Enquiry &amp; Reserve Date
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       UNIVERSAL FOOTER (CONSISTENT ACROSS ALL 7 PAGES)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with 100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              Order Counter: <a href="tel:+15558902123">(555) 890-2123</a><br>
+              Catering Hotline: <a href="tel:+15558902124">(555) 890-2124</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              Mon – Fri: 8:00 AM – 7:30 PM<br>
+              Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 Granoza LLC. All Rights Reserved. Crafted with Italian Passion.
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Food Allergen Info</a>
+          <a href="contact.html">Visit Deli</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+</body>
+</html>

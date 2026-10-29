@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Granoza Products — Explore handmade fresh egg pasta, bronze-extruded dried selections, squid ink fettuccine, slow-simmered bolognese sauces, and deli pantry essentials.">
+  <meta name="keywords" content="Granoza, buy fresh pasta, handmade ravioli, tagliatelle egg pasta, bronze extruded spaghetti, squid ink fettuccine, authentic bolognese sauce, italian deli store">
+  <title>Artisan Pasta &amp; Italian Deli Shop | Granoza</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=18">
+<!-- Theme & RTL Stylesheet -->
+  <link rel="stylesheet" href="css/theme_rtl.css?v=18">
+
+  <!-- Immediate Theme & RTL Init Script (prevents flash) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('granoza_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        var dir = localStorage.getItem('granoza_direction');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-truck"></i>
+          <span>Local Delivery Available within 15 Miles &bull; Same-Day Chilled Packaging</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Deli Counter: <strong>8:00 AM — 7:30 PM</strong></span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Via della Spiga 24 &bull; Artisanal Market District</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+15558902123" style="color:var(--golden-yellow); font-weight:600;">(555) 890-2123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Granoza Home">
+        <div class="brand-logo-icon">
+          <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">GRANOZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="catering.html" class="nav-link">Catering Orders</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+<button type="button" class="cart-toggle-btn d-none-mobile" aria-label="Open Cart Order Drawer">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="catering.html" class="btn btn-gold btn-sm d-none-mobile">
+          <i class="fa-solid fa-bell-concierge"></i> Catering Quote
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-text">
+        <span class="brand-title">GRANOZA</span>
+      </div>
+      <div class="mobile-nav-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL / LTR Layout" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-right-left"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      
+        <button type="button" class="cart-toggle-btn mobile-cart-btn mobile-cart-trigger" aria-label="Open Shopping Cart" title="Open Basket">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+      </div>
+
+      <button type="button" class="mobile-nav-close" aria-label="Close Mobile Nav">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link mobile-cart-trigger" aria-label="Open Shopping Cart">
+        <span class="mobile-cart-label-wrap">
+          <i class="fa-solid fa-basket-shopping" style="color:var(--golden-yellow); margin-right:8px; font-size:1.1rem;"></i>
+          <span>Order Basket / Cart</span>
+        </span>
+        <span class="mobile-cart-badge-pill">
+          <strong class="cart-badge-count">0</strong> items
+          <i class="fa-solid fa-angle-right" style="margin-left:6px; font-size:0.75rem; opacity:0.75;"></i>
+        </span>
+      </a>
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="home2.html" class="mobile-nav-link"><span>Home 2 (Editorial)</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About Our Story</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="products.html" class="mobile-nav-link active"><span>Pasta & Deli Shop</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="catering.html" class="mobile-nav-link"><span>Catering & Platters</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Culinary Journal</span> <i class="fa-solid fa-angle-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span> <i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="catering.html" class="btn btn-primary btn-sm" style="width:100%;">
+        <i class="fa-solid fa-calendar-check"></i> Book Catering Order
+      </a>
+      <div class="mobile-deli-info">
+        <p><i class="fa-solid fa-shop" style="color:var(--golden-yellow);"></i> Open Mon–Sat 8:00 AM – 7:30 PM</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--golden-yellow);"></i> (555) 890-2123</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart / Order Drawer -->
+  <aside class="cart-drawer" aria-label="Order Cart Basket">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> Your Pasta Basket</h3>
+      <button type="button" class="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-container">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-subtotal-amount">$0.00</span>
+      </div>
+      <p class="cart-note">Freshly made pasta orders are chilled and boxed in insulated thermal sleeves with cooking instructions.</p>
+      <button type="button" class="btn btn-primary btn-cart-checkout" style="width:100%;">
+        <i class="fa-solid fa-circle-check"></i> Proceed to Order Reservation
+      </button>
+      <button type="button" class="btn btn-outline-navy btn-sm" onclick="showToast('Your basket has been saved for local pickup!','info')" style="width:100%;">
+        Save For Later
+      </button>
+    </div>
+  </aside>
+
+    <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT (UNIFIED HEIGHT: 500PX)
+       ========================================================================= -->
+  <section class="page-hero" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/hero_products.jpg" class="hero-bg-img" alt="Fresh artisan pasta shapes and flour"
+        onerror="this.src='images/bowl_dish_2.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Il Negozio &bull; Fresh &amp; Dry Varieties</span>
+        </div>
+        <h1>Artisanal Pasta &amp; <br><em class="hero-italic-accent">Italian Deli Pantry</em></h1>
+        <p class="hero-desc">Every pasta cut below is prepared by hand in our atelier using 100% Altamura durum semolina. Available in chilled fresh trays, bronze-drawn pantry cuts, and D.O.P. accompaniments.</p>
+        <div class="hero-cta-row">
+          <a href="#productsGrid" class="hero-cta-primary">
+            <span>Browse All Cuts</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="catering.html" class="hero-cta-ghost">Catering Platters</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-box"></i> Insulated Thermal Packing</div>
+          <div class="htr-item"><i class="fa-solid fa-truck-fast"></i> Same-Day Dispatch</div>
+          <div class="htr-item"><i class="fa-solid fa-utensils"></i> 18+ Daily Shapes</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/prod_pappardelle.jpg" alt="Handmade pasta selection"
+              onerror="this.src='images/bowl_dish_1.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-fire-burner"></i>
+              <span>Bronze Die Extruded<br><small>Porous Sauce Grip</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-star"></i>
+              <span>4.9 / 5.0 <em>(Patrons Favorite)</em></span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">24<small>+</small></span>
+              <span class="hsb-label">Pasta Shapes</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">100<small>%</small></span>
+              <span class="hsb-label">Altamura Wheat</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">4<small>&deg;C</small></span>
+              <span class="hsb-label">Chilled Packing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sticky Filter Bar -->
+  <div class="products-filter-section">
+    <div class="container">
+      <div class="filter-pills-row">
+        <button type="button" class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-utensils"></i> All Products <span class="filter-count">24</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="fresh">
+          <i class="fa-solid fa-egg"></i> Fresh &amp; Filled Pasta <span class="filter-count">6</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="dried">
+          <i class="fa-solid fa-wheat-awn"></i> Bronze-Extruded Dried <span class="filter-count">6</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="specialty">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Specialty Shapes <span class="filter-count">6</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="deli">
+          <i class="fa-solid fa-jar"></i> Deli Sauces &amp; Cheeses <span class="filter-count">6</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 2: FRESH PASTA VARIETIES (RIBBONS & FILLED PILLOWS)
+       ========================================================================= -->
+  <section class="product-group-section" id="fresh-pasta-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-egg"></i> Fatta a Mano Ogni Mattina</span>
+        <h2>Fresh &amp; Filled Pasta Varieties</h2>
+        <div class="gold-divider"><i class="fa-solid fa-star"></i></div>
+        <p>Rolled fresh daily using whole pasture-raised egg yolks and Altamura durum wheat. Keep chilled and cook within 3 days, or freeze up to 60 days.</p>
+      </div>
+
+      <div class="product-grid-6">
+        <!-- Item 1: Tagliatelle -->
+        <article class="product-item-card" data-category="fresh" data-id="tagliatelle-all-uovo">
+          <div class="product-card-thumb">
+            <img src="images/prod_tagliatelle.jpg" alt="Golden egg tagliatelle ribbons dusted with semolina" onerror="this.src='images/tagliatelle.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Bolognese Classic</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Fresh Egg Ribbon</span>
+            <h3>Tagliatelle all'Uovo</h3>
+            <p>Classic 7mm wide ribbon cut from rich egg sfoglia. Coarse, porous texture designed to absorb slow-simmered bolognese sauces.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, farm eggs (33%), sea salt.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$14.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2: Pappardelle -->
+        <article class="product-item-card" data-category="fresh" data-id="pappardelle-rustiche">
+          <div class="product-card-thumb">
+            <img src="images/prod_pappardelle.jpg" alt="Wide flat pappardelle ribbons" onerror="this.src='images/bowl_dish_2.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Tuscan Favorite</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Broad Egg Ribbon</span>
+            <h3>Pappardelle Rustiche</h3>
+            <p>Generous 20mm broad ribbons cut on fluted pastry wheels. Sturdy texture built for braised wild boar, duck confit, or rich porcini ragù.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Altamura semolina, whole eggs, mountain spring water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$15.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: Ravioli Ricotta & Spinaci -->
+        <article class="product-item-card" data-category="fresh" data-id="ravioli-ricotta-spinaci">
+          <div class="product-card-thumb">
+            <img src="images/prod_ravioli.jpg" alt="Square ricotta and spinach ravioli pillows" onerror="this.src='images/ravioli.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Hand-Pinched</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 4 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Filled Square Pasta</span>
+            <h3>Ravioli di Ricotta &amp; Spinaci</h3>
+            <p>Square parcels stuffed with fresh sheep's milk ricotta, tender baby spinach, grated nutmeg, and 24-month Parmigiano Reggiano.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Egg pasta dough, fresh ricotta, spinach, nutmeg, Parmigiano.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$18.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: Gnocchi di Patate -->
+        <article class="product-item-card" data-category="fresh" data-id="gnocchi-di-patate">
+          <div class="product-card-thumb">
+            <img src="images/prod_gnocchi.jpg" alt="Light pillowy potato gnocchi dumplings" onerror="this.src='images/prod_tortelloni.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Hand-Rolled</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 2.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Potato Dumpling</span>
+            <h3>Gnocchi di Patate Soffici</h3>
+            <p>Feather-light potato pillows hand-ridged on wooden boards so sauces cling into every crevice. Rises to water surface when perfectly cooked.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Steamed Russet potatoes, durum semolina, egg yolk, sea salt.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$13.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5: Tortelloni di Vitello -->
+        <article class="product-item-card" data-category="fresh" data-id="tortelloni-vitello">
+          <div class="product-card-thumb">
+            <img src="images/prod_tortelloni.jpg" alt="Golden folded tortelloni parcels with veal and prosciutto" onerror="this.src='images/prod_agnolotti.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Emilian Crown</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 4.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Folded Crown Pasta</span>
+            <h3>Tortelloni di Vitello &amp; Prosciutto</h3>
+            <p>Hand-folded knots stuffed with braised milk-fed veal, aged prosciutto di Parma, mortadella, and a hint of lemon zest.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Egg dough, braised veal, prosciutto di Parma, mortadella, herbs.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$21.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Agnolotti del Plin -->
+        <article class="product-item-card" data-category="fresh" data-id="agnolotti-del-plin">
+          <div class="product-card-thumb">
+            <img src="images/prod_agnolotti.jpg" alt="Piedmontese pinched agnolotti del plin" onerror="this.src='images/ravioli.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Piedmontese Heritage</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Pinched Meat Parcel</span>
+            <h3>Agnolotti del Plin Tradizionali</h3>
+            <p>Tiny pockets pinched between thumb and forefinger, filled with roasted meats and cabbage. Traditionally served in rich roast meat jus.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Egg yolk dough, roasted beef and pork, savoy cabbage, Parmigiano.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$19.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: DRIED BRONZE-CUT SELECTIONS (TRAFILATE AL BRONZO)
+       ========================================================================= -->
+  <section class="product-group-section" id="dried-pasta-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-wheat-awn"></i> Trafilata al Bronzo</span>
+        <h2>Dried Bronze-Cut Selections</h2>
+        <div class="gold-divider"><i class="fa-solid fa-clock"></i></div>
+        <p>Extruded through antique bronze dies and slowly dried at low temperatures for 36 hours. Retains full wheat fragrance and high protein resilience.</p>
+      </div>
+
+      <div class="product-grid-6">
+        <!-- Item 7: Spaghetti al Bronzo -->
+        <article class="product-item-card" data-category="dried" data-id="spaghetti-al-bronzo">
+          <div class="product-card-thumb">
+            <img src="images/prod_spaghetti.jpg" alt="Long bronze extruded spaghetti strands" onerror="this.src='images/hero_noodle_lift.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Porous Surface</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 9-11 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Long Bronze Pasta</span>
+            <h3>Spaghetti Trafilati al Bronzo</h3>
+            <p>Sturdy 2.1mm thick spaghetti with a chalky, pale exterior. The ultimate foundation for Roman classics: Carbonara, Cacio e Pepe, and Amatriciana.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> 100% Pugliese durum wheat semolina, spring water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$9.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 8: Penne Rigate -->
+        <article class="product-item-card" data-category="dried" data-id="penne-rigate-rustiche">
+          <div class="product-card-thumb">
+            <img src="images/article_bronze.jpg" alt="Ridged penne rigate pasta showing chalky bronze texture" onerror="this.src='images/prod_campanelle.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Deep Ridges</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 10 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Short Tubular Cut</span>
+            <h3>Penne Rigate Rustiche</h3>
+            <p>Diagonally cut tubes with deep exterior ridges. Traps fiery Arrabbiata tomato sauces and rich creamy vodka sauces inside and out.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Coarse stone-ground durum semolina, spring water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$9.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 9: Fusilli Bucati -->
+        <article class="product-item-card" data-category="dried" data-id="fusilli-bucati">
+          <div class="product-card-thumb">
+            <img src="images/specialty_terracotta.jpg" alt="Twisted spiral fusilli bucati pasta" onerror="this.src='images/prod_campanelle.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Spiral Geometry</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 10.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Hollow Corkscrew</span>
+            <h3>Fusilli Bucati Corti</h3>
+            <p>Tightly coiled spiral corkscrews with a hollow center running the entire length, catching both light pestos and chunky vegetable sughi.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Italian durum semolina, mountain mineral water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$9.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 10: Linguine di Gragnano -->
+        <article class="product-item-card" data-category="dried" data-id="linguine-gragnano">
+          <div class="product-card-thumb">
+            <img src="images/hero_pasta_bowl.jpg" alt="Flat ribbon linguine draped in seafood sauce" onerror="this.src='images/prod_spaghetti.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Seafood Essential</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 9 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Flattened Strand</span>
+            <h3>Linguine di Gragnano I.G.P.</h3>
+            <p>Narrow flattened elliptical strands that drape gracefully. The quintessential companion for clams (alle vongole), calamari, and basil pesto.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Protected geographical origin durum semolina, mountain water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$10.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 11: Penne Rigate di Gragnano -->
+        <article class="product-item-card" data-category="dried" data-id="penne-rigate-gragnano">
+          <div class="product-card-thumb">
+            <img src="images/prod_campanelle.jpg" alt="Penne rigate extruded through bronze dies" onerror="this.src='images/bowl_dish_1.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Deep Ribs</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 10 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Diagonal Ridged Quill</span>
+            <h3>Penne Rigate di Gragnano I.G.P.</h3>
+            <p>Classic tubular quill cut with deep exterior grooves and porous bronze texture that catches both rich meat ragù and velvety vegetable sauces.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> 100% Pugliese organic durum wheat semolina, spring water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$9.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 12: Paccheri Napoletani -->
+        <article class="product-item-card" data-category="dried" data-id="paccheri-napoletani">
+          <div class="product-card-thumb">
+            <img src="images/article_bronze.jpg" alt="Monumental hollow bronze-cut paccheri tubes" onerror="this.src='images/bowl_dish_2.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Campania Classic</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 12 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Large Hollow Cylinder</span>
+            <h3>Paccheri Napoletani al Bronzo</h3>
+            <p>Monumental wide cylinders crafted with thick walls and a chalky, porous finish. Outstanding when tossed with seafood or stuffed with ricotta.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Altamura stone-ground durum semolina, cold mountain water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$10.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: SPECIALTY SHAPES & COLORED PASTAS
+       ========================================================================= -->
+  <section class="product-group-section" id="specialty-pasta-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> Formati Speciali &amp; Colori Naturali</span>
+        <h2>Specialty Shapes &amp; Natural Infusions</h2>
+        <div class="gold-divider"><i class="fa-solid fa-palette"></i></div>
+        <p>Colored entirely through natural vegetables and Mediterranean squid ink. No synthetic colorings or flavor extracts—only vibrant whole foods.</p>
+      </div>
+
+      <div class="product-grid-6">
+        <!-- Item 11: Squid Ink Fettuccine -->
+        <article class="product-item-card" data-category="specialty" data-id="squid-ink-fettuccine">
+          <div class="product-card-thumb">
+            <img src="images/specialty_squid_ink.jpg" alt="Dark dramatic squid ink fettuccine ribbons" onerror="this.src='images/article_squid.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Nero di Seppia</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Seafood Infusion</span>
+            <h3>Fettuccine al Nero di Seppia</h3>
+            <p>Dramatic midnight-black ribbons infused with pure Mediterranean cuttlefish ink, offering subtle saline mineral sweetness for seafood dishes.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, pasture egg yolks, wild cuttlefish ink (4%).
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$17.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 12: Beetroot Casarecce -->
+        <article class="product-item-card" data-category="specialty" data-id="beetroot-casarecce">
+          <div class="product-card-thumb">
+            <img src="images/specialty_beetroot.jpg" alt="Vibrant ruby-red beetroot casarecce scrolls" onerror="this.src='images/prod_campanelle.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Ruby Infusion</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 4 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Rolled Scroll Pasta</span>
+            <h3>Casarecce alla Barbabietola</h3>
+            <p>Scroll-shaped pasta kneaded with fresh roasted beet reduction, producing an eye-catching ruby color that pairs beautifully with gorgonzola and walnuts.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, concentrated beetroot juice, sea salt.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$16.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 13: Spinach Campanelle -->
+        <article class="product-item-card" data-category="specialty" data-id="spinach-campanelle">
+          <div class="product-card-thumb">
+            <img src="images/specialty_spinach.jpg" alt="Forest green spinach campanelle with ruffled borders" onerror="this.src='images/prod_campanelle.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Verde Toscano</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 4 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Fluted Cone Shape</span>
+            <h3>Campanelle agli Spinaci Novelli</h3>
+            <p>Emerald-hued floral cones infused with blanched baby spinach purée. The fluted edges capture creamy parmesan and roasted mushroom sauces.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, baby spinach purée, extra virgin olive oil.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$15.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 14: Hand-Pinched Garganelli -->
+        <article class="product-item-card" data-category="specialty" data-id="garganelli-romagnoli">
+          <div class="product-card-thumb">
+            <img src="images/specialty_terracotta.jpg" alt="Hand-rolled ridged garganelli tubes" onerror="this.src='images/prod_orecchiette.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Pettine-Rolled</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Rolled Ridged Quill</span>
+            <h3>Garganelli Romagnoli Tradizionali</h3>
+            <p>Egg pasta squares rolled diagonally around a stick across a weaver's reed comb (pettine), creating delicate ridged quills that trap ragù inside.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, pasture egg yolks, pinch of nutmeg.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$16.50 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 17: Orecchiette al Peperoncino -->
+        <article class="product-item-card" data-category="specialty" data-id="orecchiette-peperoncino">
+          <div class="product-card-thumb">
+            <img src="images/prod_orecchiette.jpg" alt="Little ear pasta infused with red Calabrian chili" onerror="this.src='images/specialty_terracotta.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Calabrian Heat</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 4.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Spicy Little Ears</span>
+            <h3>Orecchiette al Peperoncino Rosso</h3>
+            <p>Traditional hand-pressed little ears infused with sun-ripened Calabrian chili pepper purée, providing a warm, invigorating kick to broccoli rabe.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Durum semolina, stone-milled hot chili reduction, sea salt.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$16.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 18: Farfalle Tricolore -->
+        <article class="product-item-card" data-category="specialty" data-id="farfalle-tricolore">
+          <div class="product-card-thumb">
+            <img src="images/specialty_terracotta.jpg" alt="Artisan tricolor bow-tie farfalle pasta" onerror="this.src='images/bowl_dish_3.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Tricolore Artigianale</span>
+            <div class="product-cook-badge"><i class="fa-regular fa-clock"></i> 3.5 mins</div>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Three-Color Butterfly Bows</span>
+            <h3>Farfalle Tricolore dell'Orto</h3>
+            <p>Festive pinched butterflies rolled from alternating strips of natural tomato, baby spinach, and golden egg sfoglia. A vibrant showpiece for any table.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Ingredients:</strong> Semolina, farm egg yolks, organic spinach purée, tomato reduction.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$17.00 <small>/ 500g</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: COMPLEMENTARY DELI PRODUCTS & SLOW-SIMMERED SAUCES
+       ========================================================================= -->
+  <section class="product-group-section" id="deli-sauces-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-jar"></i> Dispensa &amp; Sughi della Nonna</span>
+        <h2>Complementary Italian Sauces &amp; Pantry</h2>
+        <div class="gold-divider"><i class="fa-solid fa-cheese"></i></div>
+        <p>Prepared in small copper kettles using whole San Marzano tomatoes, soffritto, and extra virgin olive oil. Simmer gently and toss directly with your pasta.</p>
+      </div>
+
+      <div class="product-grid-6">
+        <!-- Item 15: Sugo al Pomodoro -->
+        <article class="product-item-card" data-category="deli" data-id="pomodoro-san-marzano">
+          <div class="product-card-thumb">
+            <img src="images/sauce_pomodoro.jpg" alt="Vibrant red San Marzano tomato sauce jar" onerror="this.src='images/sauce_arrabbiata.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Slow-Simmered</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Classic Red Sauce</span>
+            <h3>Sugo di Pomodoro San Marzano DOP</h3>
+            <p>Whole volcanic tomatoes slow-simmered with garlic, sweet yellow onions, Genovese basil leaves, and Pugliese EVOO. Ready to heat.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Volume:</strong> 480ml Glass Jar &bull; Serves 4 portions.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$11.00 <small>/ Jar</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 16: Ragù Bolognese -->
+        <article class="product-item-card" data-category="deli" data-id="ragu-bolognese">
+          <div class="product-card-thumb">
+            <img src="images/sauce_ragu.jpg" alt="Rich meat ragù bolognese jar" onerror="this.src='images/recipe_bolognese.jpg'">
+            <span class="badge badge-gold product-badge-overlay">4-Hour Simmer</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Slow Braised Ragù</span>
+            <h3>Ragù Tradizionale alla Bolognese</h3>
+            <p>Slow-braised beef and heritage pork mince cooked for 4 hours with finely minced soffritto, whole milk, white wine, and tomato concentrate.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Volume:</strong> 480ml Glass Jar &bull; Serves 3-4 portions.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$15.50 <small>/ Jar</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 17: Pesto alla Genovese -->
+        <article class="product-item-card" data-category="deli" data-id="pesto-genovese">
+          <div class="product-card-thumb">
+            <img src="images/sauce_pesto.jpg" alt="Bright green fresh basil pesto in jar" onerror="this.src='images/sauce_alfredo.jpg'">
+            <span class="badge badge-navy product-badge-overlay">Mortar-Ground</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Fresh Herb Sauce</span>
+            <h3>Pesto alla Genovese D.O.P.</h3>
+            <p>Young basil from Pra', roasted Italian pine nuts, Parmigiano Reggiano 24M, Pecorino Sardo, garlic, and Ligurian olive oil. Unheated freshness.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Volume:</strong> 220g Jar &bull; Toss with warm pasta water.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$13.50 <small>/ Jar</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 18: Parmigiano Reggiano Wedge -->
+        <article class="product-item-card" data-category="deli" data-id="parmigiano-reggiano-30m">
+          <div class="product-card-thumb">
+            <img src="images/deli_charcuterie.jpg" alt="Aged wedge of Parmigiano Reggiano with crystallization" onerror="this.src='images/kitchen.jpg'">
+            <span class="badge badge-gold product-badge-overlay">30-Month Aged</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Artisan Mountain Cheese</span>
+            <h3>Parmigiano Reggiano Vacche Rosse</h3>
+            <p>Dense, crumbly wedge studded with crunchy tyrosine crystals. Aged 30 months in Parma caves. Vacuum-sealed fresh from the wheel.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Weight:</strong> 250g Hand-Cut Wedge &bull; D.O.P. Seal.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$16.00 <small>/ Wedge</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 23: Sugo all'Arrabbiata -->
+        <article class="product-item-card" data-category="deli" data-id="sugo-arrabbiata">
+          <div class="product-card-thumb">
+            <img src="images/sauce_arrabbiata.jpg" alt="Spicy Arrabbiata tomato sauce with chili flakes" onerror="this.src='images/sauce_pomodoro.jpg'">
+            <span class="badge badge-tomato product-badge-overlay">Spicy Roman Recipe</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Fiery Tomato &amp; Garlic</span>
+            <h3>Sugo all'Arrabbiata Tradizionale</h3>
+            <p>Whole San Marzano tomatoes crushed and simmered with sliced garlic cloves toasted in Pugliese EVOO and fiery red peperoncino flakes.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Volume:</strong> 480ml Glass Jar &bull; Serves 4 portions.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$12.50 <small>/ Jar</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 24: Crema Cacio e Pepe -->
+        <article class="product-item-card" data-category="deli" data-id="crema-cacio-pepe">
+          <div class="product-card-thumb">
+            <img src="images/sauce_alfredo.jpg" alt="Rich Pecorino Romano and black pepper cream jar" onerror="this.src='images/recipe_carbonara.jpg'">
+            <span class="badge badge-gold product-badge-overlay">Pecorino D.O.P.</span>
+          </div>
+          <div class="product-card-details">
+            <span class="product-subtitle">Roman Cheese Emulsion</span>
+            <h3>Crema di Cacio e Pepe dell'Atelier</h3>
+            <p>Velvety reduction of aged Pecorino Romano DOP and freshly cracked toasted black Tellicherry peppercorns. Simply warm with hot starchy cooking water.</p>
+            <div class="product-ingredients-snippet">
+              <strong>Volume:</strong> 280g Jar &bull; Serves 3 portions.
+            </div>
+            <div class="product-card-bar">
+              <div class="product-price-tag">$14.00 <small>/ Jar</small></div>
+              <div class="product-action-btns">
+                <button type="button" class="btn btn-outline-navy btn-sm btn-quick-view" title="Quick View">Details</button>
+                <button type="button" class="btn btn-primary btn-sm btn-add-pasta"><i class="fa-solid fa-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: STORAGE & COOKING MASTERCLASS (AL DENTE PERFECTION)
+       ========================================================================= -->
+  <section class="cooking-masterclass-section craftsmanship-section" id="cooking-masterclass-section">
+    <div class="container">
+      <div class="section-header text-light">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-fire-burner"></i> Guida alla Cottura Perfetta</span>
+        <h2>How to Cook Fresh Pasta Like an Italian Maestro</h2>
+        <div class="gold-divider"><i class="fa-solid fa-temperature-full"></i></div>
+        <p>Because fresh pasta has not been dehydrated, it cooks in just 2 to 4 minutes. Follow these fundamental rules for extraordinary results.</p>
+      </div>
+
+      <div class="craftsmanship-steps">
+        <div class="step-card">
+          <div class="step-number-circle"><i class="fa-solid fa-faucet-drip"></i></div>
+          <h3>The 10:100:1000 Ratio</h3>
+          <p>For every 100g of pasta, use 1 liter (1000ml) of rolling water and 10g of coarse Mediterranean sea salt. Generous water prevents temperature drops.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-circle"><i class="fa-solid fa-clock"></i></div>
+          <h3>Never Walk Away</h3>
+          <p>Fresh ribbons need only 180 seconds. Taste a strand at the 2.5-minute mark. You want a tender yield with an imperceptible firm core ("al dente").</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-circle"><i class="fa-solid fa-droplet"></i></div>
+          <h3>Liquid Gold Emulsion</h3>
+          <p>Before straining, reserve half a cup of starchy water. Transfer pasta straight into your warm sauce pan and stir vigorously over low flame to bind.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-circle"><i class="fa-solid fa-snowflake"></i></div>
+          <h3>Chilling &amp; Freezing</h3>
+          <p>Keep fresh trays in the coldest part of your refrigerator. To freeze, pop the whole tray in the freezer; drop directly into boiling water without thawing!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       UNIVERSAL FOOTER (CONSISTENT ACROSS ALL 7 PAGES)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1.25rem;">
+          <div class="brand-logo-icon">
+            <img src="images/granoza_logo.jpg" alt="Granoza Logo">
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">GRANOZA</span>
+          </div>
+        </a>
+        <p>
+          An independent neighborhood pastificio honoring ancient Italian pasta-making craft. Hand-rolled daily with 100% durum semolina, free-range yolks, and generations of culinary passion.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore Bottega</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="home2.html">Home 2 (Editorial)</a></li>
+          <li><a href="about.html">About Our Heritage</a></li>
+          <li><a href="products.html">Handmade Pasta Shop</a></li>
+          <li><a href="catering.html">Catering & Platters</a></li>
+          <li><a href="blog.html">Italian Recipe Journal</a></li>
+          <li><a href="contact.html">Store Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Fresh Specialties</h3>
+        <ul class="footer-links-list">
+          <li><a href="products.html">Tagliatelle all'Uovo</a></li>
+          <li><a href="products.html">Pappardelle Rustiche</a></li>
+          <li><a href="products.html">Ravioli di Ricotta & Spinaci</a></li>
+          <li><a href="products.html">Gnocchi di Patate Soffici</a></li>
+          <li><a href="products.html">Bucatini al Bronzo</a></li>
+          <li><a href="products.html">Squid Ink Fettuccine</a></li>
+          <li><a href="products.html">Deli Sauces & Pestos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Bottega Contact</h3>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Granoza</strong><br>
+              Via della Spiga 24, Artisanal Market District
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              Order Counter: <a href="tel:+15558902123">(555) 890-2123</a><br>
+              Catering Hotline: <a href="tel:+15558902124">(555) 890-2124</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              Mon – Fri: 8:00 AM – 7:30 PM<br>
+              Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 Granoza LLC. All Rights Reserved. Crafted with Italian Passion.
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Food Allergen Info</a>
+          <a href="contact.html">Visit Deli</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="js/main.js?v=18"></script>
+</body>
+</html>

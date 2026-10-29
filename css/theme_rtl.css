@@ -1,0 +1,4087 @@
+/* ==========================================================================
+   GRANOZA — THEME & RTL MASTER STYLESHEET (V10 - ULTIMATE DARK MODE & RTL)
+   Midnight Luxury Dark Mode & Full Right-to-Left (RTL) Layout
+   Guarantees 100% text readability, high-contrast artisanal surfaces,
+   and flawless illumination across all 7 pages.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. HEADER TOGGLE BUTTONS (Theme & RTL)
+   ========================================================================== */
+.theme-toggle-btn,
+.rtl-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff !important;
+  cursor: pointer;
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  min-height: 42px;
+  max-height: 42px;
+  border-radius: 50% !important;
+  font-size: 1.05rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff !important;
+  aspect-ratio: 1 / 1 !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.cart-toggle-btn {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  min-height: 42px;
+  max-height: 42px;
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1 !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-btn i {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+  color: #ffffff;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--royal-blue, #164A87);
+  border-color: var(--golden-yellow, #E8B83F);
+  color: var(--golden-yellow, #E8B83F) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.35);
+}
+
+.theme-toggle-btn:hover i {
+  color: var(--golden-yellow, #E8B83F);
+}
+
+.rtl-toggle-btn {
+  padding: 0 0.85rem;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: 0.82rem;
+  color: #ffffff !important;
+}
+
+.rtl-toggle-btn i {
+  font-size: 0.85rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.rtl-toggle-btn .rtl-text {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+}
+
+.rtl-toggle-btn:hover {
+  background: var(--royal-blue, #164A87);
+  border-color: var(--golden-yellow, #E8B83F);
+  color: var(--golden-yellow, #E8B83F) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.35);
+}
+
+.rtl-toggle-btn:hover i,
+.rtl-toggle-btn:hover .rtl-text {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Active RTL State */
+html[dir="rtl"] .rtl-toggle-btn,
+.rtl-toggle-btn.active {
+  background: rgba(232, 184, 63, 0.25) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[dir="rtl"] .rtl-toggle-btn i,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Dark Theme Header Buttons State */
+html[data-theme="dark"] .theme-toggle-btn {
+  background: rgba(232, 184, 63, 0.22) !important;
+  border-color: rgba(232, 184, 63, 0.6) !important;
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .theme-toggle-btn i {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .theme-toggle-btn:hover {
+  background: rgba(232, 184, 63, 0.4) !important;
+  box-shadow: 0 0 20px rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .rtl-toggle-btn i,
+html[data-theme="dark"] .rtl-toggle-btn .rtl-text {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-toggle-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-toggle-btn i {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .hamburger-btn {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html[data-theme="dark"] .hamburger-line {
+  background-color: #ffffff !important;
+}
+
+html[data-theme="dark"] .hamburger-btn:hover,
+html[data-theme="dark"] .hamburger-btn.active {
+  background: rgba(232, 184, 63, 0.25) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .hamburger-btn:hover .hamburger-line,
+html[data-theme="dark"] .hamburger-btn.active .hamburger-line {
+  background-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Mobile Drawer Controls Group */
+.mobile-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-nav-controls .theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 0.95rem;
+}
+
+.mobile-nav-controls .rtl-toggle-btn {
+  height: 36px;
+  padding: 0 0.65rem;
+  font-size: 0.75rem;
+}
+
+.mobile-nav-controls .cart-toggle-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 0.95rem;
+  display: flex !important;
+}
+
+html[data-theme="dark"] .mobile-cart-trigger {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border-color: rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .mobile-cart-label-wrap {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .mobile-cart-badge-pill {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #050d22 !important;
+}
+
+/* Responsive header spacing on tablets & phones */
+@media (max-width: 991px) {
+  .d-none-mobile {
+    display: none !important;
+  }
+
+  /* Hide cart icon from header on mobile & tablet view */
+  .header .cart-toggle-btn,
+  .nav-actions .cart-toggle-btn {
+    display: none !important;
+  }
+
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+  }
+
+  .theme-toggle-btn {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
+  }
+
+  .rtl-toggle-btn {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.92rem !important;
+  }
+
+  .rtl-toggle-btn .rtl-text {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    width: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  .hamburger-line {
+    width: 20px !important;
+    height: 2px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP HEADER ALIGNMENT & HORIZONTAL SINGLE-LINE PRECISION
+   ========================================================================== */
+@media (min-width: 992px) {
+  .main-header {
+    width: 100% !important;
+  }
+
+  .nav-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: clamp(1.25rem, 2vw, 2.5rem) !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+  }
+
+  .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.95rem !important;
+    flex-shrink: 0 !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(0.85rem, 1.4vw, 1.6rem) !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .nav-link {
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-actions .btn,
+  .nav-actions .btn-sm {
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .theme-toggle-btn,
+  .cart-toggle-btn {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ==========================================================================
+   2. MIDNIGHT LUXURY DARK MODE (html[data-theme="dark"])
+   Complete high-contrast dark palette covering all pages and sections
+   ========================================================================== */
+html[data-theme="dark"] {
+  /* Crucial: Pure white must remain true white for all white text! */
+  --pure-white: #ffffff;
+  
+  /* Primary Brand Tokens */
+  --primary: var(--golden-yellow, #E8B83F);
+  --primary-color: var(--golden-yellow, #E8B83F);
+  --primary-brand: #ffda6a;
+  
+  /* Midnight surfaces */
+  --navy-deep: #050d22;
+  --navy-dark: #030714;
+  --navy-surface: #0a183d;
+  --royal-blue: #13396e;
+  --royal-light: #1b4985;
+  --warm-ivory: #070f22;
+  --warm-ivory-dark: #0b1937;
+  --creamy-beige: #0d1e40;
+  --beige-border: rgba(232, 184, 63, 0.25);
+  
+  /* Text tokens */
+  --text-dark: #f8f6f0;
+  --text-muted: #cbd5e1;
+  --text-light-muted: #e2e8f0;
+  --surface-border: rgba(232, 184, 63, 0.2);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.75);
+}
+
+/* Base Body & Layout in Dark Theme */
+html[data-theme="dark"] body {
+  background-color: #070f22 !important;
+  color: #f8f6f0 !important;
+}
+
+/* Top Announcement Bar */
+html[data-theme="dark"] .top-bar {
+  background-color: #030714 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .top-bar-item {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .top-bar-item span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .top-bar-item strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .top-bar-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .top-bar-right a,
+html[data-theme="dark"] .top-bar-right span {
+  color: #cbd5e1 !important;
+}
+
+/* Main Navigation Header */
+html[data-theme="dark"] .main-header {
+  background-color: rgba(5, 13, 34, 0.96) !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-link.active {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Outline Buttons (Buttons in hero, cards, and CTA strips) */
+html[data-theme="dark"] .hero-cta-ghost,
+html[data-theme="dark"] .btn-outline-white {
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .hero-cta-ghost:hover,
+html[data-theme="dark"] .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-outline {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hero-trust-row,
+html[data-theme="dark"] .htr-item {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .htr-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* ==========================================================================
+   ALL LIGHT SECTIONS ACROSS ALL PAGES TURN MIDNIGHT
+   ========================================================================== */
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-ivory,
+html[data-theme="dark"] .bg-beige,
+html[data-theme="dark"] .workshop-section,
+html[data-theme="dark"] .curated-pantry-showcase,
+html[data-theme="dark"] .extrusion-section,
+html[data-theme="dark"] .comparison-section,
+html[data-theme="dark"] .tasting-menu-section,
+html[data-theme="dark"] .salumiere-section,
+html[data-theme="dark"] .customer-reviews-section,
+html[data-theme="dark"] .reviews-section,
+html[data-theme="dark"] .about-heritage-spine,
+html[data-theme="dark"] .about-ratio-bar,
+html[data-theme="dark"] .about-quality-seals,
+html[data-theme="dark"] .bespoke-occasions-section,
+html[data-theme="dark"] .specials-banner,
+html[data-theme="dark"] .quote-calculator-box,
+html[data-theme="dark"] .about-hero-section,
+html[data-theme="dark"] .about-story-section,
+html[data-theme="dark"] .about-techniques-section,
+html[data-theme="dark"] .about-sourcing-section,
+html[data-theme="dark"] .about-pledge-section,
+html[data-theme="dark"] .deli-showcase-section,
+html[data-theme="dark"] .shape-showcase-section,
+html[data-theme="dark"] .seasonal-specials-section,
+html[data-theme="dark"] .chef-rec-section,
+html[data-theme="dark"] .deli-pantry-section,
+html[data-theme="dark"] .home2-catering-section,
+html[data-theme="dark"] .home2-reviews-section,
+html[data-theme="dark"] .catering-packages-section,
+html[data-theme="dark"] .catering-platters-section,
+html[data-theme="dark"] .deli-intro-section,
+html[data-theme="dark"] .catering-events-section,
+html[data-theme="dark"] .catering-instructions-section,
+html[data-theme="dark"] .catering-form-section,
+html[data-theme="dark"] .product-group-section,
+html[data-theme="dark"] .blog-featured-section,
+html[data-theme="dark"] .blog-grid-section,
+html[data-theme="dark"] .contact-banner-section,
+html[data-theme="dark"] .contact-main-section,
+html[data-theme="dark"] .contact-map-section,
+html[data-theme="dark"] .contact-faq-section,
+html[data-theme="dark"] .about-invite-section,
+html[data-theme="dark"] section {
+  background-color: #070f22 !important;
+  color: #f8f6f0;
+}
+
+/* Alternating rhythmic dark background */
+html[data-theme="dark"] .extrusion-section,
+html[data-theme="dark"] .salumiere-section,
+html[data-theme="dark"] .about-ratio-bar,
+html[data-theme="dark"] .specials-banner,
+html[data-theme="dark"] .curated-pantry-showcase,
+html[data-theme="dark"] .deli-pantry-section,
+html[data-theme="dark"] .home2-reviews-section,
+html[data-theme="dark"] .seasonal-specials-section,
+html[data-theme="dark"] .behind-scenes-section {
+  background-color: #050b1a !important;
+}
+
+/* ==========================================================================
+   HOME2 SCREENSHOT SPECIFIC FIXES
+   ========================================================================== */
+
+/* 1. Shape Cards & Buttons (Home2 Screenshot 1) */
+html[data-theme="dark"] .shape-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .shape-card h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shape-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .shape-card-img {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .shape-card .shape-badge {
+  background: rgba(232, 184, 63, 0.2) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.4) !important;
+}
+
+html[data-theme="dark"] .shape-card .btn,
+html[data-theme="dark"] .shape-card .btn-outline,
+html[data-theme="dark"] .shape-card .btn-sm {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shape-card .btn:hover,
+html[data-theme="dark"] .shape-card .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  box-shadow: 0 4px 15px rgba(232, 184, 63, 0.3) !important;
+}
+
+/* 2. Chef Giancarlo's Picks (Home2 Screenshot 2) */
+html[data-theme="dark"] .chef-rec-section {
+  background-color: #070f22 !important;
+}
+
+html[data-theme="dark"] .chef-picks-content h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .chef-picks-content p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .chef-pick-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .pick-details h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pick-details p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pick-badge-price .price {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .pick-badge-price .btn,
+html[data-theme="dark"] .pick-badge-price .btn-primary {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 3. Salumeria & Formaggeria (Home2 Screenshot 3) */
+html[data-theme="dark"] .deli-pantry-section {
+  background-color: #050b1a !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .pantry-media {
+  border: 2px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .pantry-details h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pantry-details p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pantry-tags-grid .pantry-tag-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .pantry-tags-grid .pantry-tag-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .pantry-details .btn {
+  background: var(--royal-blue, #164A87) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .pantry-details .btn:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+/* 4. Banchetti per Occasioni Speciali (Home2 Screenshot 4) */
+html[data-theme="dark"] .home2-catering-section {
+  background-color: #070f22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .home2-catering-section .section-header h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home2-catering-section .section-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured {
+  background: #0e2044 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .tier-serves {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .tier-icon {
+  background: #050d20 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured .tier-icon {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #050d20 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .btn-outline {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .catering-tier-card .btn-outline:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .catering-tier-card.featured .btn,
+html[data-theme="dark"] .catering-tier-card.featured .btn-primary {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+/* 5. What Our Community Says (Home2 Screenshot 5) */
+html[data-theme="dark"] .home2-reviews-section {
+  background-color: #050b1a !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .home2-reviews-section .section-header h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home2-reviews-section .section-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .review-mini-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .review-mini-card .stars {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .review-mini-card p {
+  color: #cbd5e1 !important;
+  font-style: italic !important;
+}
+
+html[data-theme="dark"] .review-mini-card .author {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .review-mini-card strong,
+html[data-theme="dark"] .review-mini-card span {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   INDEX.HTML SPECIFIC FIXES (From Previous Screenshots)
+   ========================================================================== */
+/* Heritage seal (26 Years badge) */
+html[data-theme="dark"] .shs-heritage-seal {
+  background: #061129 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .shs-seal-text strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .shs-seal-text span {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .shs-lead-p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .shs-pull-quote {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border-left-color: var(--golden-yellow, #E8B83F) !important;
+  color: #f0e9d6 !important;
+}
+
+/* Connected Milestone Track */
+html[data-theme="dark"] .shs-timeline-track {
+  background: #0d1e40 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .shs-step-node {
+  background: #050d20 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.4) !important;
+}
+
+html[data-theme="dark"] .shs-node-active {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border-color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .shs-step-info strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .shs-step-info span {
+  color: #c4d3e8 !important;
+  font-size: 0.72rem !important;
+}
+
+html[data-theme="dark"] .shs-step-line {
+  background: rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .shs-note {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .shs-text-col h2 {
+  color: #ffffff !important;
+}
+
+/* Pappardelle Card & Specs Grid */
+html[data-theme="dark"] .pss-featured-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .pfh-title-row h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pfh-desc {
+  color: #c8d7ea !important;
+}
+
+html[data-theme="dark"] .pfh-cooktime-pill {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .pfh-specs-grid {
+  background: #08142c !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item strong {
+  color: #ffda6a !important;
+  font-size: 0.74rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item span {
+  color: #ffffff !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  display: block !important;
+}
+
+html[data-theme="dark"] .pfh-spec-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* Daily Counter Board (Section 3 Right) */
+html[data-theme="dark"] .pss-daily-board {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .pdb-board-header h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pdb-subtitle {
+  color: #c4d3e8 !important;
+}
+
+html[data-theme="dark"] .pdb-item {
+  background: #08142c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .pdb-item-top h5 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pdb-item-price {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pdb-item-price small {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pdb-item-info p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pdb-item-tag {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .pdb-footer-note {
+  color: #a4b8d0 !important;
+}
+
+/* Sourcing & Ingredient Cards */
+html[data-theme="dark"] .dps-hero-ing-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .dps-hic-body h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dps-hic-meta {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-hic-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .dps-hic-profile span {
+  color: #4ade80 !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .dps-hic-profile i {
+  color: #4ade80 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.22) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .dps-cc-loc {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-compact-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .dps-flavor-tag {
+  background: #061129 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .dps-header-row h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dps-header-row p {
+  color: #cbd5e1 !important;
+}
+
+/* Sacred Pasta Ratio & Trattoria Recipes */
+html[data-theme="dark"] .cgs-formula-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .cgs-formula-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cgs-formula-header p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cgs-ratio-steps {
+  background: #071228 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .crs-metric {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .crs-label {
+  color: #cbd5e1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+html[data-theme="dark"] .cgs-ratio-divider {
+  color: rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .cfs-secret-card {
+  background: #071228 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .cfs-secret-text strong {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cfs-secret-text p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cgs-formula-footer {
+  color: #a0b4cc !important;
+}
+
+html[data-theme="dark"] .cgs-dish-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .cdc-meta-row span {
+  color: #ffda6a !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .cdc-body h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cdc-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cdc-pairing-chip {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .cdc-pairing-chip i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .cdc-link,
+html[data-theme="dark"] a[class*="recipe-link"],
+html[data-theme="dark"] a[class*="view-guide"] {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .cgs-header-row h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cgs-header-row p {
+  color: #cbd5e1 !important;
+}
+
+/* Toast Notifications */
+html[data-theme="dark"] .toast {
+  background: #0a1738 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  border-left: 5px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75) !important;
+}
+
+html[data-theme="dark"] .toast span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .toast i {
+  color: var(--golden-yellow, #E8B83F) !important;
+  font-size: 1.15rem !important;
+}
+
+html[data-theme="dark"] .toast-success {
+  border-left-color: #2ecc71 !important;
+}
+
+html[data-theme="dark"] .toast-error {
+  border-left-color: var(--tomato-red, #B52D45) !important;
+}
+
+/* ==========================================================================
+   HOMEPAGE 1: COSA DICONO & BOLLETTINO DARK MODE TEXT VISIBILITY & CONTRAST
+   ========================================================================== */
+html[data-theme="dark"] .testimonials-prestige-section {
+  background-color: #070f22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .tps-ribbon-bar {
+  background: #030714 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.2) !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .tps-trust-col .eyebrow {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .tps-trust-col h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .tps-trust-col h2 em {
+  color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .tps-score-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .tps-big-num {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .tps-score-stars {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .tps-reviews-count {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .tps-badge-item {
+  color: #f8f6f0 !important;
+}
+
+html[data-theme="dark"] .tps-badge-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .tps-quote-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .tps-card-offset {
+  border-color: rgba(232, 184, 63, 0.45) !important;
+}
+
+html[data-theme="dark"] .tps-quote-symbol {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .tps-quote-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .tps-quote-card footer strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .tps-quote-card footer span {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .tps-avatar {
+  background: var(--royal-blue, #164A87) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .tps-avatar-gold {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #050d22 !important;
+}
+
+/* Bollettino del Pastaio (Newsletter Bar) in Dark Mode */
+html[data-theme="dark"] .bottega-club-section {
+  background-color: #050b1a !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .bcs-bar-wrap {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .bcs-eyebrow {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .bcs-text h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .bcs-text h2 em {
+  color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .bcs-perks span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .bcs-perks i {
+  color: #10b981 !important;
+}
+
+html[data-theme="dark"] .bcs-input {
+  background-color: #050c1e !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .bcs-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .bcs-input:focus {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 0 0 3px rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .bcs-submit-btn {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #050d22 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .bcs-submit-btn:hover {
+  background: #d89b1c !important;
+  color: #050d22 !important;
+  box-shadow: 0 6px 20px rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .bcs-notice {
+  color: #94a3b8 !important;
+}
+
+/* ==========================================================================
+   PRIMARY BRAND COLOR CONSISTENCY (LIGHT & DARK MODES)
+   ========================================================================== */
+html[data-theme="dark"] .cbs-box-link {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .cbs-box-link:hover {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .footer-links-list a:hover {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .social-link:hover {
+  background: var(--royal-blue, #164A87) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .cart-badge {
+  background-color: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   GLOBAL CARDS, CONTAINERS & FORMS ACROSS ALL PAGES
+   ========================================================================== */
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .curated-card,
+html[data-theme="dark"] .workshop-card,
+html[data-theme="dark"] .tasting-menu-card,
+html[data-theme="dark"] .salumiere-card,
+html[data-theme="dark"] .review-card,
+html[data-theme="dark"] .bespoke-occasion-card,
+html[data-theme="dark"] .concierge-strip,
+html[data-theme="dark"] .craft-card,
+html[data-theme="dark"] .testimonial-card,
+html[data-theme="dark"] .blog-card,
+html[data-theme="dark"] .contact-info-card,
+html[data-theme="dark"] .contact-form-card,
+html[data-theme="dark"] .catering-form-card,
+html[data-theme="dark"] .package-card,
+html[data-theme="dark"] .event-card,
+html[data-theme="dark"] .instruction-step,
+html[data-theme="dark"] .recipe-card,
+html[data-theme="dark"] .bts-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .cart-drawer,
+html[data-theme="dark"] .modal-card,
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .timeline-card,
+html[data-theme="dark"] .hst-content-box,
+html[data-theme="dark"] .about-stat,
+html[data-theme="dark"] .sourcing-pin,
+html[data-theme="dark"] .sourcing-map-box,
+html[data-theme="dark"] .pmb-seal-card,
+html[data-theme="dark"] .pmb-tile,
+html[data-theme="dark"] .tech-card,
+html[data-theme="dark"] .platter-card,
+html[data-theme="dark"] .featured-article-card {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  color: #f8f6f0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Headings in all cards */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .brand-title,
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .product-title,
+html[data-theme="dark"] .item-title,
+html[data-theme="dark"] .comparison-title,
+html[data-theme="dark"] .faq-question {
+  color: #ffffff !important;
+}
+
+/* Paragraphs & Text */
+html[data-theme="dark"] p,
+html[data-theme="dark"] .card-text,
+html[data-theme="dark"] .section-lead,
+html[data-theme="dark"] .faq-answer p,
+html[data-theme="dark"] .hero-lead,
+html[data-theme="dark"] .modal-desc,
+html[data-theme="dark"] .sourcing-lead-p {
+  color: #cbd5e1 !important;
+}
+
+/* Eyebrows, Gold subtitles, Prices */
+html[data-theme="dark"] .price-current,
+html[data-theme="dark"] .price-display,
+html[data-theme="dark"] .tier-price,
+html[data-theme="dark"] .price,
+html[data-theme="dark"] .gold-text,
+html[data-theme="dark"] .section-eyebrow,
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .card-tag {
+  color: #ffda6a !important;
+}
+
+/* Form Controls in Dark Theme */
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="tel"],
+html[data-theme="dark"] input[type="date"],
+html[data-theme="dark"] input[type="number"],
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: #050c1e !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] input:focus,
+html[data-theme="dark"] select:focus,
+html[data-theme="dark"] textarea:focus {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 0 15px rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #7a8fa8 !important;
+}
+
+html[data-theme="dark"] label,
+html[data-theme="dark"] .form-label {
+  color: #e2e8f0 !important;
+}
+
+/* Cart Drawer Dark Theme */
+html[data-theme="dark"] .cart-drawer {
+  background-color: #070f22 !important;
+}
+
+html[data-theme="dark"] .cart-drawer-header {
+  background-color: #050d22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .cart-drawer-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-close-btn {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-item {
+  background-color: #0c1a36 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8f6f0 !important;
+}
+
+html[data-theme="dark"] .cart-item-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cart-summary,
+html[data-theme="dark"] .cart-footer {
+  background-color: #040916 !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .cart-summary-row {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cart-summary-row.total strong {
+  color: #ffffff !important;
+}
+
+/* Category Filter Pills */
+html[data-theme="dark"] .filter-pill,
+html[data-theme="dark"] .category-tab-btn {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .filter-pill.active,
+html[data-theme="dark"] .filter-pill:hover,
+html[data-theme="dark"] .category-tab-btn.active,
+html[data-theme="dark"] .category-tab-btn:hover {
+  background-color: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+/* Modal Overlay & Modal Card */
+html[data-theme="dark"] .modal-overlay {
+  background: rgba(2, 6, 16, 0.85) !important;
+}
+
+html[data-theme="dark"] .modal-close-btn {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Footer in Dark Theme */
+html[data-theme="dark"] .main-footer {
+  background-color: #030714 !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .footer-links a {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .footer-links a:hover {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #9cb0c8 !important;
+}
+
+/* ==========================================================================
+   PAGE-SPECIFIC HIGH-CONTRAST DARK MODE OVERRIDES (PRODUCTS, ABOUT, ETC.)
+   ========================================================================== */
+
+/* PRODUCTS.HTML — Product Item Cards (Fixes Screenshots 4 & 5) */
+html[data-theme="dark"] .product-item-card {
+  background-color: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+}
+
+html[data-theme="dark"] .product-item-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 14px 35px rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .product-subtitle {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-card-details h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-card-details p {
+  color: #cbd5e1 !important;
+  line-height: 1.55 !important;
+}
+
+/* Ingredients Box inside Product Cards */
+html[data-theme="dark"] .product-ingredients-snippet {
+  background: #071228 !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  color: #cbd5e1 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-theme="dark"] .product-ingredients-snippet strong {
+  color: #ffda6a !important;
+}
+
+/* Product Card Bottom Bar & Price */
+html[data-theme="dark"] .product-card-bar {
+  border-top: 1px solid rgba(232, 184, 63, 0.22) !important;
+}
+
+html[data-theme="dark"] .product-price-tag {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .product-price-tag small {
+  color: #cbd5e1 !important;
+}
+
+/* Product Card Action Buttons */
+html[data-theme="dark"] .btn-outline-navy,
+html[data-theme="dark"] .btn-quick-view {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .btn-outline-navy:hover,
+html[data-theme="dark"] .btn-quick-view:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .btn-add-pasta {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .product-cook-badge {
+  background: rgba(5, 13, 34, 0.92) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+
+/* ABOUT.HTML — Specific Dark Mode Overrides (Fixes Screenshots 1, 2, 3) */
+
+/* 1. Stat Boxes (Screenshot 1) */
+html[data-theme="dark"] .about-stat {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .about-stat h3 {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .about-stat span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  display: block !important;
+}
+
+/* 2. Timeline Tag Chips & Content Boxes (Screenshot 2) */
+html[data-theme="dark"] .hst-content-box {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .hst-content-box h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hst-content-box p {
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+}
+
+html[data-theme="dark"] .hst-year-badge {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+}
+
+html[data-theme="dark"] .hst-year-current {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border-color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .hst-tag-chip {
+  background: #071228 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .hst-node-pin {
+  background: #0c1a36 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .hst-center-line {
+  background: rgba(232, 184, 63, 0.3) !important;
+}
+
+/* 3. Family Pledge & Sacred Table Rule (Screenshot 3) */
+html[data-theme="dark"] .pmb-seal-card {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+}
+
+html[data-theme="dark"] .pmb-seal-badge {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .pmb-seal-card h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-quote {
+  background: #071228 !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  color: #f0e9d6 !important;
+  font-style: italic !important;
+}
+
+html[data-theme="dark"] .pmb-check-item {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.84rem !important;
+}
+
+html[data-theme="dark"] .pmb-check-item i {
+  color: #4ade80 !important;
+  font-size: 0.95rem !important;
+}
+
+html[data-theme="dark"] .pmb-signature span {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-signature small {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pmb-tile {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .pmb-tile-top h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .pmb-tile p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pmb-metric-tag {
+  background: rgba(232, 184, 63, 0.16) !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .pmb-tile-icon {
+  background: #071228 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+/* Sourcing Map & Pins in About Us */
+html[data-theme="dark"] .sourcing-pin {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .sourcing-pin h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .sourcing-pin p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .sourcing-map-box {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .smb-header h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .smb-desc {
+  color: #cbd5e1 !important;
+}
+
+
+/* CATERING.HTML — Specific Dark Mode Overrides */
+html[data-theme="dark"] .platter-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .platter-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .platter-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .instruction-step {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .step-number {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .instruction-step h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .instruction-step p {
+  color: #cbd5e1 !important;
+}
+
+/* CATERING.HTML — Comprehensive Dark Mode Overrides */
+
+/* 1. Curated Italian Catering Packages (.package-card) */
+html[data-theme="dark"] .package-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .package-card.popular {
+  background: #0e2248 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .package-card h3 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .package-serves {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .package-price {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .package-price span {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+html[data-theme="dark"] .package-items-list {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .package-items-list li {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .package-items-list li i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .package-card .btn-outline-navy {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .package-card .btn-outline-navy:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .package-card .btn-gold {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+/* 2. Pasta Platters Section */
+html[data-theme="dark"] .platter-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .platter-content h4 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .platter-yield {
+  color: #ffda6a !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .platter-content p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .platter-footer span {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .platter-footer .btn-outline-navy {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.08) !important;
+}
+
+html[data-theme="dark"] .platter-footer .btn-outline-navy:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+/* 3. Show-Stopping Antipasto Display Boards Section */
+html[data-theme="dark"] .intro-feature-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .intro-feature-card h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .intro-feature-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .intro-feature-icon {
+  background: #050d22 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .deli-intro-section div[style*="creamy-beige"] {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .deli-intro-section div[style*="creamy-beige"] div {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .deli-intro-section div[style*="creamy-beige"] div[style*="navy-deep"] {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .deli-intro-section div[style*="creamy-beige"] strong {
+  color: #ffda6a !important;
+}
+
+/* 4. Eventi su Misura — Tailored Occasions Cards (.occ-card) */
+html[data-theme="dark"] .occ-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .occ-card:hover {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 32px rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .occ-card-featured {
+  background: #0e2044 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 35px rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .occ-featured-badge {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .occ-tag {
+  background: rgba(4, 18, 51, 0.92) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .occ-capacity-pill {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .occ-body h3 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .occ-sub {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .occ-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .occ-perks {
+  border-top: 1px dashed rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .occ-perks span {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .occ-perks i {
+  color: #4ade80 !important;
+}
+
+html[data-theme="dark"] .occ-footer {
+  border-top: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .occ-link-btn {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .occ-link-btn:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .occ-btn-gold {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .occ-btn-gold:hover {
+  background: #d89b1c !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .occ-concierge-strip {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .ocs-item strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .ocs-item span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .ocs-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* 5. Cost Preview Box & Catering Form */
+html[data-theme="dark"] .catering-form-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .cost-preview-box {
+  background: #050d22 !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .cost-preview-box h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .cost-preview-box p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .cost-preview-amount {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+
+/* BLOG.HTML — Specific Dark Mode Overrides */
+html[data-theme="dark"] .featured-article-card {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .featured-article-body h2 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .featured-article-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .author-meta {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .author-meta strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .author-meta i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .badge-navy {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .badge-gold {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .btn-read-article {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-read-article:hover {
+  background: var(--tomato-dark, #8F2035) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .blog-categories-strip {
+  background: #070f22 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .filter-btn.blog-filter-btn {
+  background: #0c1a36 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .filter-btn.blog-filter-btn:hover {
+  background: rgba(232, 184, 63, 0.15) !important;
+  color: #ffffff !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .filter-btn.blog-filter-btn.active {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .blog-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .blog-card-body h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .blog-card-body p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .blog-meta-info {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .blog-card-footer {
+  border-top: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .blog-card-footer span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .read-link:not(.btn-read-article) {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .read-link:not(.btn-read-article):hover {
+  color: #ffffff !important;
+}
+
+/* Articoli Section CTA Buttons (Consistent Horizontal Padding & Neat Alignment) */
+.blog-card .read-link,
+.blog-card .btn-read-article,
+.blog-card .read-link.btn-read-article {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 50px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  background-color: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 6px rgba(181, 45, 69, 0.22) !important;
+  text-decoration: none !important;
+}
+
+.blog-card .read-link:hover,
+.blog-card .btn-read-article:hover,
+.blog-card .read-link.btn-read-article:hover {
+  background-color: var(--tomato-dark, #8F2035) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(181, 45, 69, 0.35) !important;
+  gap: 0.65rem !important;
+}
+
+html[data-theme="dark"] .blog-card .read-link,
+html[data-theme="dark"] .blog-card .btn-read-article,
+html[data-theme="dark"] .blog-card .read-link.btn-read-article {
+  background-color: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .blog-card .read-link:hover,
+html[data-theme="dark"] .blog-card .btn-read-article:hover,
+html[data-theme="dark"] .blog-card .read-link.btn-read-article:hover {
+  background-color: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 4px 12px rgba(232, 184, 63, 0.35) !important;
+}
+
+
+/* ==========================================================================
+   ARTICLE READER MODAL & ALL MODALS (BLOG.HTML & SITE-WIDE)
+   ========================================================================== */
+html[data-theme="dark"] .article-modal,
+html[data-theme="dark"] .modal-card {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  color: #f8f6f0 !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 50px rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .article-modal .modal-close-btn,
+html[data-theme="dark"] .modal-card .modal-close-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+html[data-theme="dark"] .article-modal .modal-close-btn:hover,
+html[data-theme="dark"] .modal-card .modal-close-btn:hover {
+  background: var(--tomato-red, #B52D45) !important;
+  color: #ffffff !important;
+  border-color: var(--tomato-red, #B52D45) !important;
+}
+
+html[data-theme="dark"] .article-modal .eyebrow,
+html[data-theme="dark"] .modal-card .eyebrow {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .article-modal h1,
+html[data-theme="dark"] .article-modal .art-title,
+html[data-theme="dark"] .modal-card h2,
+html[data-theme="dark"] .modal-title-el {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .article-modal div[style*="text-muted"],
+html[data-theme="dark"] .modal-card div[style*="text-muted"] {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .article-modal div[style*="text-muted"] strong,
+html[data-theme="dark"] .modal-card div[style*="text-muted"] strong {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .article-modal-img,
+html[data-theme="dark"] .modal-media img {
+  border: 1.5px solid rgba(232, 184, 63, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .article-modal-text {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .article-modal-text p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .article-modal-text strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .article-modal-text h3 {
+  color: #ffda6a !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  padding-left: 0.75rem !important;
+  margin-top: 1.75rem !important;
+}
+
+html[data-theme="dark"] .article-modal div[style*="border-top"],
+html[data-theme="dark"] .modal-card div[style*="border-top"] {
+  border-top-color: rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .article-modal div[style*="border-top"] div,
+html[data-theme="dark"] .modal-card div[style*="border-top"] div {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .article-modal .btn-outline-navy,
+html[data-theme="dark"] .modal-card .btn-outline-navy {
+  color: #ffda6a !important;
+  border: 1.5px solid rgba(232, 184, 63, 0.5) !important;
+  background: rgba(232, 184, 63, 0.1) !important;
+}
+
+html[data-theme="dark"] .article-modal .btn-outline-navy:hover,
+html[data-theme="dark"] .modal-card .btn-outline-navy:hover {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .modal-price,
+html[data-theme="dark"] .modal-price-el {
+  color: #ffda6a !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .modal-desc-el {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .modal-card div[style*="warm-ivory"] {
+  background: #061126 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .modal-ingr-el {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .modal-portion-selector label {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .modal-card .portion-btn {
+  background: #050d22 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(232, 184, 63, 0.25) !important;
+}
+
+html[data-theme="dark"] .modal-card .portion-btn.active {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .order-summary-text {
+  color: #ffffff !important;
+}
+
+
+
+/* CONTACT.HTML — Specific Dark Mode Overrides */
+
+/* 1. Quick Info Cards Bar */
+html[data-theme="dark"] .contact-info-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .contact-info-card:hover {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 12px 30px rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .contact-icon-circle {
+  background: #050d22 !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+}
+
+html[data-theme="dark"] .contact-info-card h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .contact-info-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .contact-info-card a {
+  color: #ffda6a !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .contact-info-card a:hover {
+  color: #ffffff !important;
+}
+
+/* 2. Main Enquiry Form & Form Controls */
+html[data-theme="dark"] .contact-form-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .contact-form-card h3 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .contact-form-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .form-group label {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .form-group label span {
+  color: #ff6b6b !important;
+}
+
+html[data-theme="dark"] .form-control {
+  background: #061126 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .form-control:focus {
+  background: #091a38 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] select.form-control option {
+  background: #070f22 !important;
+  color: #ffffff !important;
+}
+
+/* Event Date Input Calendar Icon Visibility in Dark Mode */
+html[data-theme="dark"] input[type="date"],
+html[data-theme="dark"] input[type="date"].form-control,
+html[data-theme="dark"] #catering_date {
+  color-scheme: dark !important;
+}
+
+html[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+html[data-theme="dark"] #catering_date::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2) !important;
+  cursor: pointer !important;
+  opacity: 0.95 !important;
+  padding: 4px;
+  border-radius: 4px;
+  transition: opacity 0.2s ease, filter 0.2s ease, background-color 0.2s ease;
+}
+
+html[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+html[data-theme="dark"] #catering_date::-webkit-calendar-picker-indicator:hover {
+  filter: invert(0.85) sepia(1) saturate(5) hue-rotate(5deg) brightness(1.2) !important;
+  background-color: rgba(232, 184, 63, 0.15) !important;
+  opacity: 1 !important;
+}
+
+/* 3. Opening Hours & Fresh Schedule Card */
+html[data-theme="dark"] .hours-schedule-card {
+  background: #0c1a36 !important;
+  border: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .hours-schedule-card h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .hours-schedule-card p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .hours-row {
+  color: #cbd5e1 !important;
+  border-bottom: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .hours-row strong {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .fresh-batch-alert {
+  background: rgba(232, 184, 63, 0.12) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .fresh-batch-alert strong {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .fresh-batch-alert i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* 4. Dedicated Location & Map Section (.map-custom-card) */
+html[data-theme="dark"] .contact-map-section {
+  background-color: #070f22 !important;
+}
+
+html[data-theme="dark"] .map-custom-card {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+}
+
+html[data-theme="dark"] .map-text-panel {
+  background: #0c1a36 !important;
+}
+
+html[data-theme="dark"] .map-text-panel h3 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+}
+
+html[data-theme="dark"] .map-text-panel p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .map-address-box {
+  background: rgba(232, 184, 63, 0.08) !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+}
+
+html[data-theme="dark"] .map-address-icon {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+}
+
+html[data-theme="dark"] .map-address-details h4 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .map-address-details .map-address-line {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] .map-hours-pill {
+  background: rgba(232, 184, 63, 0.18) !important;
+  color: var(--golden-yellow, #E8B83F) !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .directions-item {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .directions-item strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .directions-item div {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .directions-item i {
+  color: var(--golden-yellow, #E8B83F) !important;
+  font-size: 1.15rem !important;
+}
+
+html[data-theme="dark"] .map-actions-row {
+  border-top: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .map-visual-panel {
+  background: #071228 !important;
+}
+
+html[data-theme="dark"] .map-visual-panel .map-iframe {
+  filter: contrast(1.05) brightness(0.92);
+}
+
+html[data-theme="dark"] .map-pin-overlay {
+  background: rgba(5, 13, 34, 0.94) !important;
+  border: 1.5px solid var(--golden-yellow, #E8B83F) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .map-pin-overlay strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .map-pin-overlay span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html[data-theme="dark"] .map-pin-overlay i {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+/* 5. Frequently Asked Questions (FAQ Accordion) */
+html[data-theme="dark"] .faq-item {
+  background: #0c1a36 !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .faq-item:hover {
+  border-color: rgba(232, 184, 63, 0.5) !important;
+}
+
+html[data-theme="dark"] .faq-item.active {
+  border-color: var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 0 8px 25px rgba(232, 184, 63, 0.15) !important;
+}
+
+html[data-theme="dark"] .faq-question {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .faq-question:hover {
+  color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .faq-icon {
+  background: #050d22 !important;
+  color: #ffda6a !important;
+  border: 1px solid rgba(232, 184, 63, 0.3) !important;
+}
+
+html[data-theme="dark"] .faq-item.active .faq-icon {
+  background: var(--golden-yellow, #E8B83F) !important;
+  color: #061A46 !important;
+  border-color: var(--golden-yellow, #E8B83F) !important;
+}
+
+html[data-theme="dark"] .faq-answer {
+  background: #08142c !important;
+}
+
+html[data-theme="dark"] .faq-answer-inner {
+  color: #cbd5e1 !important;
+  border-top: 1px solid rgba(232, 184, 63, 0.2) !important;
+}
+
+html[data-theme="dark"] .faq-answer-inner strong {
+  color: #ffda6a !important;
+}
+
+html[data-theme="dark"] .faq-answer-inner p {
+  color: #cbd5e1 !important;
+}
+
+
+
+/* ==========================================================================
+   3. RIGHT-TO-LEFT (RTL) STYLES (html[dir="rtl"])
+   Flips layout direction, text alignment, drawers, badges, and directional arrows
+   ========================================================================== */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Alignments */
+html[dir="rtl"] .text-start,
+html[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end,
+html[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+/* Header & Navigation Layout */
+html[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+/* Cart Badge flipped to left */
+html[dir="rtl"] .cart-badge {
+  right: auto !important;
+  left: -4px !important;
+}
+
+/* Drawers - In RTL they slide gracefully from the LEFT instead of right */
+html[dir="rtl"] .cart-drawer {
+  right: auto !important;
+  left: -460px !important;
+  border-left: none !important;
+  border-right: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.45) !important;
+  transition: left 0.35s ease !important;
+}
+
+html[dir="rtl"] .cart-drawer.open {
+  left: 0 !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] .mobile-nav-drawer {
+  right: auto !important;
+  left: -100% !important;
+  border-left: none !important;
+  border-right: 2px solid var(--golden-yellow, #E8B83F) !important;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5) !important;
+  transition: left 0.35s ease !important;
+}
+
+html[dir="rtl"] .mobile-nav-drawer.open {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Directional Icons (Flip arrows that indicate forwards/backwards) */
+html[dir="rtl"] .fa-arrow-right,
+html[dir="rtl"] .fa-angle-right,
+html[dir="rtl"] .fa-chevron-right,
+html[dir="rtl"] .fa-arrow-right-long,
+html[dir="rtl"] .fa-arrow-right-from-bracket {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+html[dir="rtl"] .fa-arrow-left,
+html[dir="rtl"] .fa-angle-left,
+html[dir="rtl"] .fa-chevron-left,
+html[dir="rtl"] .fa-arrow-left-long {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Button & Element Icon Margins */
+html[dir="rtl"] .btn i,
+html[dir="rtl"] .top-bar-item i,
+html[dir="rtl"] .badge i,
+html[dir="rtl"] .footer-links a i,
+html[dir="rtl"] .mobile-deli-info p i {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Floating Badges on Images */
+html[dir="rtl"] .hero-floating-badge {
+  right: auto !important;
+  left: 24px !important;
+}
+
+html[dir="rtl"] .card-floating-badge,
+html[dir="rtl"] .product-badge,
+html[dir="rtl"] .shape-badge {
+  right: auto !important;
+  left: 1rem !important;
+}
+
+/* Form Controls in RTL */
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  text-align: right !important;
+}
+
+/* Toast Container in RTL */
+html[dir="rtl"] .toast-container {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+html[dir="rtl"] .toast {
+  text-align: right;
+  flex-direction: row;
+}
+
+/* Breadcrumb in RTL */
+html[dir="rtl"] .breadcrumb-list {
+  flex-direction: row-reverse;
+}
+
+/* Occasion Strip Concierge in RTL */
+html[dir="rtl"] .concierge-strip {
+  direction: rtl;
+}
+
+/* Back to Top button in RTL */
+html[dir="rtl"] .back-to-top {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+/* Utility Pages RTL Rules */
+html[dir="rtl"] .eqr-card,
+html[dir="rtl"] .cs-teaser-card,
+html[dir="rtl"] .maint-progress-card {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .mpc-task-item span,
+html[dir="rtl"] .eqr-card {
+  flex-direction: row-reverse;
+}
+
+/* Utility Pages Dark Mode */
+html[data-theme="dark"] .error-quick-recommendations,
+html[data-theme="dark"] .maint-progress-card,
+html[data-theme="dark"] .countdown-stat-box,
+html[data-theme="dark"] .cs-teaser-card {
+  background: rgba(5, 13, 34, 0.88) !important;
+  border-color: rgba(232, 184, 63, 0.35) !important;
+}
+
+html[dir="rtl"] .brand-logo {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+/* ==========================================================================
+   UNIFIED HERO SECTION SPACING, ALIGNMENT & PADDING (ALL PAGES & ABOUT PAGE)
+   ========================================================================== */
+.hero-home-1,
+.hero-home-2,
+.page-hero,
+.catering-hero-section {
+  position: relative !important;
+  min-height: 500px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 2.25rem 0 2.5rem !important;
+  background-color: var(--navy-dark) !important;
+  color: var(--pure-white) !important;
+  overflow: hidden !important;
+  border-bottom: 2px solid var(--golden-yellow) !important;
+  text-align: left !important;
+}
+
+.hero-cinematic-inner {
+  position: relative !important;
+  z-index: 5 !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.hero-left-column {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.hero-left-column .breadcrumb-nav {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  margin-bottom: 0.6rem !important;
+  text-align: left !important;
+}
+
+.hero-left-column .breadcrumb-nav a {
+  color: var(--golden-yellow) !important;
+  text-decoration: none !important;
+}
+
+.hero-tag-line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: rgba(232, 184, 63, 0.15) !important;
+  border: 1px solid rgba(232, 184, 63, 0.35) !important;
+  color: var(--golden-yellow) !important;
+  padding: 0.35rem 0.9rem !important;
+  border-radius: 999px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 0.85rem !important;
+  width: fit-content !important;
+  text-align: left !important;
+}
+
+.hero-tag-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--golden-yellow) !important;
+  box-shadow: 0 0 8px var(--golden-yellow) !important;
+}
+
+.hero-left-column h1 {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(2rem, 3.4vw, 2.85rem) !important;
+  font-weight: 800 !important;
+  color: var(--pure-white) !important;
+  line-height: 1.14 !important;
+  margin-bottom: 0.85rem !important;
+  text-align: left !important;
+}
+
+.hero-italic-accent {
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: var(--golden-yellow) !important;
+}
+
+.hero-desc {
+  font-size: 0.95rem !important;
+  line-height: 1.62 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 530px !important;
+  margin-bottom: 1.65rem !important;
+  text-align: left !important;
+}
+
+.hero-cta-row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.15rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.75rem !important;
+  justify-content: flex-start !important;
+}
+
+.hero-cta-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  background: linear-gradient(135deg, var(--golden-yellow) 0%, #d89b1c 100%) !important;
+  color: var(--navy-dark) !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+  padding: 0.72rem 1.45rem !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 14px rgba(232, 184, 63, 0.35) !important;
+  white-space: nowrap !important;
+}
+
+.hero-cta-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(232, 184, 63, 0.5) !important;
+  color: var(--navy-dark) !important;
+}
+
+.hero-cta-ghost {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  padding: 0.7rem 1.45rem !important;
+  border-radius: 50px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  color: var(--pure-white) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.hero-cta-ghost:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: var(--pure-white) !important;
+}
+
+.hero-trust-row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.25rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+  justify-content: flex-start !important;
+}
+
+/* Tablet Hero Alignment */
+@media (max-width: 991px) {
+  .hero-home-1,
+  .hero-home-2,
+  .page-hero,
+  .catering-hero-section {
+    height: auto !important;
+    min-height: 480px !important;
+    max-height: none !important;
+    padding: 2.25rem 0 !important;
+  }
+
+  .hero-cinematic-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .hero-left-column {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .hero-cta-row {
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Mobile Hero Alignment */
+@media (max-width: 576px) {
+  .hero-cta-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-ghost {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* RTL Hero Alignment */
+html[dir="rtl"] .hero-home-1,
+html[dir="rtl"] .hero-home-2,
+html[dir="rtl"] .page-hero,
+html[dir="rtl"] .catering-hero-section {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-left-column {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-left-column h1,
+html[dir="rtl"] .hero-desc,
+html[dir="rtl"] .breadcrumb-nav {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-cta-row {
+  justify-content: flex-end !important;
+}
+
+html[dir="rtl"] .hero-trust-row {
+  justify-content: flex-end !important;
+}
+
+/* ==========================================================================
+   CATERING GUIDA ALL'ORDINAZIONE & PREVENTIVO ENHANCEMENTS
+   ========================================================================== */
+.catering-instructions-section {
+  padding: 4.75rem 0 !important;
+}
+
+.catering-instructions-section .section-header {
+  margin-bottom: 2.75rem !important;
+}
+
+.catering-instructions-section .instructions-row {
+  margin-top: 2.5rem !important;
+  gap: 2rem !important;
+}
+
+.instruction-step,
+.catering-instructions-section .instruction-step {
+  border-left: 3px solid var(--golden-yellow, #E8B83F) !important;
+  padding: 1.65rem 1.35rem 1.65rem 1.5rem !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 0 var(--radius-md, 8px) var(--radius-md, 8px) 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.25s ease, background 0.25s ease !important;
+}
+
+.instruction-step:hover,
+.catering-instructions-section .instruction-step:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-2px) !important;
+}
+
+html[data-theme="dark"] .instruction-step,
+html[data-theme="dark"] .catering-instructions-section .instruction-step {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-theme="dark"] .instruction-step:hover,
+html[data-theme="dark"] .catering-instructions-section .instruction-step:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (max-width: 991px) {
+  .instructions-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .instructions-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   BLOG ARTICOLI CTA BUTTONS HORIZONTAL PADDING & ALIGNMENT
+   ========================================================================== */
+.blog-card .blog-card-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  padding-top: 1.1rem !important;
+  margin-top: auto !important;
+}
+
+.blog-card .read-link,
+.blog-card .btn-read-article,
+.blog-card .read-link.btn-read-article {
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 50px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+}
+
+@media (max-width: 480px) {
+  .blog-card .blog-card-footer {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+  .blog-card .read-link,
+  .blog-card .btn-read-article {
+    padding: 0.45rem 1rem !important;
+  }
+}
+
+/* ==========================================================================
+   CONTACT DEDICATED EMBEDDED MAP SECTION
+   ========================================================================== */
+.contact-map-section {
+  padding: 5rem 0 !important;
+}
+
+.map-custom-card {
+  display: grid !important;
+  grid-template-columns: 1fr 1.35fr !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-lg, 12px) !important;
+}
+
+.map-visual-panel {
+  min-height: 460px !important;
+  position: relative !important;
+}
+
+.map-visual-panel .map-iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 460px !important;
+  border: 0 !important;
+  display: block !important;
+}
+
+@media (max-width: 991px) {
+  .map-custom-card {
+    grid-template-columns: 1fr !important;
+  }
+  .map-visual-panel,
+  .map-visual-panel .map-iframe {
+    min-height: 380px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-text-panel {
+    padding: 2rem 1.25rem !important;
+  }
+  .map-visual-panel,
+  .map-visual-panel .map-iframe {
+    min-height: 320px !important;
+  }
+  .map-pin-overlay {
+    bottom: 0.75rem !important;
+    left: 0.75rem !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   UNIFIED HERO SECTION LABELS & BADGES ACROSS ALL PAGES
+   Consistent typography, padding, colors, backdrop-blur contrast,
+   equal left/right positioning, and perfect Dark/Light mode visibility
+   ========================================================================== */
+
+/* 1. Primary Hero Category & Introductory Badge (.hero-tag-line) */
+.hero-tag-line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  background: rgba(4, 18, 51, 0.72) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  color: var(--golden-yellow) !important;
+  padding: 0.38rem 0.95rem !important;
+  border-radius: 999px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.85rem !important;
+  width: fit-content !important;
+  text-align: start !important;
+  align-self: flex-start !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-tag-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--golden-yellow) !important;
+  box-shadow: 0 0 8px var(--golden-yellow) !important;
+  flex-shrink: 0 !important;
+}
+
+/* 2. Breadcrumb Navigation in Hero (about, products, catering, blog, contact) */
+.hero-left-column .breadcrumb-nav {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-size: 0.76rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 0.65rem !important;
+  width: fit-content !important;
+  text-align: start !important;
+  align-self: flex-start !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-left-column .breadcrumb-nav a {
+  color: var(--golden-yellow) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.hero-left-column .breadcrumb-nav a:hover {
+  text-decoration: underline !important;
+  opacity: 0.9 !important;
+}
+
+.hero-left-column .breadcrumb-nav span {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* 3. Utility Hero Page Badges (404, Coming Soon, Maintenance) */
+.utility-content-wrap .eyebrow.eyebrow-gold,
+.status-pulsing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  background: rgba(4, 18, 51, 0.72) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  color: var(--golden-yellow) !important;
+  padding: 0.38rem 1rem !important;
+  border-radius: 999px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+  margin: 0 auto 1.25rem !important;
+  width: fit-content !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.status-pulsing-badge {
+  margin-bottom: 1.25rem !important;
+}
+
+.pulse-led {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #2ecc71 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7) !important;
+  animation: pulseLed 1.8s infinite !important;
+  flex-shrink: 0 !important;
+}
+
+/* 4. Floating Showcase Badges on Hero Image Cards */
+.hero-float-badge {
+  position: absolute !important;
+  top: 14px !important;
+  left: 14px !important;
+  background: rgba(4, 18, 51, 0.88) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  padding: 0.42rem 0.85rem !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  color: var(--golden-yellow) !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  z-index: 2 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+.hero-float-badge small {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500 !important;
+  font-size: 0.68rem !important;
+}
+
+.hero-rating-pill {
+  position: absolute !important;
+  bottom: 14px !important;
+  right: 14px !important;
+  background: rgba(4, 18, 51, 0.92) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.4) !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  color: var(--golden-yellow) !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  z-index: 2 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+.hero-rating-pill span {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500 !important;
+  font-size: 0.72rem !important;
+}
+
+/* 5. Dark Mode Enhancements for Hero Labels */
+html[data-theme="dark"] .hero-tag-line,
+html[data-theme="dark"] .utility-content-wrap .eyebrow.eyebrow-gold,
+html[data-theme="dark"] .status-pulsing-badge {
+  background: rgba(3, 10, 28, 0.85) !important;
+  border-color: rgba(232, 184, 63, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* 6. RTL (Right-to-Left) Language Direction Support */
+html[dir="rtl"] .hero-left-column {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-tag-line {
+  text-align: right !important;
+  align-self: flex-end !important;
+}
+
+html[dir="rtl"] .hero-left-column .breadcrumb-nav {
+  text-align: right !important;
+  align-self: flex-end !important;
+}
+
+html[dir="rtl"] .hero-float-badge {
+  left: auto !important;
+  right: 14px !important;
+}
+
+html[dir="rtl"] .hero-rating-pill {
+  right: auto !important;
+  left: 14px !important;
+}
+
+/* 7. Mobile and Tablet Responsiveness */
+@media (max-width: 991px) {
+  .hero-tag-line {
+    font-size: 0.74rem !important;
+    padding: 0.34rem 0.85rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .hero-left-column .breadcrumb-nav {
+    font-size: 0.74rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .utility-content-wrap .eyebrow.eyebrow-gold,
+  .status-pulsing-badge {
+    font-size: 0.74rem !important;
+    padding: 0.34rem 0.85rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero-float-badge {
+    top: 10px !important;
+    left: 10px !important;
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .hero-rating-pill {
+    bottom: 10px !important;
+    right: 10px !important;
+    padding: 0.28rem 0.65rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  html[dir="rtl"] .hero-float-badge {
+    left: auto !important;
+    right: 10px !important;
+  }
+
+  html[dir="rtl"] .hero-rating-pill {
+    right: auto !important;
+    left: 10px !important;
+  }
+}
+
+/* ==========================================================================
+   PRODUCT PAGE: FINAL SECTION (COOKING MASTERCLASS)
+   Balanced layout, equal left/right spacing, consistent card heights,
+   contained step badges, smooth padding, and perfect responsive alignment
+   ========================================================================== */
+.cooking-masterclass-section {
+  padding: 5.5rem 0 !important;
+  background-color: var(--navy-deep) !important;
+  color: var(--pure-white) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.cooking-masterclass-section .container {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+.cooking-masterclass-section .section-header {
+  max-width: 760px !important;
+  margin: 0 auto 2.5rem !important;
+  text-align: center !important;
+}
+
+.cooking-masterclass-section .section-header .eyebrow {
+  margin-bottom: 0.75rem !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.16em !important;
+}
+
+.cooking-masterclass-section .section-header h2 {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  line-height: 1.22 !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.cooking-masterclass-section .section-header .gold-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin: 0.85rem auto 1.25rem !important;
+  color: var(--golden-yellow) !important;
+}
+
+.cooking-masterclass-section .section-header .gold-divider::before,
+.cooking-masterclass-section .section-header .gold-divider::after {
+  content: "" !important;
+  display: block !important;
+  width: 45px !important;
+  height: 1.5px !important;
+  background: linear-gradient(90deg, transparent, var(--golden-yellow)) !important;
+}
+
+.cooking-masterclass-section .section-header .gold-divider::after {
+  background: linear-gradient(90deg, var(--golden-yellow), transparent) !important;
+}
+
+.cooking-masterclass-section .section-header p {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin: 0 auto !important;
+  max-width: 660px !important;
+}
+
+.cooking-masterclass-section .craftsmanship-steps {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.75rem !important;
+  margin-top: 2rem !important;
+  align-items: stretch !important;
+}
+
+.cooking-masterclass-section .step-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  height: 100% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.28) !important;
+  border-radius: var(--radius-md, 12px) !important;
+  padding: 2.25rem 1.6rem 2rem !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.cooking-masterclass-section .step-card:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: var(--golden-yellow) !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(232, 184, 63, 0.15) !important;
+}
+
+.cooking-masterclass-section .step-number-circle {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, var(--golden-yellow) 0%, #d89f21 100%) !important;
+  color: var(--navy-deep) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 1.35rem !important;
+  box-shadow: 0 6px 18px rgba(232, 184, 63, 0.4) !important;
+  flex-shrink: 0 !important;
+  font-size: 1.15rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.cooking-masterclass-section .step-card:hover .step-number-circle {
+  transform: scale(1.08) !important;
+}
+
+.cooking-masterclass-section .step-card h3 {
+  color: #ffffff !important;
+  font-family: var(--font-serif) !important;
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.cooking-masterclass-section .step-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  margin: 0 !important;
+  flex-grow: 1 !important;
+}
+
+/* Dark mode compatibility */
+html[data-theme="dark"] .cooking-masterclass-section {
+  background-color: #070f22 !important;
+  color: #f8f6f0 !important;
+}
+
+html[data-theme="dark"] .cooking-masterclass-section .step-card {
+  background: rgba(255, 255, 255, 0.035) !important;
+  border-color: rgba(232, 184, 63, 0.22) !important;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+  .cooking-masterclass-section .craftsmanship-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+  .cooking-masterclass-section .step-card {
+    padding: 2rem 1.4rem 1.75rem !important;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 640px) {
+  .cooking-masterclass-section {
+    padding: 3.75rem 0 !important;
+  }
+  .cooking-masterclass-section .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .cooking-masterclass-section .section-header {
+    margin-bottom: 2rem !important;
+  }
+  .cooking-masterclass-section .craftsmanship-steps {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-top: 1.5rem !important;
+  }
+  .cooking-masterclass-section .step-card {
+    padding: 1.85rem 1.25rem 1.65rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   NAVIGATION BAR 1024PX OPTIMIZATION & RESPONSIVE ALIGNMENT
+   Ensures Logo, 7 Nav Links, Theme Toggle, RTL Toggle, Cart, and
+   Catering Quote fit seamlessly on one line at 1024px without wrapping.
+   ========================================================================== */
+
+/* Optimization for Desktop-to-Tablet transition (992px to 1199px, including 1024px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .top-bar {
+    padding: 0.35rem 0 !important;
+    font-size: 0.74rem !important;
+  }
+
+  .top-bar-inner {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    gap: 0.85rem !important;
+  }
+
+  .top-bar-item {
+    font-size: 0.72rem !important;
+    white-space: nowrap !important;
+  }
+
+  .main-header .container,
+  .main-header .nav-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .brand-logo {
+    gap: 0.45rem !important;
+    margin-right: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .brand-logo-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .brand-logo-text .brand-title {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.55rem !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 1 !important;
+    margin: 0 !important;
+  }
+
+  .nav-link {
+    font-size: 0.82rem !important;
+    padding: 0.35rem 0.1rem !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+  }
+
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .theme-toggle-btn {
+    width: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .rtl-toggle-btn {
+    height: 36px !important;
+    padding: 0 0.6rem !important;
+    font-size: 0.76rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .rtl-toggle-btn .rtl-text {
+    font-size: 0.72rem !important;
+  }
+
+  .nav-actions .cart-toggle-btn,
+  .cart-toggle-btn.d-none-mobile {
+    display: inline-flex !important;
+    width: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .nav-actions .btn,
+  .nav-actions .btn-gold,
+  .btn.btn-gold.btn-sm.d-none-mobile {
+    display: inline-flex !important;
+    padding: 0.42rem 0.75rem !important;
+    font-size: 0.76rem !important;
+    gap: 0.35rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+
+  .hamburger-btn {
+    display: none !important;
+  }
+}
+
+
+
+/* === UNIFIED HERO ENGINE: HOME TO CONTACT UNIFORMITY === */
+.hero-home-1,
+.hero-home-2,
+.page-hero,
+.catering-hero-section {
+  position: relative !important;
+  min-height: 480px !important;
+  height: auto !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 2.5rem 0 2.75rem !important;
+  background-color: var(--navy-dark) !important;
+  color: var(--pure-white) !important;
+  overflow: hidden !important;
+  border-bottom: 2px solid var(--golden-yellow) !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+/* Background Layers: rich visibility and warm center spotlight, eliminating dead black void */
+.hero-bg-layers {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+}
+
+.hero-bg-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 0.38 !important;
+  filter: saturate(1.2) contrast(1.08) !important;
+}
+
+.hero-bg-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse at 50% 50%, rgba(232, 184, 63, 0.12) 0%, transparent 70%),
+              linear-gradient(90deg, rgba(4, 18, 51, 0.94) 0%, rgba(4, 18, 51, 0.74) 45%, rgba(4, 18, 51, 0.74) 55%, rgba(4, 18, 51, 0.90) 100%) !important;
+  z-index: 2 !important;
+}
+
+/* Inner Grid: tightened max-width and balanced gap to eliminate empty center space */
+.hero-cinematic-inner {
+  position: relative !important;
+  z-index: 5 !important;
+  display: grid !important;
+  grid-template-columns: 1.12fr 0.98fr !important;
+  gap: 2.25rem !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Left Column: clean alignment and rich proportional width */
+.hero-left-column {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.hero-left-column .breadcrumb-nav {
+  display: none !important;
+}
+
+/* Hero Tag Line (Proper Label Badge) */
+.hero-tag-line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  background: rgba(4, 18, 51, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(232, 184, 63, 0.55) !important;
+  color: var(--golden-yellow) !important;
+  padding: 0.38rem 1rem !important;
+  border-radius: 999px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.85rem !important;
+  width: fit-content !important;
+  text-align: start !important;
+  align-self: flex-start !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-tag-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--golden-yellow) !important;
+  box-shadow: 0 0 8px var(--golden-yellow) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Left Column Heading & Content */
+.hero-left-column h1 {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(2.2rem, 3.2vw, 2.85rem) !important;
+  font-weight: 800 !important;
+  color: var(--pure-white) !important;
+  line-height: 1.16 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.85rem !important;
+  max-width: 580px !important;
+  text-align: left !important;
+}
+
+.hero-desc {
+  font-size: 1.02rem !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  line-height: 1.62 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.35rem !important;
+  max-width: 540px !important;
+  text-align: left !important;
+}
+
+.hero-cta-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.35rem !important;
+  justify-content: flex-start !important;
+}
+
+.hero-trust-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.35rem !important;
+  flex-wrap: wrap !important;
+  font-size: 0.82rem !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  margin-top: 0.2rem !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.85rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+  max-width: 540px !important;
+  width: 100% !important;
+  justify-content: flex-start !important;
+}
+
+/* Right Column Card Showcase: Fills column nicely, no far-right drift */
+.hero-right-column {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.hero-card-showcase {
+  max-width: 500px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.hero-image-float {
+  position: relative !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(232, 184, 63, 0.45) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(232, 184, 63, 0.12) !important;
+}
+
+.hero-image-float img {
+  width: 100% !important;
+  height: 275px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.hero-stat-tower {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .hero-home-1,
+  .hero-home-2,
+  .page-hero,
+  .catering-hero-section {
+    padding: 2.5rem 0 !important;
+    min-height: 460px !important;
+  }
+  .hero-cinematic-inner {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.75rem !important;
+    max-width: 960px !important;
+  }
+  .hero-image-float img {
+    height: 240px !important;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-home-1,
+  .hero-home-2,
+  .page-hero,
+  .catering-hero-section {
+    padding: 2.25rem 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .hero-cinematic-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+    max-width: 100% !important;
+  }
+  .hero-card-showcase {
+    margin: 0 auto !important;
+    max-width: 440px !important;
+  }
+  .hero-image-float img {
+    height: 220px !important;
+  }
+}
+
+/* RTL Layout */
+html[dir="rtl"] .hero-home-1,
+html[dir="rtl"] .hero-home-2,
+html[dir="rtl"] .page-hero,
+html[dir="rtl"] .catering-hero-section {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-left-column {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-left-column h1,
+html[dir="rtl"] .hero-desc {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-tag-line {
+  align-self: flex-end !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .hero-cta-row,
+html[dir="rtl"] .hero-trust-row {
+  justify-content: flex-end !important;
+}

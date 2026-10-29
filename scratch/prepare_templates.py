@@ -1,0 +1,1056 @@
+# -*- coding: utf-8 -*-
+"""
+Full redesign builder for Granoza website.
+Applies unique, non-repetitive section layouts to index.html and about.html,
+fixes prices and UTF-8 encodings, and consolidates all styles into css/style.css with cache-busting ?v=6.
+"""
+import os
+import re
+
+WORKSPACE = r"c:\Users\dines\OneDrive\Desktop\italian"
+INDEX_PATH = os.path.join(WORKSPACE, "index.html")
+ABOUT_PATH = os.path.join(WORKSPACE, "about.html")
+STYLE_CSS_PATH = os.path.join(WORKSPACE, "css", "style.css")
+REDESIGN_CSS_PATH = os.path.join(WORKSPACE, "css", "redesign_sections.css")
+ABOUT_CSS_PATH = os.path.join(WORKSPACE, "css", "about_redesign.css")
+
+# ==============================================================================
+# 1. INDEX.HTML SECTIONS HTML
+# ==============================================================================
+INDEX_SECTIONS = """  <!-- =========================================================================
+       SECTION 1: HERO — BALANCED CINEMATIC SPLIT
+       ========================================================================= -->
+  <section class="hero-home-1" id="hero-section">
+    <div class="hero-bg-layers">
+      <div class="hero-bg-overlay"></div>
+      <img src="images/hero_bowl.jpg" class="hero-bg-img" alt="Granoza Artisanal Pasta"
+        onerror="this.src='images/bowl_dish_1.jpg'">
+    </div>
+    <div class="container hero-cinematic-inner">
+      <div class="hero-left-column">
+        <div class="hero-tag-line">
+          <span class="hero-tag-dot"></span>
+          <span>Artigianale &bull; Since 1998 &bull; Bologna</span>
+        </div>
+        <h1>Pure Italian <br><em class="hero-italic-accent">Handcraft</em><br>On Your Table</h1>
+        <p class="hero-desc">Silky egg sfoglia rolled before dawn. Bronze-drawn ribbons. Time-honored salumi. The true soul of Emilia-Romagna &mdash; delivered fresh, daily.</p>
+        <div class="hero-cta-row">
+          <a href="products.html" class="hero-cta-primary">
+            <span>Shop Fresh Pasta</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="about.html" class="hero-cta-ghost">Our Story</a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="htr-item"><i class="fa-solid fa-wheat-awn"></i> 100% Pugliese Wheat</div>
+          <div class="htr-item"><i class="fa-solid fa-truck-fast"></i> Same-Day Delivery</div>
+          <div class="htr-item"><i class="fa-solid fa-star"></i> 4.9 Patrons Rating</div>
+        </div>
+      </div>
+      <div class="hero-right-column">
+        <div class="hero-card-showcase">
+          <div class="hero-image-float">
+            <img src="images/hero_noodle_lift.jpg" alt="Fresh pasta noodle lift"
+              onerror="this.src='images/tagliatelle.jpg'">
+            <div class="hero-float-badge">
+              <i class="fa-solid fa-fire-burner"></i>
+              <span>Al Bronzo Extruded<br><small>Porous Sauce Grip</small></span>
+            </div>
+            <div class="hero-rating-pill">
+              <i class="fa-solid fa-star"></i>
+              <span>4.9 / 5.0 <em>(340+ Reviews)</em></span>
+            </div>
+          </div>
+          <div class="hero-stat-tower">
+            <div class="hero-stat-block">
+              <span class="hsb-number">36<small>hrs</small></span>
+              <span class="hsb-label">Cold Drying</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">100<small>%</small></span>
+              <span class="hsb-label">Altamura Wheat</span>
+            </div>
+            <div class="hsb-divider"></div>
+            <div class="hero-stat-block">
+              <span class="hsb-number">24<small>+</small></span>
+              <span class="hsb-label">Artisan Shapes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: STORY — ASYMMETRIC ATELIER MAGAZINE FEATURE
+       ========================================================================= -->
+  <section class="story-heritage-section">
+    <div class="container">
+      <div class="shs-grid">
+        <!-- Left: Overlapping Photo Collage & Atelier Badge -->
+        <div class="shs-media-col">
+          <div class="shs-collage-wrap">
+            <div class="shs-main-img-card">
+              <img src="images/chef_rolling.jpg" alt="Master pastaio rolling golden sfoglia" onerror="this.src='images/flour_mound.jpg'">
+              <div class="shs-img-caption">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <span>Hand-Rolled on Rough Beechwood</span>
+              </div>
+            </div>
+            <div class="shs-accent-img-card">
+              <img src="images/kitchen.jpg" alt="Traditional bronze extrusion atelier" onerror="this.src='images/pasta_machine.jpg'">
+            </div>
+            <div class="shs-heritage-seal">
+              <i class="fa-solid fa-certificate"></i>
+              <div class="shs-seal-text">
+                <strong>26 Years</strong>
+                <span>Emilian Craft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Narrative & Connected Milestone Ribbon -->
+        <div class="shs-text-col">
+          <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-shop"></i> Benvenuti a Bottega</span>
+          <h2>More Than a Deli &mdash;<br>A Living <em>Italian Legend</em></h2>
+          <p class="shs-lead-p">
+            Founded in 1998 by Giancarlo De Luca, Granoza was born from a singular mission: rescuing the fading art of authentic hand-rolled pasta. Every morning at 5:00 AM, our sfogline knead organic Pugliese semolina with fresh egg yolks on beechwood boards.
+          </p>
+          <div class="shs-pull-quote">
+            <div class="shs-quote-line"></div>
+            <p>&ldquo;We do not make pasta for warehouse shelves. We make pasta the way Nonna did at dawn &mdash; with warm eggs, coarse grain, and patience.&rdquo;</p>
+          </div>
+
+          <!-- Connected Milestone Track (Horizontal Ribbon) -->
+          <div class="shs-timeline-track">
+            <div class="shs-step">
+              <div class="shs-step-node">1998</div>
+              <div class="shs-step-info">
+                <strong>First Bottega</strong>
+                <span>Vintage Treviso press</span>
+              </div>
+            </div>
+            <div class="shs-step-line"></div>
+            <div class="shs-step">
+              <div class="shs-step-node">2010</div>
+              <div class="shs-step-info">
+                <strong>D.O.P. Salumeria</strong>
+                <span>Direct Parma dairies</span>
+              </div>
+            </div>
+            <div class="shs-step-line"></div>
+            <div class="shs-step">
+              <div class="shs-step-node shs-node-active">Today</div>
+              <div class="shs-step-info">
+                <strong>Daily Atelier</strong>
+                <span>500kg fresh daily</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shs-action-row">
+            <a href="about.html" class="btn btn-primary btn-sm">
+              <span>Read Our Full Story</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="shs-note"><i class="fa-solid fa-shield-halved" style="color:var(--golden-yellow);"></i> 100% Preservative-Free Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: PASTA — FEATURED MAESTRO CUT + THE DAILY ARTISAN BOARD
+       ========================================================================= -->
+  <section class="pasta-spotlight-section">
+    <div class="container">
+      <div class="pss-header-row">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-utensils"></i> Le Nostre Paste Fresche</span>
+          <h2>Handcrafted Daily <em>Specialties</em></h2>
+        </div>
+        <a href="products.html" class="pss-all-link">
+          <span>Explore All 24 Artisan Varieties</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="pss-main-grid">
+        <!-- Left: Featured Spotlight Showcase (Large Masterpiece Card) -->
+        <article class="pss-feature-hero" data-id="pappardelle-toscane">
+          <div class="pfh-media">
+            <img src="images/prod_pappardelle.jpg" alt="Pappardelle Rustiche all'Uovo" onerror="this.src='images/bowl_dish_2.jpg'">
+            <div class="pfh-badge-top">
+              <span class="pfh-batch-dot"></span>
+              <span>Chef Giancarlo's Batch of the Day &bull; Extruded 6:00 AM</span>
+            </div>
+            <span class="pfh-cooktime-pill"><i class="fa-regular fa-clock"></i> 3.5 min al dente</span>
+          </div>
+          <div class="pfh-content">
+            <div class="pfh-title-row">
+              <div>
+                <span class="pfh-category-tag">Tuscan Broad Ribbon</span>
+                <h3>Pappardelle Rustiche all&rsquo;Uovo</h3>
+              </div>
+              <div class="pfh-price-badge">
+                <span class="pfh-currency">$</span><span class="pfh-val">15.00</span>
+                <small>/ 500g (Serves 3&ndash;4)</small>
+              </div>
+            </div>
+            <p class="pfh-desc">
+              20mm wide ribbons kneaded with 10 golden farm yolks per kilo. Bronze-extruded with chalky micro-pores that capture braised wild boar ragù and porcini butter sauce.
+            </p>
+            <div class="pfh-specs-grid">
+              <div class="pfh-spec-item">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <div><strong>Flour</strong><span>Altamura Semolina</span></div>
+              </div>
+              <div class="pfh-spec-item">
+                <i class="fa-solid fa-egg"></i>
+                <div><strong>Hydration</strong><span>100% Pasture Egg Yolks</span></div>
+              </div>
+              <div class="pfh-spec-item">
+                <i class="fa-solid fa-wine-glass"></i>
+                <div><strong>Pairing</strong><span>Sangiovese DOCG</span></div>
+              </div>
+            </div>
+            <div class="pfh-actions">
+              <button type="button" class="btn btn-primary btn-add-pasta pfh-order-btn" data-id="pappardelle-toscane">
+                <i class="fa-solid fa-basket-shopping"></i> Add to Order Basket
+              </button>
+              <span class="pfh-stock-status"><i class="fa-solid fa-check-circle"></i> Freshly Chilled Trays Available</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right: The Daily Artisan Board (Sleek Counter Menu) -->
+        <div class="pss-daily-board">
+          <div class="pdb-board-header">
+            <div>
+              <h4><i class="fa-solid fa-clipboard-list" style="color:var(--golden-yellow);"></i> Daily Deli Counter Board</h4>
+              <span class="pdb-subtitle">Hand-folded &amp; cut this morning &bull; Limited batches</span>
+            </div>
+            <span class="pdb-live-badge"><i class="fa-solid fa-circle"></i> Counter Open</span>
+          </div>
+
+          <div class="pdb-items-list">
+            <!-- Cut 1: Tagliatelle -->
+            <div class="pdb-item" data-id="tagliatelle-classiche">
+              <div class="pdb-item-thumb">
+                <img src="images/bowl_dish_1.jpg" alt="Tagliatelle all'Uovo" onerror="this.src='images/tagliatelle.jpg'">
+                <span class="pdb-cook"><i class="fa-regular fa-clock"></i> 3 min</span>
+              </div>
+              <div class="pdb-item-info">
+                <div class="pdb-item-top">
+                  <h5>Tagliatelle all&rsquo;Uovo</h5>
+                  <span class="pdb-item-price">$14.50 <small>/500g</small></span>
+                </div>
+                <p>7mm golden ribbons &mdash; the authentic vehicle for Bolognese meat ragù.</p>
+                <div class="pdb-item-action">
+                  <span class="pdb-item-tag"><i class="fa-solid fa-ribbon"></i> Classic Cut</span>
+                  <button type="button" class="pdb-add-btn btn-add-pasta" data-id="tagliatelle-classiche" aria-label="Add Tagliatelle">
+                    <i class="fa-solid fa-plus"></i> Order
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cut 2: Ravioli Ricotta & Spinaci -->
+            <div class="pdb-item" data-id="ravioli-ricotta">
+              <div class="pdb-item-thumb">
+                <img src="images/ravioli.jpg" alt="Ravioli Ricotta & Spinaci" onerror="this.src='images/prod_ravioli.jpg'">
+                <span class="pdb-cook"><i class="fa-regular fa-clock"></i> 4 min</span>
+              </div>
+              <div class="pdb-item-info">
+                <div class="pdb-item-top">
+                  <h5>Ravioli Ricotta &amp; Spinaci</h5>
+                  <span class="pdb-item-price">$18.50 <small>/500g</small></span>
+                </div>
+                <p>Hand-pinched parcels filled with sheep milk ricotta &amp; 30-mo Parmigiano.</p>
+                <div class="pdb-item-action">
+                  <span class="pdb-item-tag"><i class="fa-solid fa-hands"></i> Hand-Pinched</span>
+                  <button type="button" class="pdb-add-btn btn-add-pasta" data-id="ravioli-ricotta" aria-label="Add Ravioli">
+                    <i class="fa-solid fa-plus"></i> Order
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cut 3: Gnocchi di Patate -->
+            <div class="pdb-item" data-id="gnocchi-patate">
+              <div class="pdb-item-thumb">
+                <img src="images/prod_gnocchi.jpg" alt="Gnocchi di Patate" onerror="this.src='images/prod_tortelloni.jpg'">
+                <span class="pdb-cook"><i class="fa-regular fa-clock"></i> 2.5 min</span>
+              </div>
+              <div class="pdb-item-info">
+                <div class="pdb-item-top">
+                  <h5>Gnocchi di Patate</h5>
+                  <span class="pdb-item-price">$13.50 <small>/500g</small></span>
+                </div>
+                <p>Feather-light potato pillows that float like clouds in brown butter and sage.</p>
+                <div class="pdb-item-action">
+                  <span class="pdb-item-tag"><i class="fa-solid fa-cloud"></i> Potato Pillow</span>
+                  <button type="button" class="pdb-add-btn btn-add-pasta" data-id="gnocchi-patate" aria-label="Add Gnocchi">
+                    <i class="fa-solid fa-plus"></i> Order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pdb-board-footer">
+            <div class="pdb-footer-note">
+              <i class="fa-solid fa-box-open" style="color:var(--golden-yellow);"></i>
+              <span>Insulated thermal boxes with ice packs &amp; cooking parchment included.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: CRAFTSMANSHIP — CONNECTED HORIZONTAL PROCESS TRACK
+       ========================================================================= -->
+  <section class="craft-rail-section">
+    <div class="container">
+      <div class="crs-header">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-hand-holding-heart"></i> Il Nostro Metodo</span>
+        <h2>Four Pillars of Our <em>Craftsmanship</em></h2>
+        <p class="crs-subtitle">From sun-drenched grain fields in Puglia to traditional bronze dies, every Granoza pasta shape follows strict centuries-old Italian culinary discipline.</p>
+      </div>
+
+      <!-- Horizontal Continuous Progress Railway -->
+      <div class="crs-rail-wrapper">
+        <div class="crs-rail-line"></div>
+        <div class="crs-steps-grid">
+          <!-- Step 1 -->
+          <div class="crs-step-card">
+            <div class="crs-node">
+              <span class="crs-step-num">01</span>
+              <div class="crs-node-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            </div>
+            <div class="crs-card-inner">
+              <span class="crs-tag">Altamura, Puglia</span>
+              <h3>100% Pugliese Semolina</h3>
+              <p>Certified organic coarse durum wheat from Altamura. Amber color and high protein strength deliver the perfect al dente toothsome bite.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="crs-step-card">
+            <div class="crs-node">
+              <span class="crs-step-num">02</span>
+              <div class="crs-node-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            </div>
+            <div class="crs-card-inner">
+              <span class="crs-tag">Solid Cast Bronze</span>
+              <h3>Trafilatura al Bronzo</h3>
+              <p>Extruded through pure solid bronze dies. Creates an artisan porous, chalky texture that clings tenaciously to every drop of sauce.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="crs-step-card">
+            <div class="crs-node">
+              <span class="crs-step-num">03</span>
+              <div class="crs-node-icon"><i class="fa-solid fa-hands"></i></div>
+            </div>
+            <div class="crs-card-inner">
+              <span class="crs-tag">Beechwood Table</span>
+              <h3>Hand-Rolled Sfoglia</h3>
+              <p>Tender ribbon pastas and filled parcels kneaded on beechwood tables to cultivate elasticity without rubbery industrial toughness.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="crs-step-card">
+            <div class="crs-node">
+              <span class="crs-step-num">04</span>
+              <div class="crs-node-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+            </div>
+            <div class="crs-card-inner">
+              <span class="crs-tag">&lt; 42&deg;C &bull; 36 Hours</span>
+              <h3>Slow Cold Drying</h3>
+              <p>Gentle static drying below 42&deg;C for 36 hours &mdash; preserving wheat nutrients, golden aroma, and superior natural digestibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="crs-bottom-bar">
+        <div class="crs-guarantee-item"><i class="fa-solid fa-check"></i> Zero Bleached Flour</div>
+        <div class="crs-guarantee-item"><i class="fa-solid fa-check"></i> Zero Chemical Preservatives</div>
+        <div class="crs-guarantee-item"><i class="fa-solid fa-check"></i> 100% Traceable Italian Grain</div>
+        <div class="crs-guarantee-item"><i class="fa-solid fa-check"></i> Fresh Egg Yolks Only</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: INGREDIENTS — MARQUEE + SENSORY INGREDIENT MOSAIC
+       ========================================================================= -->
+  <section class="dop-pantry-section">
+    <!-- Animated Continuous Marquee -->
+    <div class="dps-marquee-track">
+      <div class="dps-marquee-inner">
+        <span>Parmigiano Reggiano D.O.P.</span><i class="fa-solid fa-circle"></i>
+        <span>Pomodoro San Marzano dell'Agro Sarnese</span><i class="fa-solid fa-circle"></i>
+        <span>Guanciale di Amatrice</span><i class="fa-solid fa-circle"></i>
+        <span>Coratina Olive Oil &bull; Puglia</span><i class="fa-solid fa-circle"></i>
+        <span>Prosciutto di Parma 24-Mesi</span><i class="fa-solid fa-circle"></i>
+        <span>Altamura Durum Wheat</span><i class="fa-solid fa-circle"></i>
+        <span>Parmigiano Reggiano D.O.P.</span><i class="fa-solid fa-circle"></i>
+        <span>Pomodoro San Marzano dell'Agro Sarnese</span><i class="fa-solid fa-circle"></i>
+        <span>Guanciale di Amatrice</span><i class="fa-solid fa-circle"></i>
+        <span>Coratina Olive Oil &bull; Puglia</span><i class="fa-solid fa-circle"></i>
+        <span>Prosciutto di Parma 24-Mesi</span><i class="fa-solid fa-circle"></i>
+        <span>Altamura Durum Wheat</span><i class="fa-solid fa-circle"></i>
+      </div>
+    </div>
+
+    <div class="container dps-body">
+      <div class="dps-header-row">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-gem"></i> Ingredienti D'Origine Protetta</span>
+          <h2>Purity You Can Taste in <em>Every Strand</em></h2>
+        </div>
+        <p>Great pasta begins with uncompromising respect for raw ingredients. We partner directly with certified Italian family cooperatives and regional dairies.</p>
+      </div>
+
+      <!-- Asymmetric Sensory Mosaic (Hero Ingredient + 3 Compact Cards) -->
+      <div class="dps-mosaic-grid">
+        <!-- Hero Ingredient Card -->
+        <div class="dps-hero-ing-card">
+          <div class="dps-hic-media">
+            <img src="images/deli_charcuterie.jpg" alt="Parmigiano Reggiano D.O.P. and Italian cold cuts" onerror="this.src='images/italian_dining.jpg'">
+            <span class="dps-origin-pill"><i class="fa-solid fa-certificate"></i> Consorzio D.O.P. Parma</span>
+          </div>
+          <div class="dps-hic-body">
+            <div class="dps-hic-tag"><i class="fa-solid fa-cheese"></i> King of Cheeses</div>
+            <h3>Parmigiano Reggiano D.O.P.</h3>
+            <span class="dps-hic-meta">30 Months Mountain Aged &bull; Vacche Rosse Cattle</span>
+            <p>Crafted exclusively from raw milk of heritage red cows. Tested, graded, and wheel-branded by the consortium. Shaved freshly over hot pasta at our deli counter.</p>
+            <div class="dps-hic-profile">
+              <span><i class="fa-solid fa-circle-check"></i> Crystalline Texture</span>
+              <span><i class="fa-solid fa-circle-check"></i> Rich Nutty Umami</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Side Ingredient Cards -->
+        <div class="dps-side-grid">
+          <!-- Card 1 -->
+          <div class="dps-compact-card">
+            <div class="dps-cc-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+            <div class="dps-cc-content">
+              <span class="dps-cc-loc">Campania &bull; Volcanic Soil Harvest</span>
+              <h4>Pomodoro San Marzano D.O.P.</h4>
+              <p>Sweet, low-acid whole plum tomatoes grown in rich mineral volcanic soil at the foot of Mount Vesuvius.</p>
+              <div class="dps-flavor-tag"><i class="fa-solid fa-seedling"></i> Naturally Sweet &bull; Low Acid</div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="dps-compact-card">
+            <div class="dps-cc-icon"><i class="fa-solid fa-bacon"></i></div>
+            <div class="dps-cc-content">
+              <span class="dps-cc-loc">Lazio &bull; Herb &amp; Pepper Cured</span>
+              <h4>Guanciale di Amatrice</h4>
+              <p>Black pepper-crusted cured pork jowl essential for authentic Carbonara &mdash; rendering luscious savory fat without butter.</p>
+              <div class="dps-flavor-tag"><i class="fa-solid fa-fire"></i> Crispy Rind &bull; Savory Fat</div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="dps-compact-card">
+            <div class="dps-cc-icon"><i class="fa-solid fa-bottle-droplet"></i></div>
+            <div class="dps-cc-content">
+              <span class="dps-cc-loc">Bitonto, Puglia &bull; First Cold Press</span>
+              <h4>Olio Extra Vergine Coratina</h4>
+              <p>Monovarietal oil with peppery, artichoke finish &mdash; cold-pressed within 4 hours of harvest to elevate every pasta emulsion.</p>
+              <div class="dps-flavor-tag"><i class="fa-solid fa-droplet"></i> Peppery &bull; Polyphenol Rich</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: RECIPES — THE SACRED COOKING RATIO + 2 TRATTORIA PAIRINGS
+       ========================================================================= -->
+  <section class="culinary-guide-section">
+    <div class="container">
+      <div class="cgs-header-row">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-kitchen-set"></i> Cucina Tradizionale</span>
+          <h2>Secrets from <em>Our Trattoria Kitchen</em></h2>
+        </div>
+        <p>Master the simple secrets of Roman and Emilian trattorias &mdash; our chefs' pairing guides for shape-to-sauce perfection.</p>
+      </div>
+
+      <div class="cgs-content-grid">
+        <!-- Left: The Golden Formula Workshop Card -->
+        <div class="cgs-formula-card">
+          <div class="cgs-formula-header">
+            <span class="cgs-formula-badge"><i class="fa-solid fa-star"></i> Emilian Golden Rule</span>
+            <h3>The Sacred Pasta Ratio</h3>
+            <p>Follow the timeless proportion taught by Bologna's master sfogline for perfect al dente pasta every single time.</p>
+          </div>
+          <div class="cgs-ratio-steps">
+            <div class="cgs-ratio-step">
+              <span class="crs-metric">100g</span>
+              <span class="crs-label">Artisan Pasta</span>
+            </div>
+            <div class="cgs-ratio-divider">:</div>
+            <div class="cgs-ratio-step">
+              <span class="crs-metric">1 Litre</span>
+              <span class="crs-label">Boiling Water</span>
+            </div>
+            <div class="cgs-ratio-divider">:</div>
+            <div class="cgs-ratio-step">
+              <span class="crs-metric">10g</span>
+              <span class="crs-label">Sicilian Salt</span>
+            </div>
+          </div>
+          <div class="cgs-formula-secret">
+            <div class="cfs-secret-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="cfs-secret-text">
+              <strong>The Starch Water Secret:</strong>
+              <p>Always reserve half a cup of cooking water before draining. Its suspended bronze-die starch is what emulsifies butter or olive oil into a silky, restaurant-grade glaze.</p>
+            </div>
+          </div>
+          <div class="cgs-formula-footer">
+            <span>&mdash; Maestro Giancarlo De Luca</span>
+          </div>
+        </div>
+
+        <!-- Right: 2 Signature Culinary Pairings -->
+        <div class="cgs-pairings-col">
+          <!-- Dish 1 -->
+          <article class="cgs-dish-card">
+            <div class="cdc-media">
+              <img src="images/recipe_bolognese.jpg" alt="Tagliatelle al Ragù Bolognese" onerror="this.src='images/bowl_dish_1.jpg'">
+              <span class="cdc-time-tag"><i class="fa-solid fa-stopwatch"></i> 4 hrs simmer</span>
+            </div>
+            <div class="cdc-body">
+              <div class="cdc-meta-row">
+                <span class="cdc-diff"><i class="fa-solid fa-fire"></i> Medium Effort</span>
+                <span class="cdc-serves"><i class="fa-solid fa-users"></i> Serves 4</span>
+              </div>
+              <h4>Tagliatelle al Rag&ugrave; Bolognese</h4>
+              <p>Coarse beef &amp; pork mince braised gently with soffritto, whole milk, white wine, and tomato paste into a velvety sauce that clings to egg ribbons.</p>
+              <div class="cdc-pairing-chip"><i class="fa-solid fa-wine-glass"></i> Sangiovese di Romagna Superiore</div>
+              <a href="blog.html" class="cdc-link">View Trattoria Recipe Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Dish 2 -->
+          <article class="cgs-dish-card">
+            <div class="cdc-media">
+              <img src="images/recipe_carbonara.jpg" alt="Spaghetti alla Carbonara" onerror="this.src='images/bowl_dish_3.jpg'">
+              <span class="cdc-time-tag"><i class="fa-solid fa-stopwatch"></i> 15 mins</span>
+            </div>
+            <div class="cdc-body">
+              <div class="cdc-meta-row">
+                <span class="cdc-diff"><i class="fa-solid fa-bolt"></i> Fast &amp; Authentic</span>
+                <span class="cdc-serves"><i class="fa-solid fa-users"></i> Serves 2</span>
+              </div>
+              <h4>Spaghetti alla Carbonara Autentica</h4>
+              <p>Strictly zero cream. Crisped guanciale fat, pasture egg yolks, freshly grated Pecorino Romano, and toasted black pepper creating rich silky gloss.</p>
+              <div class="cdc-pairing-chip"><i class="fa-solid fa-wine-glass"></i> Frascati Superiore DOCG</div>
+              <a href="blog.html" class="cdc-link">View Trattoria Recipe Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CATERING — PANORAMIC FULL-BLEED HOSPITALITY BAR
+       ========================================================================= -->
+  <section class="catering-banner-section">
+    <div class="cbs-bg-image">
+      <img src="images/catering_spread.jpg" alt="Italian catering feast spread" onerror="this.src='images/kitchen.jpg'">
+      <div class="cbs-bg-gradient"></div>
+    </div>
+    <div class="container cbs-content-wrap">
+      <div class="cbs-main-content">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-champagne-glasses"></i> Rinfreschi &amp; Banchetti</span>
+        <h2>Host Unforgettable <em>Italian Feasts</em> For Your Guests</h2>
+        <p>Whether catering an intimate family gathering or a 150-guest corporate gala, our kitchen prepares grand warm lasagna trays, fresh antipasti boards, and custom pasta buffets &mdash; delivered hot and ready to serve.</p>
+        <div class="cbs-cta-row">
+          <a href="catering.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check"></i> View Catering Packages</a>
+          <a href="contact.html" class="btn btn-outline-white"><i class="fa-solid fa-phone"></i> (555) 890-2123</a>
+        </div>
+      </div>
+
+      <div class="cbs-feature-box">
+        <div class="cbs-box-header">
+          <div class="cbs-box-title">
+            <i class="fa-solid fa-bell-concierge"></i>
+            <span>Catering Guarantee</span>
+          </div>
+          <span class="cbs-rate-badge">From $22 / Guest</span>
+        </div>
+        <div class="cbs-feature-grid">
+          <div class="cbs-card">
+            <div class="cbs-card-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <h4>10 &ndash; 150+ Guests</h4>
+              <p>Intimate suppers to large galas</p>
+            </div>
+          </div>
+          <div class="cbs-card">
+            <div class="cbs-card-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <div>
+              <h4>Hot Delivery</h4>
+              <p>Chafing warmers &amp; tongs included</p>
+            </div>
+          </div>
+          <div class="cbs-card">
+            <div class="cbs-card-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div>
+              <h4>Dietary Menus</h4>
+              <p>Gluten-aware &amp; vegetarian items</p>
+            </div>
+          </div>
+          <div class="cbs-card">
+            <div class="cbs-card-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>24h Setup Notice</h4>
+              <p>Express reservation available</p>
+            </div>
+          </div>
+        </div>
+        <div class="cbs-box-footer">
+          <a href="catering.html" class="cbs-box-link">Estimate Your Event Cost &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: TESTIMONIALS — PRESTIGE AUTHORITY & STAGGERED REVIEWS
+       ========================================================================= -->
+  <section class="testimonials-prestige-section">
+    <div class="tps-ribbon-bar">
+      <span>&#9733; PAROLE DEI CLIENTI &#9733;</span>
+      <span>&#9733; RECENSIONI VERIFICATE &#9733;</span>
+      <span>&#9733; TRADIZIONE DI BOLOGNA &#9733;</span>
+      <span>&#9733; PASTA FRESCA ARTIGIANALE &#9733;</span>
+    </div>
+    <div class="container tps-container">
+      <div class="tps-grid">
+        <!-- Left: Authority Rating Pillar -->
+        <div class="tps-trust-col">
+          <span class="eyebrow"><i class="fa-solid fa-comment-dots"></i> Cosa Dicono Di Noi</span>
+          <h2>Loved by Families &amp; <em>Food Critics</em></h2>
+          <div class="tps-score-card">
+            <div class="tps-big-num">4.9</div>
+            <div class="tps-score-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="tps-reviews-count">Based on 340+ Verified Local Reviews</span>
+          </div>
+          <div class="tps-badges-list">
+            <div class="tps-badge-item"><i class="fa-solid fa-award"></i> Bologna Culinary Heritage Seal</div>
+            <div class="tps-badge-item"><i class="fa-solid fa-heart"></i> Voted Best Fresh Pasta Deli 2025</div>
+          </div>
+        </div>
+
+        <!-- Right: 2 Staggered Pull-Quotes -->
+        <div class="tps-quotes-col">
+          <blockquote class="tps-quote-card">
+            <div class="tps-quote-symbol">&ldquo;</div>
+            <p>Growing up in Bologna, Sunday meant rolling tagliatelle with my nonna. Granoza is the only place in town that captures that exact silkiness and rustic bite. Their ragu is pure nostalgia.</p>
+            <footer>
+              <div class="tps-avatar">EP</div>
+              <div>
+                <strong>Elena Pellegrini</strong>
+                <span>Verified Regular &bull; 8-Year Patron</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="tps-quote-card tps-card-offset">
+            <div class="tps-quote-symbol">&ldquo;</div>
+            <p>We ordered the Grand Feast catering for my husband's 50th birthday &mdash; 45 guests genuinely thought we hired a private Michelin chef from Milan. Flawless presentation!</p>
+            <footer>
+              <div class="tps-avatar tps-avatar-gold">MC</div>
+              <div>
+                <strong>Michael &amp; Claire Connelly</strong>
+                <span>Private Event Hosts</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 9: NEWSLETTER — STREAMLINED BOTTEGA CLUB BAR
+       ========================================================================= -->
+  <section class="bottega-club-section">
+    <div class="container">
+      <div class="bcs-bar-wrap">
+        <div class="bcs-text">
+          <span class="bcs-eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Bollettino del Pastaio</span>
+          <h2>Weekly Fresh Batch Alerts &amp; <em>Chef Recipes</em></h2>
+          <div class="bcs-perks">
+            <span><i class="fa-solid fa-check"></i> Saturday Morning Dispatch</span>
+            <span><i class="fa-solid fa-check"></i> 10% First Order Discount</span>
+            <span><i class="fa-solid fa-check"></i> Limited Seasonal Pre-Orders</span>
+          </div>
+        </div>
+        <form class="bcs-form" id="homeNewsletterForm">
+          <div class="bcs-input-group">
+            <input type="text" placeholder="Your name" class="bcs-input" aria-label="First name">
+            <input type="email" placeholder="Your email address" class="bcs-input" required aria-label="Email address">
+            <button type="submit" class="bcs-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Subscribe
+            </button>
+          </div>
+          <p class="bcs-notice">No spam &mdash; only genuine Italian recipes &amp; fresh batch notices. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+"""
+
+# ==============================================================================
+# 2. ABOUT.HTML SECTIONS HTML
+# ==============================================================================
+ABOUT_SECTIONS = """  <!-- =========================================================================
+       SECTION 1: PAGE HERO & BRAND INTRODUCTION
+       ========================================================================= -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>About Our Heritage</span>
+      </nav>
+      <h1>Artisans of the Wooden Table</h1>
+      <p>
+        Founded on timeless Emilian principles, Granoza preserves the ancient dignity of handmade sfoglia, slow bronze extrusion, and genuine neighborhood Italian deli culture.
+      </p>
+    </div>
+  </section>
+
+  <!-- Brand Introduction Showcase -->
+  <section class="about-hero-section">
+    <div class="container about-intro-grid">
+      <div class="about-intro-media">
+        <div class="intro-image-frame">
+          <img src="images/chef_pastaio.jpg" alt="Master Pastaio dusting golden semolina over tortellini" onerror="this.src='images/chef_rolling.jpg'">
+          <div class="intro-media-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>Maestro Pastaio Giancarlo De Luca</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-intro-text">
+        <span class="eyebrow"><i class="fa-solid fa-seedling"></i> La Nostra Filosofia</span>
+        <h2>A Passion Born Between Bologna &amp; Bari</h2>
+        <p>
+          In Italy, pasta is not merely nourishment &mdash; it is a spiritual rhythm. It marks Sunday gatherings, seals friendships, and honors centuries of culinary memory passed down from mother to daughter without written manuals.
+        </p>
+        <p>
+          When Maestro Giancarlo established our atelier in 1998, he brought a set of heavy wooden rolling pins (mattarelli) hand-carved from Emilian pearwood and an uncompromising pledge: never use artificial preservatives, never rush the cold air-drying cycle, and never compromise on whole grains.
+        </p>
+        <div class="about-stats-row">
+          <div class="about-stat">
+            <h3>26+</h3>
+            <span>Years of Local Heritage</span>
+          </div>
+          <div class="about-stat">
+            <h3>100%</h3>
+            <span>Altamura Durum Wheat</span>
+          </div>
+          <div class="about-stat">
+            <h3>Zero</h3>
+            <span>Chemical Additives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: OUR ITALIAN-INSPIRED STORY (ALTERNATING HERITAGE SPINE TIMELINE)
+       ========================================================================= -->
+  <section class="about-story-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-clock-rotate-left"></i> Il Nostro Cammino</span>
+        <h2>Our Journey Through Generations</h2>
+        <div class="gold-divider"><i class="fa-solid fa-hourglass-half"></i></div>
+        <p>How an apprentice's passion in an alleyway in Bologna blossomed into a beloved neighborhood pastificio and gourmet Italian deli.</p>
+      </div>
+
+      <!-- Alternating Heritage Timeline with Center Spine (NO EMPTY GAPS!) -->
+      <div class="heritage-spine-track">
+        <div class="hst-center-line"></div>
+        <div class="hst-milestones-list">
+          <!-- Milestone 1: 1992 (Left) -->
+          <div class="hst-item hst-item-left">
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">1992</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-graduation-cap"></i> Bologna Quadrilatero</span>
+              </div>
+              <h3>Apprenticeship in Bologna</h3>
+              <p>At age 19, Giancarlo De Luca apprenticed under Master Sfoglina Signora Rosa in Bologna's historic Quadrilatero district, learning the exacting art of rolling dough so thin it could be held up to the sunlight without breaking.</p>
+            </div>
+            <div class="hst-node-pin"><i class="fa-solid fa-seedling"></i></div>
+          </div>
+
+          <!-- Milestone 2: 1998 (Right) -->
+          <div class="hst-item hst-item-right">
+            <div class="hst-node-pin"><i class="fa-solid fa-shop"></i></div>
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">1998</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-handshake"></i> The First Bottega</span>
+              </div>
+              <h3>Opening the Neighborhood Bottega</h3>
+              <p>Granoza opened its doors with two wooden tables, a small counter, and a single vintage bronze extrusion press brought across the Atlantic from Treviso. Neighbors gathered each morning lured by the aroma of freshly kneaded semolina.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2010 (Left) -->
+          <div class="hst-item hst-item-left">
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge">2010</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-cheese"></i> D.O.P. Partnerships</span>
+              </div>
+              <h3>Expanding to an Authentic Salumeria</h3>
+              <p>To accompany fresh pasta, we partnered directly with family dairies in Parma and salumifici in Modena to install our cold cuts counter, offering prosciutto di Parma aged on chestnut racks and cave-ripened pecorino.</p>
+            </div>
+            <div class="hst-node-pin"><i class="fa-solid fa-wine-bottle"></i></div>
+          </div>
+
+          <!-- Milestone 4: 2026 (Right) -->
+          <div class="hst-item hst-item-right">
+            <div class="hst-node-pin"><i class="fa-solid fa-medal"></i></div>
+            <div class="hst-content-box">
+              <div class="hst-box-header">
+                <span class="hst-year-badge hst-year-current">Today</span>
+                <span class="hst-tag-chip"><i class="fa-solid fa-heart"></i> Generational Atelier</span>
+              </div>
+              <h3>The Tradition Continues</h3>
+              <p>Today, the second generation of the De Luca family works side-by-side with our master sfoglini, providing daily fresh pasta to hundreds of neighborhood families, renowned trattorias, and festive catering banquets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: HANDMADE PASTA-MAKING TECHNIQUES (TECHNICAL SHOWCASE + RATIO BAR)
+       ========================================================================= -->
+  <section class="about-techniques-section">
+    <div class="container">
+      <div class="section-header text-light">
+        <span class="eyebrow eyebrow-gold"><i class="fa-solid fa-screwdriver-wrench"></i> Tecniche Artigianali</span>
+        <h2>Honoring Ancient Methods</h2>
+        <div class="gold-divider"><i class="fa-solid fa-wheat-awn"></i></div>
+        <p>Industrial pasta factories prioritize speed and volume. We prioritize touch, patience, and the physics of dough structure.</p>
+      </div>
+
+      <div class="tech-cards-grid">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-hands"></i></div>
+            <span class="tech-metric-pill">0.6mm Sfoglia</span>
+          </div>
+          <span class="tech-subtitle">Rough Beechwood Friction</span>
+          <h3>Manual Sfoglia Rolling</h3>
+          <p>Rolling on rough wood aerates the dough and imparts microscopic friction channels across the sheet, giving fresh tagliatelle and pappardelle their velvety, sauce-binding grip.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-fire-burner"></i></div>
+            <span class="tech-metric-pill">100% Solid Bronze</span>
+          </div>
+          <span class="tech-subtitle">Trafilatura al Bronzo</span>
+          <h3>Solid Bronze Extrusion Dies</h3>
+          <p>Bronze dies leave a chalky, pale matte exterior on macaroni and penne. When simmered, this microscopic roughness releases natural starch that turns pasta water into silk.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+            <span class="tech-metric-pill">&lt; 40&deg;C &bull; 36 Hours</span>
+          </div>
+          <span class="tech-subtitle">Enzyme Protection</span>
+          <h3>Static Low-Heat Air Curing</h3>
+          <p>We dry our non-fresh pasta slowly on breathable cedar frames at ambient room temperatures (under 40°C), preserving the wheat's natural nutty aroma and delicate enzymes.</p>
+        </div>
+      </div>
+
+      <!-- Emilian Standard Formula Bar (Fills empty space with authentic culinary insight!) -->
+      <div class="tech-formula-bar">
+        <div class="tfb-item">
+          <span class="tfb-val">100g</span>
+          <span class="tfb-label">Altamura Wheat</span>
+        </div>
+        <span class="tfb-plus">+</span>
+        <div class="tfb-item">
+          <span class="tfb-val">1</span>
+          <span class="tfb-label">Farm Fresh Egg</span>
+        </div>
+        <span class="tfb-plus">+</span>
+        <div class="tfb-item">
+          <span class="tfb-val">0</span>
+          <span class="tfb-label">Chemical Additives</span>
+        </div>
+        <span class="tfb-equal">=</span>
+        <div class="tfb-result">
+          <strong>The Century-Old Bologna Standard</strong>
+          <small>Pure taste, digestible gluten, and effortless al dente structure</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: INGREDIENT SOURCING & DIRECT FARM PARTNERSHIPS
+       ========================================================================= -->
+  <section class="about-sourcing-section">
+    <div class="container sourcing-grid">
+      <div class="sourcing-content">
+        <span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Provenienza e Origine</span>
+        <h2>Traceable Sourcing Across Italy's Regions</h2>
+        <p class="sourcing-lead-p">
+          We never buy generic commodity grains or mystery bulk oils. Every sack of durum semolina, wheel of cheese, and leg of salumi is traced back to a specific Italian cooperative or family estate.
+        </p>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-wheat-awn"></i>
+          <div>
+            <h4>Altamura Durum Wheat Semolina (Puglia)</h4>
+            <p>100% certified coarse-milled durum wheat grown under intense Mediterranean sunshine, providing natural yellow pigment and superior gluten elasticity.</p>
+          </div>
+        </div>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-egg"></i>
+          <div>
+            <h4>Pasture-Raised Hen Eggs (Local Valley Farms)</h4>
+            <p>Laid by pasture-roaming hens fed on natural grains and alfalfa, producing brilliant amber yolks that give our egg noodles their rich, buttery hue.</p>
+          </div>
+        </div>
+
+        <div class="sourcing-pin">
+          <i class="fa-solid fa-cheese"></i>
+          <div>
+            <h4>30-Month Parmigiano Reggiano (Parma Hills)</h4>
+            <p>Crafted exclusively from raw milk of heritage Vacche Rosse cattle. Tested and wheel-branded by the Parmigiano Reggiano Consortium.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sourcing-map-box">
+        <div class="smb-header">
+          <i class="fa-solid fa-certificate" style="color:var(--golden-yellow);"></i>
+          <h3>Our Regional Sourcing Map</h3>
+        </div>
+        <p class="smb-desc">Direct trade with ethical Italian producers ensures maximum freshness and supports small agricultural families.</p>
+        <div class="smb-media-frame">
+          <img src="images/hero_about.jpg" alt="Artisanal food table in Italy with olive oil, pasta and fresh bread" onerror="this.src='images/italian_dining.jpg'">
+          <div class="smb-map-overlay">
+            <span><i class="fa-solid fa-location-dot"></i> Altamura</span>
+            <span><i class="fa-solid fa-location-dot"></i> Parma</span>
+            <span><i class="fa-solid fa-location-dot"></i> Bologna</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: COMMITMENT TO FRESHNESS & FAMILY PLEDGE BOARD (REPLACES GENERIC CARDS)
+       ========================================================================= -->
+  <section class="about-pledge-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Il Nostro Impegno</span>
+        <h2>Our Unconditional Promise to Your Family</h2>
+        <div class="gold-divider"><i class="fa-solid fa-check-double"></i></div>
+        <p>When you purchase pasta from Granoza, you receive food made today with ingredients you could find in an Italian grandmother's pantry.</p>
+      </div>
+
+      <!-- Atelier Quality Seal & Family Pledge Board -->
+      <div class="pledge-master-board">
+        <!-- Left: De Luca Quality Seal Card -->
+        <div class="pmb-seal-card">
+          <div class="pmb-seal-badge">
+            <i class="fa-solid fa-stamp"></i>
+            <span>De Luca Family Guarantee</span>
+          </div>
+          <h3>The Chef's Sacred Table Rule</h3>
+          <p class="pmb-quote">&ldquo;We never sell pasta that we would not proudly set down on our own Sunday family table before our children and elders.&rdquo;</p>
+          <div class="pmb-checklist">
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Preservatives or Chemicals</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Bleached or Modified Flours</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Zero Artificial Colorants or Gums</div>
+            <div class="pmb-check-item"><i class="fa-solid fa-check-circle"></i> Daily Extrusion or Roll Guarantee</div>
+          </div>
+          <div class="pmb-signature">
+            <span>Giancarlo De Luca</span>
+            <small>Founder &amp; Master Pastaio</small>
+          </div>
+        </div>
+
+        <!-- Right: 3 Actionable Pillar Tiles -->
+        <div class="pmb-tiles-col">
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Daily Small Batches</h4>
+                <span class="pmb-metric-tag">&lt; 15kg Limit</span>
+              </div>
+              <p>Extruded in micro-batches under 15kg to prevent machine friction overheating and delicate starch degradation.</p>
+            </div>
+          </div>
+
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-box-archive"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Breathable Cedar Trays</h4>
+                <span class="pmb-metric-tag">Condensation-Free</span>
+              </div>
+              <p>Chilled breathable trays lined with durum semolina prevent condensation buildup and protect dough elasticity.</p>
+            </div>
+          </div>
+
+          <div class="pmb-tile">
+            <div class="pmb-tile-icon"><i class="fa-solid fa-recycle"></i></div>
+            <div class="pmb-tile-body">
+              <div class="pmb-tile-top">
+                <h4>Zero-Waste Ethics</h4>
+                <span class="pmb-metric-tag">Traditional Re-Use</span>
+              </div>
+              <p>Dough trimmings are re-kneaded into maltagliati ("badly cut") rustic soup noodles, honoring sacred peasant thrift.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+"""
+
+print("Section templates prepared.")
